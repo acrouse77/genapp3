@@ -86,7 +86,7 @@
 import fs from 'fs'
 import path from 'path'
 
-let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/hj.json'), 'utf8')
+let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
 var participantData = JSON.parse(participantDataString)
 
 // import participantData from './static/participantdata/hj.json'

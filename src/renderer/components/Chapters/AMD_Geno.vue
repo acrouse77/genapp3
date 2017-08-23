@@ -1,7 +1,18 @@
 <script>
-import AMD from './assets/data/AMD_ordered2.json'
-import finreduced from './assets/data/AMD.json'
-import genos from './assets/data/hj.json'
+import fs from 'fs'
+import path from 'path'
+
+let AMDread = fs.readFileSync(path.join(__static, '/referencedata/AMD_ordered2.json'), 'utf8')
+var AMD = JSON.parse(AMDread)
+
+let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/AMD.json'), 'utf8')
+var finreduced = JSON.parse(finreducedread)
+
+let genosread = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+var genos = JSON.parse(genosread)
+// import AMD from './assets/data/AMD_ordered2.json'
+// import finreduced from './assets/data/AMD.json'
+// import genos from './assets/data/hj.json'
 var _ = require('underscore')
 // import genos from './assets/data/SL159977_bear.json'
 
