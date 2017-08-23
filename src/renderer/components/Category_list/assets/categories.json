@@ -1,0 +1,1287 @@
+[{
+        "name": "Alzheimer's disease",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Alzheimer's disease (late onset)",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Amyotrophic lateral sclerosis",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Autism",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Bipolar disorder",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Epilepsy (generalized)",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Essential tremor",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Major depressive disorder",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Migraine",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Multiple sclerosis",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Myasthenia gravis",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Narcolepsy",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Parkinson's disease",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Restless legs syndrome",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Schizophrenia",
+        "type": "Disease",
+        "category": "Brain"
+    }, {
+        "name": "Acute lymphoblastic leukemia (childhood)",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Basal cell carcinoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Bladder cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Breast cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Chronic lymphocytic leukemia",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Chronic myeloid leukemia",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Colorectal cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Endometrial cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Esophageal cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Esophageal cancer and gastric cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Ewing sarcoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Follicular lymphoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Glioma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Glioma (high-grade)",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Hepatocellular carcinoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Hodgkin's lymphoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Lung adenocarcinoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Lung cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Melanoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Meningioma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Multiple myeloma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Nasopharyngeal carcinoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Neuroblastoma",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Neuroblastoma (high-risk)",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Ovarian cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Pancreatic cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Prostate cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Testicular cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Testicular germ cell cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Testicular germ cell tumor",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Thyroid cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Upper aerodigestive tract cancers",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Urinary bladder cancer",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Wilms tumor",
+        "type": "Disease",
+        "category": "Cancer"
+    }, {
+        "name": "Abdominal aortic aneurysm",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Atrial fibrillation",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Atrial fibrillation/atrial flutter",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Chronic obstructive pulmonary disease",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Coronary heart disease",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Hypertension",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Hypertriglyceridemia",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Intracranial aneurysm",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Kawasaki disease",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Myocardial infarction",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Myocardial infarction (early onset)",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Stroke",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Stroke (ischemic)",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Sudden cardiac arrest",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Venous thromboembolism",
+        "type": "Disease",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Diabetes (gestational)",
+        "type": "Disease",
+        "category": "Endocrine"
+    }, {
+        "name": "Hypothyroidism",
+        "type": "Disease",
+        "category": "Endocrine"
+    }, {
+        "name": "Type 1 diabetes",
+        "type": "Disease",
+        "category": "Endocrine"
+    }, {
+        "name": "Type 2 diabetes and other traits",
+        "type": "Disease",
+        "category": "Endocrine"
+    }, {
+        "name": "Type 2 diabetes",
+        "type": "Disease",
+        "category": "Endocrine"
+    }, {
+        "name": "Barrett's esophagus",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Celiac disease",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Crohn's disease",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Duodenal ulcer",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Gallstones",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Infantile hypertrophic pyloric stenosis",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Inflammatory bowel disease",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Inflammatory bowel disease (early onset)",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Primary biliary cirrhosis",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Sclerosing cholangitis and ulcerative colitis (combined)",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Ulcerative colitis",
+        "type": "Disease",
+        "category": "GI"
+    }, {
+        "name": "Ankylosing spondylitis",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Behcet's disease",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Crohn's disease and psoriasis",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Graves' disease",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "IgE grass sensitization",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Psoriatic arthritis",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Systemic lupus erythematosus",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Systemic sclerosis",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Kidney",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Disease",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Chronic kidney disease and serum creatinine levels",
+        "type": "Disease",
+        "category": "Immune"
+    }, {
+        "name": "Chronic Hepatitis C infection",
+        "type": "Disease",
+        "category": "Liver"
+    }, {
+        "name": "Nonalcoholic fatty liver disease",
+        "type": "Disease",
+        "category": "Liver"
+    }, {
+        "name": "Metabolic syndrome",
+        "type": "Disease",
+        "category": "Metabolic"
+    }, {
+        "name": "Metabolic syndrome (bivariate traits)",
+        "type": "Disease",
+        "category": "Metabolic"
+    }, {
+        "name": "Obesity",
+        "type": "Disease",
+        "category": "Metabolic"
+    }, {
+        "name": "Obesity (extreme)",
+        "type": "Disease",
+        "category": "Metabolic"
+    }, {
+        "name": "Dupuytren's disease",
+        "type": "Disease",
+        "category": "Muscle"
+    }, {
+        "name": "Thyrotoxic hypokalemic periodic paralysis",
+        "type": "Disease",
+        "category": "Muscle"
+    }, {
+        "name": "Age-related macular degeneration",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Age-related macular degeneration (CNV vs. GA)",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Age-related macular degeneration (CNV)",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Age-related macular degeneration (GA)",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Corneal astigmatism",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Glaucoma",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Glaucoma (exfoliation)",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Glaucoma (primary open-angle)",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Myopia (pathological)",
+        "type": "Disease",
+        "category": "Ocular"
+    }, {
+        "name": "Airflow obstruction",
+        "type": "Disease",
+        "category": "Pulmonary"
+    }, {
+        "name": "Asthma",
+        "type": "Disease",
+        "category": "Pulmonary"
+    }, {
+        "name": "Asthma (childhood onset)",
+        "type": "Disease",
+        "category": "Pulmonary"
+    }, {
+        "name": "Chronic kidney disease",
+        "type": "Disease",
+        "category": "Renal"
+    }, {
+        "name": "IgA nephropathy",
+        "type": "Disease",
+        "category": "Renal"
+    }, {
+        "name": "Kidney stones",
+        "type": "Disease",
+        "category": "Renal"
+    }, {
+        "name": "Renal function and chronic kidney disease",
+        "type": "Disease",
+        "category": "Renal"
+    }, {
+        "name": "Endometriosis",
+        "type": "Disease",
+        "category": "Reproductive"
+    }, {
+        "name": "Polycystic ovary syndrome",
+        "type": "Disease",
+        "category": "Reproductive"
+    }, {
+        "name": "Uterine fibroids",
+        "type": "Disease",
+        "category": "Reproductive"
+    }, {
+        "name": "Alopecia areata",
+        "type": "Disease",
+        "category": "Skin"
+    }, {
+        "name": "Atopic dermatitis",
+        "type": "Disease",
+        "category": "Skin"
+    }, {
+        "name": "Keloid",
+        "type": "Disease",
+        "category": "Skin"
+    }, {
+        "name": "Psoriasis",
+        "type": "Disease",
+        "category": "Skin"
+    }, {
+        "name": "Vitiligo",
+        "type": "Disease",
+        "category": "Skin"
+    }, {
+        "name": "Cleft lip",
+        "type": "Disease",
+        "category": "Skeletal"
+    }, {
+        "name": "Hypospadias",
+        "type": "Disease",
+        "category": "Skeletal"
+    }, {
+        "name": "Knee osteoarthritis",
+        "type": "Disease",
+        "category": "Skeletal"
+    }, {
+        "name": "Orofacial clefts",
+        "type": "Disease",
+        "category": "Skeletal"
+    }, {
+        "name": "Osteoarthritis",
+        "type": "Disease",
+        "category": "Skeletal"
+    }, {
+        "name": "Osteoporosis",
+        "type": "Disease",
+        "category": "Skeletal"
+    }, {
+        "name": "Paget's disease",
+        "type": "Disease",
+        "category": "Skeletal"
+    }, {
+        "name": "Rheumatoid arthritis",
+        "type": "Disease",
+        "category": "Skeletal"
+    }, {
+        "name": "Periodontitis",
+        "type": "Disease",
+        "category": "Dental"
+    }, {
+        "name": "Response to hepatitis C treatment",
+        "type": "Medical Trait",
+        "category": "Drug Response"
+    }, {
+        "name": "Response to interferon beta therapy",
+        "type": "Medical Trait",
+        "category": "Drug Response"
+    }, {
+        "name": "Response to metformin",
+        "type": "Medical Trait",
+        "category": "Drug Response"
+    }, {
+        "name": "Response to statin therapy",
+        "type": "Medical Trait",
+        "category": "Drug Response"
+    }, {
+        "name": "Response to Vitamin E supplementation",
+        "type": "Medical Trait",
+        "category": "Drug Response"
+    }, {
+        "name": "Stevens-Johnson syndrome and toxic epidermal necrolysis (SJS-TEN)",
+        "type": "Medical Trait",
+        "category": "Drug Response"
+    }, {
+        "name": "Warfarin maintenance dose",
+        "type": "Medical Trait",
+        "category": "Drug Response"
+    }, {
+        "name": "Androgen levels",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Dehydroepiandrosterone sulphate levels",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Menarche (age at onset)",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Menarche and menopause (age at onset)",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Menopause (age at onset)",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Sex hormone-binding globulin levels",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Testosterone levels",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Thyroid function",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Thyroid volume",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "Type 1 diabetes autoantibodies",
+        "type": "Medical Trait",
+        "category": "Endocrine"
+    }, {
+        "name": "CD4:CD8 lymphocyte ratio",
+        "type": "Medical Trait",
+        "category": "Immune"
+    }, {
+        "name": "Eosinophil counts",
+        "type": "Medical Trait",
+        "category": "Immune"
+    }, {
+        "name": "IgE levels",
+        "type": "Medical Trait",
+        "category": "Immune"
+    }, {
+        "name": "Neutrophil count",
+        "type": "Medical Trait",
+        "category": "Immune"
+    }, {
+        "name": "Non-albumin protein levels",
+        "type": "Medical Trait",
+        "category": "Immune"
+    }, {
+        "name": "White blood cell types",
+        "type": "Medical Trait",
+        "category": "Immune"
+    }, {
+        "name": "Bilirubin levels",
+        "type": "Medical Trait",
+        "category": "Liver"
+    }, {
+        "name": "Gamma gluatamyl transferase levels",
+        "type": "Medical Trait",
+        "category": "Liver"
+    }, {
+        "name": "Gamma glutamyl transpeptidase",
+        "type": "Medical Trait",
+        "category": "Liver"
+    }, {
+        "name": "Liver enzyme levels",
+        "type": "Medical Trait",
+        "category": "Liver"
+    }, {
+        "name": "Liver enzyme levels (alanine transaminase)",
+        "type": "Medical Trait",
+        "category": "Liver"
+    }, {
+        "name": "Liver enzyme levels (alkaline phosphatase)",
+        "type": "Medical Trait",
+        "category": "Liver"
+    }, {
+        "name": "Liver enzyme levels (gamma-glutamyl transferase)",
+        "type": "Medical Trait",
+        "category": "Liver"
+    }, {
+        "name": "Central corneal thickness",
+        "type": "Medical Trait",
+        "category": "Ocular"
+    }, {
+        "name": "Corneal curvature",
+        "type": "Medical Trait",
+        "category": "Ocular"
+    }, {
+        "name": "Intraocular pressure",
+        "type": "Medical Trait",
+        "category": "Ocular"
+    }, {
+        "name": "Optic disc parameters",
+        "type": "Medical Trait",
+        "category": "Ocular"
+    }, {
+        "name": "Refractive error",
+        "type": "Medical Trait",
+        "category": "Ocular"
+    }, {
+        "name": "Retinal vascular caliber",
+        "type": "Medical Trait",
+        "category": "Ocular"
+    }, {
+        "name": "Vertical cup-disc ratio",
+        "type": "Medical Trait",
+        "category": "Ocular"
+    }, {
+        "name": "Cholelithiasis-related traits in sickle cell anemia",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Erythrocyte sedimentation rate",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Fetal hemoglobin levels",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Glycated hemoglobin levels",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Haptoglobin levels",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Hematocrit",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Hematological parameters",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Hematology traits",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Hemoglobin",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Hemostatic factors and hematological phenotypes",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Immunoglobulin A",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Mean corpuscular hemoglobin",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Mean corpuscular volume",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Other erythrocyte phenotypes",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Red blood cell traits",
+        "type": "Medical Traits",
+        "category": "Blood"
+    }, {
+        "name": "Brain structure",
+        "type": "Medical Traits",
+        "category": "Brain"
+    }, {
+        "name": "Cortical thickness",
+        "type": "Medical Traits",
+        "category": "Brain"
+    }, {
+        "name": "Hippocampal volume",
+        "type": "Medical Traits",
+        "category": "Brain"
+    }, {
+        "name": "Intracranial volume",
+        "type": "Medical Traits",
+        "category": "Brain"
+    }, {
+        "name": "Progranulin levels",
+        "type": "Medical Traits",
+        "category": "Brain"
+    }, {
+        "name": "Prostate-specific antigen levels",
+        "type": "Medical Traits",
+        "category": "Cancer"
+    }, {
+        "name": "Activated partial thromboplastin time",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Amyloid A Levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Angiotensin-converting enzyme activity",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Ankle-brachial index",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Aortic root size",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Blood pressure",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "C-reactive protein",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "C-reactive protein and white blood cell count",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Cardiac repolarization",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Cardiac structure and function",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Carotid intima media thickness",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Cholesterol, total",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Coagulation factor levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Coronary artery calcification",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Cardiovascular disease risk factors",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "D-dimer levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Diastolic blood pressure",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Electrocardiographic traits",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Fibrinogen",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "HDL cholesterol",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "HDL Cholesterol - Triglycerides (HDLC-TG)",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Homocysteine levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "LDL cholesterol",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Lipoprotein-associated phospholipase A2 activity and mass",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Mean platelet volume",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "N-glycan levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Natriuretic peptide levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Phospholipid levels (plasma)",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Phytosterol levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Platelet counts",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "PR interval",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Protein C levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Prothrombin time",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "QT interval",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Quantitative traits",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Resistin levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Resting heart rate",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Soluble ICAM-1",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Soluble levels of adhesion molecules",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Sphingolipid levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Systolic blood pressure",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Triglycerides",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Triglycerides-Blood Pressure (TG-BP)",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Vaspin levels",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Ventricular conduction",
+        "type": "Medical Traits",
+        "category": "Cardiovascular"
+    }, {
+        "name": "Black vs. blond hair color",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Black vs. red hair color",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Blond vs. brown hair color",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Blue vs. brown eyes",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Blue vs. green eyes",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Breast size",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Common traits (Other)",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Cutaneous nevi",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Eye color",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Eye color traits",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Facial morphology",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Freckles",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Freckling",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Hair color",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Hair morphology",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Height",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Iris characteristics",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Male-pattern baldness",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Red vs non-red hair color",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Tanning",
+        "type": "Nonmedical Traits",
+        "category": "Physical attributes"
+    }, {
+        "name": "Optic disc size (disc)",
+        "type": "Symptom",
+        "category": "Eye"
+    }, {
+        "name": "Adiponectin levels",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Adiposity",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Body mass (lean)",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Body mass index",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Fasting plasma glucose",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Metabolic traits",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Metabolite levels",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Soluble leptin receptor levels",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Two-hour glucose challenge",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Waist Circumference - Triglycerides (WC-TG)",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Waist circumference and related phenotypes",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Waist-hip ratio",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Weight",
+        "type": "Symptom",
+        "category": "Metabolic"
+    }, {
+        "name": "Alcohol consumption",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Alcohol dependence",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Biomedical quantitative traits",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Birth weight",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Butyrylcholinesterase levels",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Caffeine consumption",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Circulating cell-free DNA",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Coffee consumption",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "E-selectin levels",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Electroencephalographic traits in alcoholism",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Lp (a) levels",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Mammographic density",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Nicotine dependence",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Recombination rate (females)",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Recombination rate (males)",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Smoking behavior",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Telomere length",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Urate levels",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "Uric acid levels",
+        "type": "Symptom",
+        "category": "Other"
+    }, {
+        "name": "AIDS progression",
+        "type": "Symptom",
+        "category": "Pathogen response"
+    }, {
+        "name": "Hepatitis B",
+        "type": "Symptom",
+        "category": "Pathogen response"
+    }, {
+        "name": "Hepatitis B (viral clearance)",
+        "type": "Symptom",
+        "category": "Pathogen response"
+    }, {
+        "name": "HIV-1 control",
+        "type": "Symptom",
+        "category": "Pathogen response"
+    }, {
+        "name": "Leprosy",
+        "type": "Symptom",
+        "category": "Pathogen response"
+    }, {
+        "name": "Malaria",
+        "type": "Symptom",
+        "category": "Pathogen response"
+    }, {
+        "name": "Tuberculosis",
+        "type": "Symptom",
+        "category": "Pathogen response"
+    }, {
+        "name": "Pulmonary function",
+        "type": "Symptom",
+        "category": "Pulmonary"
+    }, {
+        "name": "Creatinine levels",
+        "type": "Symptom",
+        "category": "Renal"
+    }, {
+        "name": "Renal function-related traits (BUN)",
+        "type": "Symptom",
+        "category": "Renal"
+    }, {
+        "name": "Renal function-related traits (eGRFcrea)",
+        "type": "Symptom",
+        "category": "Renal"
+    }, {
+        "name": "Renal function-related traits (sCR)",
+        "type": "Symptom",
+        "category": "Renal"
+    }, {
+        "name": "Renal function-related traits (urea)",
+        "type": "Symptom",
+        "category": "Renal"
+    }, {
+        "name": "Urinary albumin excretion",
+        "type": "Symptom",
+        "category": "Renal"
+    }, {
+        "name": "Skin sensitivity to sun",
+        "type": "Symptom",
+        "category": "Skin"
+    }, {
+        "name": "Calcium levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Carotenoid and tocopherol levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Folate pathway vitamin levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Iron levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Iron status biomarkers",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Magnesium levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Phosphorus levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Retinol levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Vitamin B12 levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Vitamin D levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Vitamin E levels",
+        "type": "Symptom",
+        "category": "Vitamins"
+    }, {
+        "name": "Bone mineral density",
+        "type": "Symptom",
+        "category": "Skeletal"
+    }, {
+        "name": "Bone mineral density (hip)",
+        "type": "Symptom",
+        "category": "Skeletal"
+    }, {
+        "name": "Bone mineral density (spine)",
+        "type": "Symptom",
+        "category": "Skeletal"
+    }, {
+        "name": "Head circumference (infant)",
+        "type": "Symptom",
+        "category": "Skeletal"
+    }, {
+        "name": "Permanent tooth development",
+        "type": "Symptom",
+        "category": "Dental"
+    }, {
+        "name": "Primary tooth development (number of teeth)",
+        "type": "Symptom",
+        "category": "Dental"
+    }, {
+        "name": "Primary tooth development (time to first tooth eruption)",
+        "type": "Symptom",
+        "category": "Dental"
+    }
+
+]
