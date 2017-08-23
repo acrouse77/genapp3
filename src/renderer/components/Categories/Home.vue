@@ -34,7 +34,7 @@
           <!--<div class="col-xs-3 col-md-3 col-lg-3">-->
           <div class="card radius shadowDepth1 col-xs-3 col-md-3 col-lg-3" v-for="category in categories">
             <div class="card__image border-tlr-radius">
-              <img :src="'img/categories/'+ category.name + '.png'" :alt="category"  class="card-img-top img-fluid border-tlr-radius"/>
+              <img :src="'static/img/categories/'+ category.name + '.png'" :alt="category"  class="card-img-top img-fluid border-tlr-radius"/>
             </div> <!-- end of card image -->
             <div class="card__content card__padding">
               <router-link :to="{name: 'categorylist-page' , params: {category: category.name }}" class="btn btn-primary btn-block">{{category.name}}</router-link>
