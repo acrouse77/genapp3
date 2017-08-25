@@ -3,6 +3,12 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+hr.style18break {
+  margin-top: 2rem;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 1px 0 0 0;
+}
 hr.style18top {
   height: 30px;
   border-style: solid;
@@ -10,7 +16,14 @@ hr.style18top {
   border-width: 1px 0 0 0;
   border-radius: 20px;
 }
-/*hr.style18top:before {
+hr.style18 {
+  height: 30px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr.style18:before {
   display: block;
   content: "";
   height: 30px;
@@ -19,7 +32,17 @@ hr.style18top {
   border-color: #8c8b8b;
   border-width: 0 0 1px 0;
   border-radius: 20px;
-}*/
+}
+hr.style18bottom:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
 .lead {
     margin-bottom: 20px;
     font-size: 16px;
@@ -81,7 +104,7 @@ h3 {
             </div>
         </div>
     </div>-->
-    <div class="col-lg-10 offset-lg-1">
+    <div style="margin:0 auto;">
       <hr class="style18top">
         <div class="padd-5 section">
             <div class="container">
@@ -104,7 +127,8 @@ h3 {
             <div class="container">
               <div class="row ">
               <div class="collapse" id="INTRODUCTION">
-                <div class="card card-block">
+              <hr class="style18break">
+                <div class="card card-block" style="border-color: #fff;">
                     <h1 class="text-primary">INTRODUCTION</h1>
                     <h3><strong>Welcome to Your Genome</strong></h3>
                       <p>The information in this Insight Genome Research Guide (Guide) is based upon current scientific knowledge and technology as of the date of this Guide and is subject to change. This Guide and its contents are provided as part of a research study and,
@@ -123,6 +147,7 @@ h3 {
                           Guide examines commonly occurring DNA changes which have generally smaller impacts on risk. Accordingly, the two reports may appear to provide contradictory risk information. The results in the research Guide should always be explored in the context
                           of the clinical report, personal medical history, and family health history.</p>
                 </div>
+                
               </div>
             </div> <!--  end row -->
             </div> <!--  end container -->
@@ -152,7 +177,8 @@ h3 {
                 <div class="container">
                   <div class="row ">
                   <div class="collapse" id="YOURGENOME">
-                    <div class="card card-block">
+                    <hr class="style18break">
+                    <div class="card card-block" style="border-color: #fff;">
                       <h1 class="text-primary">YOUR GENOME</h1>
                       <a name="GANDD"></a>
                         <h3><strong>Exploring your sequence</strong></h3>
@@ -212,7 +238,8 @@ h3 {
             <div class="container">
               <div class="row ">
               <div class="collapse" id="GENANDDIS">
-                <div class="card card-block">
+                <hr class="style18break">
+                <div class="card card-block" style="border-color: #fff;">
                   <h1 class="text-primary">GENOMICS AND DISEASE</h1>
                   <h3><strong>Changes in DNA impact the development of symptoms and disease</strong></h3>
                   <br />
@@ -258,7 +285,8 @@ h3 {
             <div class="container">
               <div class="row ">
               <div class="collapse" id="CLINICALREP">
-                <div class="card card-block">
+              <hr class="style18break">
+                <div class="card card-block" style="border-color: #fff;">
                   <h1 class="text-primary">CLINICAL REPORT</h1>
                   <a name=""></a>
                   <h3><strong>What to Expect in your Insight Genome Clinical Report</strong></h3>
@@ -302,7 +330,8 @@ h3 {
             <div class="container">
               <div class="row ">
               <div class="collapse" id="RESGUIDE">
-                <div class="card card-block">
+                <hr class="style18break">
+                <div class="card card-block" style="border-color: #fff;">
                   <h1 class="text-primary">RESEARCH RESULTS</h1>
                   <a name=""></a>
                   <h3><strong>The story of you</strong></h3>
@@ -333,8 +362,7 @@ h3 {
                     <div class="col-md-6">
                         <h1 class="text-primary">UNDERSTANDING YOUR RISK</h1>
                         <h3>Numbers associated with risk</h3>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                            eu, pretium quis, sem.
+                        <p class="lead">Most human traits and diseases are caused by the combination of multiple genetic and environmental factors.  This Guide uses the concepts of heritability and odds ratios as a way to explain the contribution of genetic variation to disease risk.  
                         </p>
                         <p>
                         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#UNDERSTANDRISK" aria-expanded="false" aria-controls="collapseExample">
@@ -350,7 +378,8 @@ h3 {
             <div class="container">
               <div class="row ">
               <div class="collapse" id="UNDERSTANDRISK">
-                <div class="card card-block">
+                <hr class="style18break">
+                <div class="card card-block" style="border-color: #fff;">
                   <h1 class="text-primary">UNDERSTANDING YOUR RISK</h1>
                     <a name=""></a>
                     <h3><strong>Implications of Research Data</strong></h3>
@@ -384,8 +413,7 @@ h3 {
                     <div class="col-md-6">
                         <h1 class="text-primary">SHARING YOUR RESULTS</h1>
                         <h3>Who Should I share my results with?</h3>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                            eu, pretium quis, sem.
+                        <p class="lead">As you think about others who might need or want to see your results, it is important to remember that your genomic test results are your private health information to use and share as you decide is appropriate. While there may be benefit to you and others in knowing this information, there could also be risks and implications in having your information shared with a larger audience. The section below explains some of these risks.
                         </p>
                         <p>
                         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SHARING" aria-expanded="false" aria-controls="collapseExample">
@@ -398,7 +426,8 @@ h3 {
             <div class="container">
               <div class="row ">
               <div class="collapse" id="SHARING">
-                <div class="card card-block">
+                <hr class="style18break">
+                <div class="card card-block" style="border-color: #fff;">
                   <h1 class="text-primary">SHARING YOUR RESULTS</h1>
                   <a name=""></a>
                   <h3><strong>Who Should I share my results with?</strong></h3>
@@ -440,6 +469,7 @@ h3 {
                     </div>
                   </div> <!--  end row -->
                 </div> <!--  end collapse container -->
+                <hr class="style18bottom">
         </div>
     <!-- END TEXT -->
 </div>

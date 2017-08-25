@@ -1,13 +1,13 @@
 <style scoped>
   img {
-    margin-top: -25px;
     width: 450px;
   }
 </style>
 <template>
   <div>
     <Banner></Banner>
-    <home class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1"></home>
+        <home ></home>
+    <!--<home class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1"></home> -->
     <!-- <Intro class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1"></Intro> -->
   </div>
 </template>
