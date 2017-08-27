@@ -9,7 +9,5 @@
 </script>
 
 <style scoped>
-.banner{
-  margin-top:70px;
-}
+
 </style>

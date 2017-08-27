@@ -10,7 +10,40 @@
 .jumbotron-buffer {
     min-height: 40px
 }
-
+hr.style18top {
+  height: 30px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr.style18bottom:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+hr.style18 {
+  height: 30px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr.style18:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
 .faderow {
     width: 100%;
     margin-bottom: 5px;
@@ -38,19 +71,24 @@
 
 <template>
 <div>
-    <div class="jumbotron">
-        <h1 class="display-3">Disease focused chapters</h1>
-        <h2> Select a chapter below for a detailed review of specific diseases and the impact of your genome's sequence.</h2>
+    <div class="row">
+    <b-jumbotron header="BootstrapVue" lead="Bootstrap 4 Components for Vue.js 2" >
+  <p>For more information visit website</p>
+  <b-btn variant="primary" href="#">Docs</b-btn>
+</b-jumbotron>
+
     </div>
+    
 
     <div class="row">
+    
         <div class=" container col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1">
 
             <!-- CHAPTER -->
 
             <!-- END CHAPTER -->
             <br>
-            <hr class="style18">
+            <hr class="style18top">
 
             <div class="row">
                 <h1 style="margin-left: 20px;">Coronary Artery Disease</h1>
@@ -128,7 +166,7 @@
                 </div>
             </div>
             <!-- CHAPTER -->
-            
+            <hr class="style18bottom">
         </div>
     </div>
     <!-- TESTING  -->
