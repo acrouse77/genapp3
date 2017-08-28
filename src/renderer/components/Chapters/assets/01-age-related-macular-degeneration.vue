@@ -64,8 +64,14 @@ h3 {
 </style>
 
 <template>
-    <div class="row">
-        <h1><strong>Chapter: Age Related Macular Degeneration</strong></h1>
+    <div>
+          <div class=" section">
+      <div class="container" style="margin-top:100px;">
+        <h1><strong>Chapter: Age Related Macular Degeneration</strong></h1><br />
+      </div>
+      </div>
+
+
     <div class=" section">
         <div class="container">
             <div class="row">
@@ -146,13 +152,13 @@ h3 {
                             <dd class="col-sm-3">CFH, C2/BF, and C3, polymorphism</dd>
                           </dl>
                         </div>
-                        <h1 class="text-primary">Inheritance and Family History</h1>
+                        <h1>Inheritance and Family History</h1>
                         <p>AMD is a multifactorial condition, meaning that both genetic and environmental factors combine to affect risk to develop the disease.<sup>7</sup> Heritability is a term used to estimate the amount that genetic factors contribute to the difference in disease
                             risk across a population. For AMD, heritability is estimated to be between 45% and 70%, meaning that between 45 and 70 percent of the variability in disease risk among individuals is due to genetic differences.<sup>7</sup> Family history information as
                             well as genetic testing may be able to identify some of the genetic risk factors that contribute to the heritability of AMD.<sup>8,9</sup></p>
                         <p>Family studies have suggested that individuals who have a first degree relative (parent, sibling, or child) with AMD are at an increased risk to develop the condition themselves.8,9 The precise increase in risk is not well-defined, but reports suggest
                             there is a four to ten fold increase in likelihood for these individuals to develop AMD.<sup>8,9</sup></p>
-                        <h1 class="text-primary">Other Risk Factors</h1>
+                        <h1>Other Risk Factors</h1>
                         <p>A number of other factors are known to be associated with the risk to develop AMD. As the name of the condition suggests, the likelihood of developing AMD increases with age.<sup>1,3,10,11</sup> Progression to later stages of AMD is somewhat more likely to
                             occur in Caucasians, but there appears to be no difference among races in the development of the early stages of the condition.<sup>6</sup></p>
                         <p>Cigarette smoking is a well-described risk factor for the development of AMD, with the likelihood of developing AMD increased by two to three times among smokers.<sup>5,6,11,12</sup> The amount and duration of smoking affects this increase; individuals with
@@ -165,7 +171,7 @@ h3 {
                         <br>
 
             <hr class="style18">
-            <h2><strong>Genetic Risk Factors</strong></h2>
+            <h1>Genetic Risk Factors</h1>
             <p>Below is a summary of several <em>selected</em> genetic variants which have been identified as influencing a person&#39;s risk for macular degeneration.</p>
         </div> <!-- col-->
         </div> <!-- ROW2-->

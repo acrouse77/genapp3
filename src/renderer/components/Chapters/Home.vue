@@ -53,7 +53,7 @@ hr.style18:before {
     overflow: hidden;
     text-overflow: ellipsis;
     content: "";
-    position: relative; top:-20px;
+    position: relative; top:0px;
     font-size: 20px;
     margin-left: 20px;
 }
@@ -71,21 +71,13 @@ hr.style18:before {
 
 <template>
 <div>
+    <b-jumbotron header="Disease focused chapters">
+        <h2><i>Select a chapter below for a detailed review of specific diseases and the impact of your genome's sequence.</i></h2>
+        
+    </b-jumbotron>
     <div class="row">
-    <b-jumbotron header="BootstrapVue" lead="Bootstrap 4 Components for Vue.js 2" >
-  <p>For more information visit website</p>
-  <b-btn variant="primary" href="#">Docs</b-btn>
-</b-jumbotron>
-
-    </div>
-    
-
-    <div class="row">
-    
         <div class=" container col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1">
-
             <!-- CHAPTER -->
-
             <!-- END CHAPTER -->
             <br>
             <hr class="style18top">

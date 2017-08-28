@@ -449,13 +449,12 @@ export default {
                             '</tr>' +
                             '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
                             '<td colspan="11">' +
-
                             '<div class="card">' +
                             '<div class="card-header rounded">' +
                             'Publication Information:' +
                             '</div>' +
                             '<div class="card-block">' +
-                            '<h1 class="card-title"><em>' + sortTableValue.studyName + '</em></h1>' +
+                            '<h2 class="card-title"> <em>' + sortTableValue.studyName + '</em></h2>' +
                             // "<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>" +
                             '</div>' +
 
@@ -463,19 +462,19 @@ export default {
                             '<h3>Study size and ancestry (when available) of studied population: </h3>' +
                             '<div class="row">' +
                             '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                            '<strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
-                            '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br />' +
+                            '<p><strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
+                            '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br /></p>' +
                             '</div>' +
                             '</div>' +
                             '</div>' +
                             '<div class="card-block">' +
-                            '<h3>Citation: </h3>' +
+                            '<p><h3>Citation: </h3>' +
                             '<div class="row">' +
                             '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
                             '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
                             '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
                             // '<strong>First Author: </strong>' + ' ' + sortTableValue.auth + '<br />' +
-                            '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br />' +
+                            '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
                             '</div>' +
                             '</div>' +
                             '</div>' +
@@ -483,7 +482,7 @@ export default {
                             // "<h2 class=\"card-subtitle mb-2 text-muted\">" + "h2 text" + "</h2>" +
                             // "<p class=\"card-text\">" + "With supporting text below as a natural lead-in to additional content." + "</p>" +
                             '<div class="card-footer">' +
-                            // '<a href="' + sortTableValue.pubLink + '">link to pubmed</a> ' + '<button v-on:click=" openurl("' + 'http://www.ncbi.nlm.nih.gov/pubmed/20385819' + '")">pubmed</button>' +
+                            // '<a href="' + sortTableValue.pubLink + '">link to pubmed</a> ' +
                             // "<small class=\"text-muted\"> Copy this link for reference to the article in pubmed: " + sortTableValue.pubLink + "</small>" +
                             '</div>' +
                             '</div>' +
@@ -519,19 +518,19 @@ export default {
                             '<h3>Study size and ancestry (when available) of studied population: </h3>' +
                             '<div class="row">' +
                             '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                            '<strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
-                            '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br />' +
+                            '<p><strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
+                            '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br /></p>' +
                             '</div>' +
                             '</div>' +
                             '</div>' +
                             '<div class="card-block">' +
-                            '<h3>Citation: </h3>' +
+                            '<p><h3>Citation: </h3>' +
                             '<div class="row">' +
                             '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
                             '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
                             '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
                             // '<strong>First Author: </strong>' + ' ' + sortTableValue.auth + '<br />' +
-                            '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br />' +
+                            '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
                             '</div>' +
                             '</div>' +
                             '</div>' +
@@ -583,7 +582,7 @@ export default {
           genoTableOne = genoTableOne.concat(
                             '<div class="card">' +
                             '<div class="card-block card-inverse " style="background-color: #FD901E;">' +
-                            '<h1 class="card-title">' + 'Risk Increasing Variants::</h1>' +
+                            '<h1 class="card-title">' + 'Risk Increasing Variants:</h1>' +
                             '<p class="card-text">' +
                             'Variants in this table are those in which your genotype includes one or more copies of the risk increasing allele. ' + '</p>' +
                             '</div>' +

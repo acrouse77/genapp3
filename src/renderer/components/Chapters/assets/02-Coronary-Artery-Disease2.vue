@@ -64,9 +64,11 @@ h3 {
 </style>
 
 <template>
-    <div class="row">
-      <div class="row">
+    <div>
+      <div class=" section">
+      <div class="container" style="margin-top:100px;">
         <h1><strong>Chapter: Coronary Artery Disease Disease</strong></h1><br />
+      </div>
       </div>
     <div class=" section">
         <div class="container">
@@ -162,7 +164,7 @@ h3 {
 
             <hr class="style18">
             <h2><strong>Genetic Risk Factors</strong></h2>
-            <p>Below is a summary of several <em>selected</em> genetic variants which have been identified as influencing a person&#39;s risk for macular degeneration.</p>
+            <p>Below is a summary of several <em>selected</em> genetic variants which have been identified as influencing a person&#39;s genetic risk.</p>
         </div> <!-- col-->
         </div> <!-- ROW2-->
         </div>

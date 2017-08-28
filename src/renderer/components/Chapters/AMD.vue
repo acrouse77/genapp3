@@ -7,11 +7,15 @@ img {
 
 </style>
 <template>
-<div class="col-lg-10 col-md-10 col-sm-10 offset-lg-2 offset-md-2 offset-sm-2">
-    <AMD class="col-lg-10 col-md-10 col-sm-10"></AMD>
-    <!-- <Key class="section"></Key> -->
-    <Geno></Geno>
-</div>
+  <div>
+    <AMD></AMD>
+    <div class="section">
+      <div class="container">
+
+        <Geno></Geno>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

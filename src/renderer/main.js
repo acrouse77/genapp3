@@ -4,9 +4,12 @@ import App from './App'
 import BootstrapVue from 'bootstrap-vue'
 import router from './router'
 import store from './store'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(BootstrapVue)
 // import 'font-awesome/4.3.0/css/font-awesome.min.css'
 // ADDED BY ANDY
 global.jQuery = require('jquery')

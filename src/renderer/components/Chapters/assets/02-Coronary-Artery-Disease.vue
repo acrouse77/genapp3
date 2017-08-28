@@ -18,7 +18,7 @@
 </style>
 <template>
 
-<div>
+<div style="margin:0 auto;">
 
     <h1 id="02-coronary-artery-disease"><strong>Chapter: Coronary Artery Disease</strong></h1>
     <br />
