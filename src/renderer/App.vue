@@ -10,11 +10,10 @@
       <a class="text-muted navbar-brand" href="#">
         <img src="static/img/mini-logo.png" style="margin-left: 20px" height="30" class="text-muted d-inline-block" alt=""> Insight Genome
       </a>
-  
-    <a href="/#/introduction" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></a>
-    <a href="/#/chapter" class="btn btn-outline-secondary btn-lg"><i class="fa fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></a>
-    <a href="/#/categories" class="btn btn-outline-secondary btn-lg"><i class="fa fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></a>
-    <a href="/#/traits" class="btn btn-outline-secondary btn-lg"><i class="fa fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></a>
+    <router-link :to="{name: 'introduction-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
+    <router-link :to="{name: 'chapter-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
+    <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
+    <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
 
 <h6 class="text-right"style="margin-right: 10px">Participant ID: {{participantId}}</h6>
 </ul>
@@ -43,10 +42,8 @@ import path from 'path'
 let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
 var participantData = JSON.parse(participantDataString)
 
-// import participantData from './static/participantdata/hj.json'
 const webview = document.querySelector('webview')
 const BrowserWindow = require('electron').BrowserWindow
-//  app/src/renderer/App.vue
 
 console.log('participantData App.vue')
 console.log(participantData)
