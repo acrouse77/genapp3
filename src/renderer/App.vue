@@ -19,7 +19,7 @@
 </ul>
 </div>
   </nav>
-  <div id="#app" >
+  <div>
     <router-view class="app"></router-view>
   </div>
   <footer class="footer">
@@ -93,7 +93,7 @@ export default {
   padding: 0;
 }
 .app{
-  margin-top:80px
+  margin-top:80px;
 }
 .navbar{
   background-color: #f7f7f7;

@@ -70,7 +70,7 @@ hr.style18:before {
 </style>
 
 <template>
-<div>
+<div >
     <b-jumbotron header="Disease focused chapters">
         <h2><i>Select a chapter below for a detailed review of specific diseases and the impact of your genome's sequence.</i></h2>
         

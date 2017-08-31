@@ -19,15 +19,16 @@
 
 
 <template>
-  <div class="container">
+
+  <div class="container" style="margin-top:100 auto;">
     <div class="card card-inverse card-primary text-center">
       <div class="card-block">
         <h1>Select from the systems below to compare your genome to 100's of research studies:</h1>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-10 offset-lg-1">
+    <!--<div class="row">-->
+    <!--  <div class="col-lg-10 offset-lg-1">-->
       <!--<div class="card-deck-wrapper ">-->
         <div class="card-deck" id="categories">
           <!-- CARD -->
@@ -43,8 +44,8 @@
            <!-- </div> end of col -->
         </div> <!-- end of card-deck -->
        <!-- </div>end of card-deck-wrapper -->
-    </div> <!-- end of column -->
-    </div> <!-- end of row -->
+    <!--</div>  end of column -->
+    <!--</div>  end of row -->
   </div> <!-- end of container -->
 </template>
 
