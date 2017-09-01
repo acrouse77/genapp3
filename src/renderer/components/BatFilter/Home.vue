@@ -51,50 +51,44 @@ hr.style18:before {
 </style>
 
 <template>
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12">
-    <div class="card card-inverse card-primary text-center ">
-      <div class="card-block">
-        <h1>Your genotype is matched to variants found in each study below:</h1>
-      </div>
+    <div class="section" style="margin-top:100 auto;">
+        <div class="container">
+                    <b-card bg-variant="dark" text-variant="white" style="margin:20px; margin-top:100px;">
+                        <p class="card-text">
+                            <h2>Your genotype is matched to variants found in each study below:</h2>
+                        </p>
+                        <b-list-group flush>
+                            <b-list-group-item class="norisk">Homozygous Lower - Both of your copies match the lower risk allele</b-list-group-item>
+                            <b-list-group-item class="heterozygous">Heterozygous - One of your copies match the lower risk allele</b-list-group-item>
+                            <b-list-group-item class="homozygous">Homozygous Higher - Both of your copies match the higher risk allele</b-list-group-item>
+                        </b-list-group>
+                    </b-card>
+        </div>
+        <!-- TABLE FOR EACH PUBLICATION -->
+        <div class="section" style="margin:20px; auto;">
+        <div class="container">
+            <p v-html="pubtable"></p>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1">
-
-    <div class="card card-inverse" style="background-color: #333; border-color: #333;">
-  <div class="card-block">
-    <h2 class="card-title"> Variants are color coded based on how your genome matched to the higher or lower risk variants for each study.</h2>
-
-  </div>
-</div>
-<div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2">
-<table class="table table-bordered ">
-            <thead>
-                <tr>
-                    <th class="norisk">Homozygous Lower - Both of your copies match the lower risk allele</th>
-                </tr>
-                <tr>
-                    <th class="heterozygous">Heterozygous - One of your copies match the lower risk allele</th>
-                </tr>
-                <tr>
-                    <th class="homozygous">Homozygous Higher - Both of your copies match the higher risk allele</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
-    </div>
-    </div>
-    <!-- TABLE FOR EACH PUBLICATION -->
-    <div class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1">
-      <p v-html="pubtable" ></p>
-    </div>
-</div>
-
 </template>
 
 <script>
-import bat from './assets/BAT.json'
-import genos from './assets/hj.json'
-import finreduced from './assets/final_reduced.json'
+import fs from 'fs'
+import path from 'path'
+
+let batread = fs.readFileSync(path.join(__static, '/referencedata/BAT.json'), 'utf8')
+var bat = JSON.parse(batread)
+
+let genosread = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+var genos = JSON.parse(genosread)
+
+let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/final_reduced.json'), 'utf8')
+var finreduced = JSON.parse(finreducedread)
+
+// import bat from './assets/BAT.json'
+// import genos from './assets/hj.json'
+// import finreduced from './assets/final_reduced.json'
 // import Vue from 'vue'
 var _ = require('underscore')
 // import genos from '/app/dist/data/SL159977_bear.json'
