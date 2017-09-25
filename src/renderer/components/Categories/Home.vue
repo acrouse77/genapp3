@@ -53,7 +53,7 @@
 export default {
   data () {
     return {
-      categories: [{ 'name': 'Cardiovascular' }, { 'name': 'Vitamins' }, { 'name': 'Pathogen response' }, { 'name': 'Blood' }, { 'name': 'Eye' }, { 'name': 'Muscle' }, { 'name': 'Brain' }, { 'name': 'Dental' }, { 'name': 'Drug Response' }, { 'name': 'Skeletal' }, { 'name': 'Metabolic' }, { 'name': 'Skin' }, { 'name': 'Reproductive' }, { 'name': 'Renal' }, { 'name': 'Pulmonary' }, { 'name': 'GI' }, { 'name': 'Ocular' }, { 'name': 'Liver' }, { 'name': 'Immune' }, { 'name': 'Endocrine' }, { 'name': 'Cancer' }, { 'name': 'Other' }, { 'name': 'Physical attributes' }]
+      categories: [{ 'name': 'Cardiovascular' }, { 'name': 'Blood' }, { 'name': 'Muscle' }, { 'name': 'Brain' }, { 'name': 'Dental' }, { 'name': 'Drug Response' }, { 'name': 'Skeletal' }, { 'name': 'Metabolic' }, { 'name': 'Skin' }, { 'name': 'Reproductive' }, { 'name': 'Renal' }, { 'name': 'Pulmonary' }, { 'name': 'GI' }, { 'name': 'Ocular' }, { 'name': 'Liver' }, { 'name': 'Immune' }, { 'name': 'Endocrine' }, { 'name': 'Cancer' }]
     }
   }
 }

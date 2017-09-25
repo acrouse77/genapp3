@@ -5,7 +5,9 @@
   }
 </style>
 <template>
+<div>
 <home></home>
+</div>
 </template>
 
 <script>

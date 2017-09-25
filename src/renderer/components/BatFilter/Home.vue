@@ -231,7 +231,7 @@ export default {
                         // ADD ROW FOR EACH VARIANT IN THE STUDY
           focustable = focustable.concat(
                             '<tr>' +
-                            '<th scope="row" align="center">' + val.repGene + '</th>' +
+                            '<th scope="row" align="center">' + val.mapGene + '</th>' +
                             '<td align="center">' + val.snpID + '</td>' +
                             '<td align="center">' + val.chr + '</td>' +
                             '<td align="center">' + val.chrPos + '</td>' +

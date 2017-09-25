@@ -11,9 +11,9 @@
         <img src="static/img/mini-logo.png" style="margin-left: 20px" height="30" class="text-muted d-inline-block" alt=""> Insight Genome
       </a>
     <router-link :to="{name: 'introduction-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
-    <router-link :to="{name: 'chapter-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
-    <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
-    <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+    <router-link :to="{name: 'chapter-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
+    <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
+    <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
 
 <h6 class="text-right"style="margin-right: 10px">Participant ID: {{participantId}}</h6>
 </ul>

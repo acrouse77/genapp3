@@ -13,6 +13,7 @@
 </style>
 
 <template>
+<div class="container" style="margin-top:100 auto;">
 <div class="row">
 
     <!-- COLUMNS FOR DISEASE AND MEDICAL TRAITS -->
@@ -23,9 +24,9 @@
                 <div class="card-deck">
                     <div class="col-6">
                         <div class="card">
-                            <div class="card-block card-inverse card-success">
-                                <h1 class="card-title">Diseases</h1>
-                                <p class="card-text">A disease is something one can be diagnosed with.</p>
+                            <div class="bg-primary text-white">
+                                <h1 class="card-title" style="margin-left:5px">Diseases</h1>
+                                <p style="margin-left:5px">A disease is something one can be diagnosed with.</p>
                             </div>
                             <ul class="list-unstyled">
                                 <li class="list-group-item" v-for="disease in diseases">
@@ -36,9 +37,9 @@
                     </div>
                     <div class="col-6">
                         <div class="card">
-                            <div class="card-block card-inverse card-primary">
-                                <h1 class="card-title">Medical traits</h1>
-                                <p class="card-text">Measured to help diagnose a disease.</p>
+                            <div class="bg-success text-white">
+                                <h1 class="card-title" style="margin-left:5px">Medical traits</h1>
+                                <p style="margin-left:5px">Measured to help diagnose a disease.</p>
                             </div>
                             <ul class="list-unstyled">
                               <li class="list-group-item" v-for="medtrait in medtraits">
@@ -53,7 +54,7 @@
     <!--</div>-->
 </div>
 <!-- TESTING  -->
-
+</div>
 <!-- v-cloak hides any un-compiled data bindings until the Vue instance is ready. -->
 
 

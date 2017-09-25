@@ -54,7 +54,7 @@ hr.style18:before {
 </style>
 
 <template>
-    <div class="row">
+    <div class="container" style="margin-top:100 auto;">
         <!-- TABLE FOR EACH PUBLICATION -->
         <div class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1">
 
@@ -82,7 +82,7 @@ hr.style18:before {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-success text-white">
+                            <tr v-bind:class="[true ? 'bg-success text-white': '']">
                                 <th scope="row" align="center">Your Genotype</th>
                                 <td align="center">A/A</td>
                                 <td align="center">Fast caffeine metabolizer</td>
@@ -92,7 +92,7 @@ hr.style18:before {
                                 <td align="center">A/C</td>
                                 <td align="center">Slow caffeine metabolizer</td>
                             </tr>
-                            <tr>
+                            <tr v-bind:class="[rs762551=== 'C/C'? 'bg-success text-white': '']">
                                 <th scope="row" align="center"></th>
                                 <td align="center">C/C</td>
                                 <td align="center">Slow caffeine metabolizer</td>
@@ -276,9 +276,6 @@ hr.style18:before {
                 </div>
                 <div class="card-block">
                     <h2>Genes: HERC2, KITLG and SLC24A4</h2>
-                    <h2><strong>You have 2 of 3 known indicators blond hair.  If you are of european decent then you are very likely to have blond.
-                    </strong></h2>
-
                     <br />
                     <table class="table table-bordered">
                         <thead>
@@ -332,12 +329,19 @@ hr.style18:before {
 </template>
 
 <script>
-// import bat from './assets/BAT.json';
-// import finreduced from './assets/final_reduced.json';
-// var _ = require("underscore");
-// import Vue from 'vue';
-// import genos from './assets/SL159977_bear.json'
+import fs from 'fs'
+import path from 'path'
 
+let AMDread = fs.readFileSync(path.join(__static, '/referencedata/AMD_ordered2.json'), 'utf8')
+var AMD = JSON.parse(AMDread)
+
+let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/AMD.json'), 'utf8')
+var finreduced = JSON.parse(finreducedread)
+
+let genosread = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+var genos = JSON.parse(genosread)
+
+var _ = require('underscore')
 // SHOWING THAT VARIABLE CAN BE SET TO VALUE AND USED IN JSON INPUT FOR where
 // var chr2 = 2;
 // var geno_test = _.where(finreduced, {chr: chr2, chrPos:234668570});
@@ -349,6 +353,7 @@ export default {
   },
   data () {
     return {
+      rs762551: 'A/C'
             // msg: 'Hello from vue-loader!',
             // msg1: '<h1>Hello from vue-loader!</h1>',
             // pubtable: "",
@@ -363,54 +368,18 @@ export default {
             // selectCat: "Not Cancer",
     }
   },
-    // created: function() {
-    //     console.log('created ran')
-    //     //GET PARAMS
-    //     var urlarray = window.location.hash.split("/")
-    //     var n = urlarray.length - 1
-    //     var getparam = decodeURI(urlarray[n])
-    //
-    //     //console.log("before genotypes")
-    //     var genotypes = genos.Participants.Genotypes
-    //     // var geno_test = _.where(genotypes, {Chr: "13" });
-    //     // console.log("geno_test")
-    //     // console.log(geno_test)
-    //     //console.log("window.location")
-    //     //console.log(catparam)
-    //     //console.log(window.location)
-    //
-    //     //VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE
-    //     var focustable = ""
-    //
-    //     //EXAMPLE DATA FROM final_reduced data
-    //     //{"cat":"Blood","type":"Symptom","focus":"Cholelithiasis-related traits in sickle cell anemia","date":"6/22/12","sizeInitRep":905,"ethRep":"African American/Afro-Caribbean","pmID":22558097,"auth":"Milton JN","pubDate":"4/27/12","journ":"PLoS One","pubLink":"http://www.ncbi.nlm.nih.gov/pubmed/22558097","studyName":"A genome-wide association study of total bilirubin and cholelithiasis risk in sickle cell anemia.","studySize":"905 African American cases","repSize":"2,152 African American cases","include":"EX","snpIndex":7626,"chr":2,"chrPos":234668570,"repGene":"UGT1A1, UGT1A10","mapGene":"UGT1A10;UGT1A8;UGT1A7;UGT1A6;UGT1A5;UGT1A9;UGT1A4;UGT1A1;UGT1A3","snpID":"rs887829-A","riskAllele":"A","riskAlleleFreq":0.45,"pVal":5e-25,"mlog":24.30103,"pValText":"","OR":0.19,"ConfIntText":"[NR] unit increase","Plat":"Illumina [569,615]","FilterStatus":"Filter 5: RAs on quantitative traits","in LD block (trait)":""}
-    //
-    //
-    //     //GROUPING BY FOCUS - Hematocrit
-    //     var groupedData = _.groupBy(finreduced, function(d) {
-    //         return d.focus
-    //     });
-    //
-    //     var focuscat = _.groupBy(groupedData[getparam], function(d) {
-    //         return d.pmID
-    //     });
-    //     //console.log(focuscat)
-    //
-    //
-    //
-    //     $.each(focuscat, function(index, value) {
-    //
-    //         //ADD THE HEADER OF EACH STUDY
-    //         focustable = focustable.concat(
-    //
-    //
-    //         )
-    //
-    //     }) //END OF EXCH(FOCUSCAT...
-    //
-    //     //SET DATA pubtable TO FOCUSTABLE value
-    //     this.pubtable = focustable
-    // },
+  created: function () {
+        // console.log('created ran')
+        // GET PARAMS
+    // var urlarray = window.location.hash.split('/')
+    // var n = urlarray.length - 1
+    // var getparam = decodeURI(urlarray[n])
+
+    // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
+    var genotypes = genos.Participants.Genotypes
+    console.log('genotypes')
+    console.log(genotypes)
+  },
   computed: {
 
   }

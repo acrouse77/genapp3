@@ -6,7 +6,9 @@
 </style>
 
 <template>
-  <home selectCat="Cancer"></home>
+  <div>
+<home></home>
+</div>
 </template>
 
 <script>

@@ -1,12 +1,4 @@
 [{
-        "name": "Alzheimer's disease",
-        "type": "Disease",
-        "category": "Brain"
-    }, {
-        "name": "Alzheimer's disease (late onset)",
-        "type": "Disease",
-        "category": "Brain"
-    }, {
         "name": "Amyotrophic lateral sclerosis",
         "type": "Disease",
         "category": "Brain"

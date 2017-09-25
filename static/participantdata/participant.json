@@ -6,10 +6,14 @@
       "Chr_pos": 1005806,
       "Geno": "G:G"
     }, {
+      "Chr_id": 15,
+      "Chr_pos": 75041917,
+      "Geno": "A:A"
+    }, {
       "Chr_id": 1,
       "Chr_pos": 2069172,
       "Geno": "G:T"
-    }, {
+    },{
       "Chr_id": 1,
       "Chr_pos": 2069681,
       "Geno": "G:G"

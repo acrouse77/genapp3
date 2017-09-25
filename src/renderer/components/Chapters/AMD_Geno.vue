@@ -125,7 +125,7 @@ export default {
     // var n = urlarray.length - 1
     // var getparam = decodeURI(urlarray[n])
 
-        // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
+    // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
     var genotypes = genos.Participants.Genotypes
     console.log('genotypes')
     console.log(genotypes)
