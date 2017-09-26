@@ -1,24 +1,23 @@
 <script>
-import chapterSnps from './assets/data/CAD_ordered0.json'
-import genos from './assets/data/hj.json'
-import finreduced from './assets/data/CAD.json'
+import fs from 'fs'
+import path from 'path'
+
+let chapread = fs.readFileSync(path.join(__static, '/referencedata/CAD_ordered.json'), 'utf8')
+var chapterSnps = JSON.parse(chapread)
+
+let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/CAD.json'), 'utf8')
+var finreduced = JSON.parse(finreducedread)
+
+let genosread = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+var genos = JSON.parse(genosread)
 var _ = require('underscore')
 // import genos from './assets/data/SL159977_bear.json'
 
 console.log('chapterSnps CAD')
 console.log(chapterSnps)
 
-console.log('finreduced')
+console.log('finreduced CAD')
 console.log(finreduced)
-
-// MAKE POPOVER WORK
-// $(function () {
-//   $('[data-toggle="popover"]').popover()
-// })
-
-// SHOWING THAT VARIABLE CAN BE SET TO VALUE AND USED IN JSON INPUT FOR where
-// var chr2 = 2;
-// var geno_test = _.where(finreduced, {chr: chr2, chrPos:234668570});
 
 export default {
   props: ['selectCat'],
@@ -546,14 +545,11 @@ export default {
     var groupedData = _.groupBy(finreduced, function (d) {
       return d.focus
     })
-
+    console.log('CAD groupedData')
+    console.log(groupedData)
     $.each(groupedData, function (index, value) {
-            // if (error) {
-            //     // handle error
-            //     console.log("broke just after starting html function")
-            // }
-            // console.log("started html function")
-            // ADD THE HEADER OF EACH STUDY
+      console.log('CAD geno groupData value[0]')
+      console.log(value)
       focustable = focustable.concat(
 
                 '<div class="card">' +

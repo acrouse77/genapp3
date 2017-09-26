@@ -202,11 +202,7 @@
         "name": "Chronic obstructive pulmonary disease",
         "type": "Disease",
         "category": "Cardiovascular"
-    }, {
-        "name": "Coronary heart disease",
-        "type": "Disease",
-        "category": "Cardiovascular"
-    }, {
+    },  {
         "name": "Hypertension",
         "type": "Disease",
         "category": "Cardiovascular"
@@ -220,14 +216,6 @@
         "category": "Cardiovascular"
     }, {
         "name": "Kawasaki disease",
-        "type": "Disease",
-        "category": "Cardiovascular"
-    }, {
-        "name": "Myocardial infarction",
-        "type": "Disease",
-        "category": "Cardiovascular"
-    }, {
-        "name": "Myocardial infarction (early onset)",
         "type": "Disease",
         "category": "Cardiovascular"
     }, {
@@ -386,23 +374,7 @@
         "name": "Thyrotoxic hypokalemic periodic paralysis",
         "type": "Disease",
         "category": "Muscle"
-    }, {
-        "name": "Age-related macular degeneration",
-        "type": "Disease",
-        "category": "Ocular"
-    }, {
-        "name": "Age-related macular degeneration (CNV vs. GA)",
-        "type": "Disease",
-        "category": "Ocular"
-    }, {
-        "name": "Age-related macular degeneration (CNV)",
-        "type": "Disease",
-        "category": "Ocular"
-    }, {
-        "name": "Age-related macular degeneration (GA)",
-        "type": "Disease",
-        "category": "Ocular"
-    }, {
+    },  {
         "name": "Corneal astigmatism",
         "type": "Disease",
         "category": "Ocular"
@@ -510,11 +482,7 @@
         "name": "Paget's disease",
         "type": "Disease",
         "category": "Skeletal"
-    }, {
-        "name": "Rheumatoid arthritis",
-        "type": "Disease",
-        "category": "Skeletal"
-    }, {
+    },  {
         "name": "Periodontitis",
         "type": "Disease",
         "category": "Dental"

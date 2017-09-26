@@ -1,7 +1,4 @@
 <style scoped>
-  img {
-
-  }
 </style>
 <template>
 <div>
@@ -17,7 +14,7 @@
 </template>
 
 <script>
-  import Geno3 from './CAD_Geno3.vue'
+  import Geno3 from './CAD_Geno.vue'
   import CAD from './assets/02-Coronary-Artery-Disease2.vue'
   import Key from './Key.vue'
 

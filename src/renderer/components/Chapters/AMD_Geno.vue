@@ -20,80 +20,9 @@ console.log('AMD')
 console.log(AMD)
 console.log('finreduced')
 console.log(finreduced)
-// MAKE POPOVER WORK
-// $(function () {
-//   $('[data-toggle="popover"]').popover()
-// })
-
-// SHOWING THAT VARIABLE CAN BE SET TO VALUE AND USED IN JSON INPUT FOR where
-// var chr2 = 2;
-// var geno_test = _.where(finreduced, {chr: chr2, chrPos:234668570});
 
 export default {
   props: ['selectCat'],
-  methods: {
-    printPDF () {
-            // console.log("require electron")
-            // const BrowserWindow = require('electron')
-            // console.log("new browserwindow")
-            // let win = new BrowserWindow({width: 800, height: 1500})
-            // console.log("loadurl")
-            // win.loadURL('http://github.com')
-            // console.log("contents")
-
-            // let contents = win.webContents
-            // console.log("contents")
-            // console.log(contents)
-
-            // printpdf stuff follows
-    //   console.log('printPDF')
-    //   console.log('document')
-    //   console.log(document)
-
-      var fs = require('fs')
-            // var pdf = require('html-pdf');
-      var htmldoc = document.documentElement.outerHTML
-      fs.writeFile('test1.html', htmldoc, 'utf8')
-
-    //   console.log('htmldoc')
-    //   console.log(typeof (htmldoc))
-    //   console.log(htmldoc)
-
-            // var fs = require('fs');
-            // var pdf = require('html-pdf');
-            // var html = fs.readFileSync('test1.html', 'utf8');
-            // var options = {
-            //   format: 'Letter',
-            //   "base": "/img/"
-            //   };
-
-            // pdf.create(htmldoc, options).toFile('./businesscard.pdf', function(err, res) {
-            //   if (err) return console.log(err);
-            //   console.log(res); // { filename: '/app/businesscard.pdf' }
-            // });
-    },
-    testHTMLtoPDF () {
-            // var fs = require('fs'),
-            //     convertFactory = require('electron-html-to');
-            //
-            // var conversion = convertFactory({
-            //     converterPath: convertFactory.converters.PDF
-            // });
-            //
-            // conversion({
-            //     html: '<h1>Hello World</h1>'
-            // }, function(err, result) {
-            //     if (err) {
-            //         return console.error(err);
-            //     }
-            //
-            //     console.log(result.numberOfPages);
-            //     result.stream.pipe(fs.createWriteStream('/path/to/anywhere.pdf'));
-            //     conversion.kill(); // necessary if you use the electron-server strategy, see bellow for details
-            // });
-    }
-
-  },
   data () {
     return {
       msg: 'Hello from vue-loader!',
@@ -119,12 +48,6 @@ export default {
     }
   },
   created: function () {
-        // console.log('created ran')
-        // GET PARAMS
-    // var urlarray = window.location.hash.split('/')
-    // var n = urlarray.length - 1
-    // var getparam = decodeURI(urlarray[n])
-
     // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
     var genotypes = genos.Participants.Genotypes
     console.log('genotypes')
@@ -132,6 +55,12 @@ export default {
         // VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE
     var focustable = ''
     var studyGeno = []
+    var partGenotest = _.where(genotypes, {
+      Chr: '6',
+      Pos: '31903804'
+    })
+    console.log('partGenotest')
+    console.log(partGenotest)
 
         // EXAMPLE DATA FROM final_reduced data
         // {"cat":"Blood","type":"Symptom","focus":"Cholelithiasis-related traits in sickle cell anemia","date":"6/22/12","sizeInitRep":905,"ethRep":"African American/Afro-Caribbean","pmID":22558097,"auth":"Milton JN","pubDate":"4/27/12","journ":"PLoS One","pubLink":"http://www.ncbi.nlm.nih.gov/pubmed/22558097","studyName":"A genome-wide association study of total bilirubin and cholelithiasis risk in sickle cell anemia.","studySize":"905 African American cases","repSize":"2,152 African American cases","include":"EX","snpIndex":7626,"chr":2,"chrPos":234668570,"repGene":"UGT1A1, UGT1A10","mapGene":"UGT1A10;UGT1A8;UGT1A7;UGT1A6;UGT1A5;UGT1A9;UGT1A4;UGT1A1;UGT1A3","snpID":"rs887829-A","riskAllele":"A","riskAlleleFreq":0.45,"pVal":5e-25,"mlog":24.30103,"pValText":"","OR":0.19,"ConfIntText":"[NR] unit increase","Plat":"Illumina [569,615]","FilterStatus":"Filter 5: RAs on quantitative traits","in LD block (trait)":""}
@@ -141,27 +70,44 @@ export default {
             // console.log("value");
             // console.log(value);
       // var open = require('open')
-      var loc = value.chrPos
-      var ch = value.chr
+    //   var loc = parseInt(value.chrPos, 10)
+    //   var ch = parseInt(value.chr, 10)
+      var loc = value.chrPos.toString()
+      var ch = value.chr.toString()
+    //   var loc = value.chrPos
+    //   var ch = value.chr
+    //   var partValue = ''
+    //   console.log('value.chr.toString()')
+    //   console.log(value.chr.toString())
+    //   console.log('value.chrPos.toString()')
+    //   console.log(value.chrPos.toString())
+    //   console.log(loc)
+    //   console.log('loc')
       // ********** lint said this was wrong here - var partValue = ''
       var count = 9999
       var format
       format = ''
-      var partGeno = _.where(genotypes, {
-        Chr_id: ch,
-        Chr_pos: loc
-      })
+    //   console.log('genotypes[index].Chr')
+    //   console.log(genotypes[index].Chr)
+    //   console.log('genotypes[index].Pos')
+    //   console.log(genotypes[index].Pos)
+    //   console.log('value.chrPos')
+    //   console.log(typeof value.chrPos)
+    //   console.log('typeof value.chr')
+    //   console.log(typeof value.chr)
+    //   console.log('typeof ch')
+    //   console.log(typeof ch)
+    //   console.log('typeof loc')
+    //   console.log(typeof loc)
 
+      var partGeno = _.where(genotypes, {
+        Chr: ch,
+        Pos: loc
+      })
+      console.log('partGeno')
+      console.log(partGeno)
       var partGenoObj = value
       if (partGeno.length === 0) {
-                // if (typeof.partGeno === undefined) {
-        // var partGenoObj = value
-                // console.log("partGeno")
-                // console.log(partGeno)
-                // console.log("typeof.partGeno")
-                // console.log(typeof partGeno)
-
-                // console.log("1 partGeno is undefined");
         partGenoObj.Geno = '-:-'
                 // console.log("2 partGenoObj")
                 // console.log(partGenoObj)
@@ -183,16 +129,21 @@ export default {
         this.show_genoTableFour = true
       } else {
         // var partGenoObj = value
+        console.log('check for risk variant')
+        console.log('value')
+        console.log(value)
         var risk = new RegExp(value.riskAllele, 'g')
-        var gen = partGeno[0].Geno
+        console.log('risk')
+        console.log(risk)
+        console.log('typeof risk')
+        console.log(typeof risk)
+        console.log('partGeno[0]')
+        console.log(partGeno[0])
+        var gen = partGeno[0].Gen
+        console.log('gen')
+        console.log(gen)
         count = (gen.match(risk) || []).length
         format = ''
-
-                // console.log("1 partGeno is defined");
-                // console.log("2 partGeno[0].Geno");
-                // console.log(partGeno[0].Geno);
-
-                // ADD PART GENO TO CHAPTER DATA
         partGenoObj.Geno = partGeno[0].Geno
                 // console.log("3 partGenoObj")
                 // console.log(partGenoObj)

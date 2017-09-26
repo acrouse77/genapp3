@@ -159,14 +159,14 @@ var _ = require('underscore')
 // import Vue from 'vue'
 // import genos from './assets/data/SL159977_bear.json'
 
-console.log('chapterSnps CAD')
-console.log(chapterSnps)
+// console.log('chapterSnps CAD')
+// console.log(chapterSnps)
 
-console.log('finreduced')
-console.log(finreduced)
+// console.log('finreduced')
+// console.log(finreduced)
 
-console.log('genos')
-console.log(genos)
+// console.log('genos')
+// console.log(genos)
 // MAKE POPOVER WORK
 // $(function () {
 //   $('[data-toggle="popover"]').popover()
@@ -703,8 +703,13 @@ export default {
     var groupedData = _.groupBy(finreduced, function (d) {
       return d.focus
     })
-
+    console.log('RA groupedData')
+    console.log(groupedData)
     $.each(groupedData, function (index, value) {
+      console.log('RA geno groupData value[0]')
+      console.log(value[0])
+      console.log('RA value[0].studyName')
+      console.log(value[0].studyName)
             // if (error) {
             //     // handle error
             //     console.log("broke just after starting html function")
