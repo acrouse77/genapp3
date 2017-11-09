@@ -741,7 +741,6 @@ hr.style18:before {
 </style>
 
 <template>
-
 <div class="row">
 <div class="section">
     <div class="container">

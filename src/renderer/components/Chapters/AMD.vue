@@ -11,8 +11,8 @@ img {
     <AMD></AMD>
     <div class="section">
       <div class="container">
-
-        <Geno></Geno>
+        <Geno1></Geno1>
+        
       </div>
     </div>
   </div>
@@ -20,11 +20,13 @@ img {
 
 <script>
 import Geno from './AMD_Geno.vue'
+import Geno1 from './AMD_Geno.1.vue'
 import AMD from './assets/01-age-related-macular-degeneration.vue'
 import Key from './Key.vue'
 
 export default {
   components: {
+    Geno1,
     Geno,
     AMD,
     Key
