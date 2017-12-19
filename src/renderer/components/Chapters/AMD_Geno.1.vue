@@ -239,6 +239,8 @@ export default {
     var genoTableTwo = ''
     var genoTableThree = ''
     var genoTableFour = ''
+    console.log('genoTableOne')
+    console.log(genoTableOne)
 
     // console.log('tableGroupedData')
     // console.log(tableGroupedData)
@@ -428,6 +430,7 @@ export default {
                 // console.log(genoTable);
       switch (genTableID) {
         case 1:
+          console.log('case 1')
                         // ADD THE HEADER OF EACH STUDY
           genoTableOne = genoTableOne.concat(
                             '<div class="card">' +
@@ -447,6 +450,7 @@ export default {
                         // console.log(genoTable);
           break
         case 2:
+          console.log('case 2')
                         // ADD THE HEADER OF EACH STUDY
           genoTableTwo = genoTableTwo.concat(
                             '<div class="card">' +
@@ -463,6 +467,7 @@ export default {
                         // console.log("genoTableTwo");
           break
         case 3:
+          console.log('case 3')
                         // ADD THE HEADER OF EACH STUDY
           genoTableThree = genoTableThree.concat(
                             '<div class="card">' +
@@ -481,6 +486,7 @@ export default {
                         // console.log("genoTableThree");
           break
         case 4:
+          console.log('case 4')
                         // ADD THE HEADER OF EACH STUDY
           genoTableFour = genoTableFour.concat(
                             '<div class="card">' +
@@ -509,7 +515,8 @@ export default {
     this.genoTableTwo = genoTableTwo
     this.genoTableThree = genoTableThree
     this.genoTableFour = genoTableFour
-
+    console.log('genoTableOne')
+    console.log(genoTableOne)
         // AND MAKE THEM VISIBLE
     if (genoTableOne.length !== 0) {
       this.show_genoTableOne = true

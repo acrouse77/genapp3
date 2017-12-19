@@ -64,15 +64,18 @@ hr.style18:before {
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Caffeine Metabolism</h1>
                         <div class="float-right col-4">
-                        <img src="static/img/coffee_trait.jpg" class="img-fluid text-center img-thumbnail">
+                        <b-btn v-b-toggle.collapse2 class="m-1"><img src="static/img/coffee_trait.jpg" class="img-fluid text-center img-thumbnail"></b-btn>
                         </div>
+                    
+                </div>
+                
+                <div class="card-block">
+                <b-collapse id="collapse2">
                     <p class="card-text">Some individuals find that they need to consume more coffee in the morning that their friends or family in order to feel a stimulating effect. Variation in the CYP1A2 gene may influence whether someone is fast or slow caffeine metabolizer,
                         which in turn affects whether that individual receives the same effect from a particular amount of caffeine as others. In general, individuals who are slower metabolizers of caffeine experience a larger effect from the same amount
                         of caffeine as a fast metabolizer.
                     </p>
-                </div>
-                <div class="card-block">
-                    <h2>Gene: CYP1A2 Variant: rs762551</h2>
+                    <p><h5>Gene: CYP1A2 Variant: rs762551</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -99,11 +102,61 @@ hr.style18:before {
                             </tr>
                         </tbody>
                     </table>
-                    <P>
+                    <p>
                         Variation at this location in the CYP1A2 gene has been associated with the speed of caffeine metabolism in humans. The CYP1A2 gene encodes a member of a family of proteins that are responsible for metabolism of nutrients and medications . Individuals
-                        who have the letter “C” at this location in one or both of of their copies of this genetic region are more likely to slow caffeine metabolizers while an individual who has the letter “A” at this location in both of their copies
+                        who have the letter “C” at this location in one or both of their copies of this genetic region are more likely to slow caffeine metabolizers while an individual who has the letter “A” at this location in both of their copies
                         of this gene is more likely to be a fast caffeine metabolizer [PMID 18759349].
-                    </P>
+                    </p>
+                    </b-collapse>
+                </div>
+                
+            </div>
+        </div>
+       <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
+            <div class="card">
+                <div class="card-block card-inverse card-primary">
+                    <h1 class="card-title">Caffeine Metabolism</h1>
+                        <div class="float-right col-4">
+                        <img src="static/img/coffee_trait.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
+                    <p class="card-text">Some individuals find that they need to consume more coffee in the morning that their friends or family in order to feel a stimulating effect. Variation in the CYP1A2 gene may influence whether someone is fast or slow caffeine metabolizer,
+                        which in turn affects whether that individual receives the same effect from a particular amount of caffeine as others. In general, individuals who are slower metabolizers of caffeine experience a larger effect from the same amount
+                        of caffeine as a fast metabolizer.
+                    </p>
+                </div>
+                <div class="card-block">
+                    <p><h5>Gene: CYP1A2 Variant: rs762551</h5></p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Genotype</th>
+                                <th>Impact on Trait</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-bind:class="[true ? 'bg-success text-white': '']">
+                                <th scope="row" align="center">Your Genotype</th>
+                                <td align="center">A/A</td>
+                                <td align="center">Fast caffeine metabolizer</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" align="center"></th>
+                                <td align="center">A/C</td>
+                                <td align="center">Slow caffeine metabolizer</td>
+                            </tr>
+                            <tr v-bind:class="[rs762551=== 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center"></th>
+                                <td align="center">C/C</td>
+                                <td align="center">Slow caffeine metabolizer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Variation at this location in the CYP1A2 gene has been associated with the speed of caffeine metabolism in humans. The CYP1A2 gene encodes a member of a family of proteins that are responsible for metabolism of nutrients and medications . Individuals
+                        who have the letter “C” at this location in one or both of their copies of this genetic region are more likely to slow caffeine metabolizers while an individual who has the letter “A” at this location in both of their copies
+                        of this gene is more likely to be a fast caffeine metabolizer [PMID 18759349].
+                    </p>
                 </div>
             </div>
         </div>
@@ -114,16 +167,21 @@ hr.style18:before {
             <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
             <div class="card">
                 <div class="card-block card-inverse card-primary">
-                    <h1 class="card-title">Ear Wax Type</h1>
+                    <h1 class="card-title">Stink-Free Armpits and Ear Wax Type</h1>
+                        <div class="float-right col-4">
+                        <img src="static/img/armpit.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
                     <p class="card-text"></p>
-                    <p class="card-text">Earwax is ubiquitous to everyone but you may not know that it comes two types - wet and dry. Wet earwax is the most common form in most populations (except East Asian) and can be described as yellow to brown colored and sticky. The
+                    <p class="card-text">2% of people of european decent, many east asians and almost all Koreans are the lucky few who do not have to wear deoderant.  A variant in the ABCC11 gene prevents their armpits from producing an offensive odor.  This variant is thought 
+                    to affect apocrine sweat glands by reducing secretion of odorous molecules and its precursors.  This make using deoderant unneccesary for the select lucky few.  
+                    </p>
+                    <p>This variant also affects earwax consistancy.  Earwax is ubiquitous to everyone but you may not know that it comes two types - wet and dry. Wet earwax is the most common form in most populations (except East Asian) and can be described as yellow to brown colored and sticky. The
                         less common dry earwax is often described as grey in color and as the name suggests, is dry and flakey. Earwax type is determined by variation in a single gene, ABCC11. No matter which type of earwax you have, it serves an important
                         job in your body keeping your ear canals clean.
-
                     </p>
                 </div>
                 <div class="card-block">
-                    <h2>Gene: ABCC11 Variant: rs17822931</h2>
+                    <p><h5>Gene: ABCC11 Variant: rs17822931</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -150,10 +208,10 @@ hr.style18:before {
                             </tr>
                         </tbody>
                     </table>
-                    <P>
-                        Variation at this location within the ABCC11 gene has been shown to solely determine earwax type in humans. Wet earwax is the dominant version of this single-gene trait. Individuals who have the letter “C” at this location in one or both of their copies
+                    <p>
+                        Variation at this location within the  gene has been shown to solely determine earwax type in humans. Wet earwax is the dominant version of this single-gene trait. Individuals who have the letter “C” at this location in one or both of their copies
                         ABCC11 will have wet earwax while individuals who have two “T”s will have dry [PMID 16444273].
-                    </P>
+                    </p>
                 </div>
             </div>
             </div>
@@ -172,7 +230,7 @@ hr.style18:before {
                     </p>
                 </div>
                 <div class="card-block">
-                    <h2>Gene: ALDH2 Variant: rs671</h2>
+                    <p><h5>Gene: ALDH2 Variant: rs671</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -199,28 +257,27 @@ hr.style18:before {
                             </tr>
                         </tbody>
                     </table>
-                    <P>
-                        Variation at this location in the ALDH2 gene has been associated with likelihood of the alcohol flush reaction in humans. Individuals who have the letter “A” at this location in one or both of of their copies of this genetic region have an increased likelihood
-                        of flushing [PMID 10441588]. </P>
+                    <p>
+                        Variation at this location in the ALDH2 gene has been associated with likelihood of the alcohol flush reaction in humans. Individuals who have the letter “A” at this location in one or both of their copies of this genetic region have an increased likelihood
+                        of flushing [PMID 10441588]. </p>
                 </div>
             </div>
             </div>
             <br>
 
+            
             <!-- <hr class="style18"> -->
-            <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
             <!-- START TRAIT -->
+            <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
             <div class="card">
                 <div class="card-block card-inverse card-primary">
-                    <h1 class="card-title">Asparagus Anosmia</h1>
+                    <h1 class="card-title">Norovirus Susceptibility and Resistance</h1>
                     <p class="card-text"></p>
-                    <p class="card-text">Some individuals are able to detect a striking odor in their urine after consuming asparagus while others lack this olfactory ability. A person who is unable to detect this chemical are said to have “anosmia” which means “inability
-                        to smell.” When asparagus is ingested, enzymes in the body break down its chemicals including methanethiol, which is thought to be the culprit for the characteristic asparagus urine odor. People with asparagus anosmia still produce
-                        the acid and odor; but variation in their olfactory (smell) receptors make them unable to detect the odor.
+                    <p class="card-text">Norovirus is a highly contagious cause of gastroenteritis. Common on cruise ships and in other close quarters, norovirus can cause symptoms such as nausea, vomiting, and diarrhea, leading in some cases to serious dehydration. Although most people are susceptible to experiencing symptoms following a norovirus infection, some individuals with particular variation in the FUT2 gene are actually resistant to norovirus and may not exhibit symptoms after exposure to the virus.
                     </p>
                 </div>
                 <div class="card-block">
-                    <h2>Gene: Near OR2M7 Variant: rs4481887</h2>
+                    <p><h5>Gene: FUT2 Variant: rs601338</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -230,98 +287,264 @@ hr.style18:before {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row" align="center"></th>
-                                <td align="center">G/G</td>
-                                <td align="center">Typical odds of smelling asparagus</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
-                                <td align="center">G/A</td>
-                                <td align="center">Increased odds of smelling asparagus</td>
-                            </tr>
                             <tr class="bg-success text-white">
                                 <th scope="row" align="center">Your Genotype</th>
+                                <td align="center">G/G</td>
+                                <td align="center">Susceptible</td>
+                            </tr>
+                            <tr >
+                                <th scope="row" align="center"></th>
+                                <td align="center">G/A</td>
+                                <td align="center">Susceptible</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" align="center"></th>
                                 <td align="center">A/A</td>
-                                <td align="center">Increased odds of smelling asparagus</td>
+                                <td align="center">Resistant</td>
                             </tr>
                         </tbody>
                     </table>
                     <p>
-                        Variation at this location near the OR2M7 gene has been associated with asparagus anosmia in humans. Individuals who have the letter “A” at this location in one or both of of their copies of this genetic region have an increased likelihood of smelling
-                        asparagus in urine [PMID 20585627].
-                    </p>
+                        Variation at this location in the FUT2 gene has been associated with differing susceptibility/resistance to norovirus infection. Individuals who have the letter “A” at this location in both of their copies of this gene are resistant to norovirus infection [PMID 16306606]. 
+                        </p>
+                </div>
                 </div>
             </div>
-            </div>
+            
             <br>
-            <hr class="style18">
 
+            <!-- <hr class="style18"> -->
             <!-- START TRAIT -->
             <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
             <div class="card">
                 <div class="card-block card-inverse card-primary">
-                    <h1 class="card-title">Blond Hair and Your Genes</h1>
-<!-- <span class="pull-right"> -->
-                    <!-- <div class="text-right-right col-md-3 col-lg-3 col-sm-3">
-                      <img src="static/img/eye_trait.png" style="max-height: 100px;"class="rounded  img-thumbnail">
-                    </div> -->
-                  <!-- </span> -->
-                    <p class="card-text">Blond hair color is determined by a pigment called melanin. People with higher levels of the brown-black form of melanin have darker hair and those with lower levels have lighter hair that may be considered blond. Roughly 20 percent of 23andMe customers report having either light blond or dark blond hair. Several genetic variants have been found to influence whether or not someone has blond hair. This report provides results for three variants that are known to play a very strong role in determining blond hair color.</p>
-                    <p class="card-text">There are two types of melanin: a brown-black form known as eumelanin and a yellow-red form known as pheomelanin. The amount of eumelanin and pheomelanin you produce has important consequences on the way you look. In most people, eumelanin levels dominate, leading to variation in brown-black pigmentation. People with higher levels of eumelanin have darker hair and those with lower levels of eumelanin have lighter hair that may be considered blond. A small subset of the world's population has high levels of pheomelanin, leading to red hair and light skin color.
+                    <h1 class="card-title">Photic Sneeze Reflex</h1>
+                    <p class="card-text"></p>
+                    <p class="card-text">For some individuals, walking outside on a bright sunny day can cause an involuntary sneeze or series of sneezes in response to the sudden light. Variation in a particular area of chromosome 2, between the genes ZEB2 and PABPCP2, has been shown to influence a person’s likelihood to reflexively sneeze in response to sunlight or other forms of sudden bright light. 
                     </p>
-                    <p class="card-text">One marker (rs12821256) that affects pigmentation is near a gene called KITLG. The KITLG gene is believed to affect pigmentation by controlling the movement, survival, and growth of melanin-producing cells called melanocytes. A second marker (rs1667394) we report on is located near the OCA2 gene, which codes for a protein located in melanocytes.                    </p>
-                    <p class="card-text">About twenty percent of 23andMe customers report having blond hair, though this number varies greatly based on ethnic background. Blond hair is most common in Northern European populations, with hair color going from light to dark as you move from Northern to Southern Europe. Blond hair is also occasionally found in non-European populations, but the genetics underlying blond hair in such groups is unique. For instance, roughly five to ten percent of Solomon Islanders have blond hair that is caused by a single genetic variant in a gene called TYRP1.</p>
-                    <p class="card-text">rs12913832 is a SNP near the OCA2 gene that may be functionally linked to blue or brown eye color, due to a lowering of promoter activity of the OCA2 gene. Blue eye color is associated with the rs12913832(G;G) genotype.[PMID 18172690, PMID 18252222]rs12913832-T (brown eye) homozygotes compared to rs12913832-C (blue eye). correlations with skin, eye, and hair color variation.</p>
                 </div>
                 <div class="card-block">
-                    <h2>Genes: HERC2, KITLG and SLC24A4</h2>
-                    <br />
+                    <p><h5>On chromosome 2 between the genes ZEB2 and PABPCP2 Variant: rs10427255</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>SNP ID</th>
-                                <th>Your Genotype</th>
+                                <th></th>
+                                <th>Genotype</th>
                                 <th>Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr >
-                                <th scope="row" align="center">rs1667394</th>
-                                <td align="center">A/A</td>
-                                <td align="center">less likely to have blond hair and blue eyes</td>
-                            </tr>
-                            <tr >
-                                <th scope="row" align="center">rs12821256</th>
-                                <td align="center">C/T</td>
-                                <td align="center">less likely to have blond hair and blue eyes</td>
-                            </tr>
                             <tr class="bg-success text-white">
-                                <th scope="row" align="center">rs12913832</th>
+                                <th scope="row" align="center">Your Genotype</th>
+                                <td align="center">C/C</td>
+                                <td align="center">Increased odds of photic sneeze reflex</td>
+                            </tr>
+                            <tr >
+                                <th scope="row" align="center"></th>
+                                <td align="center">C/T</td>
+                                <td align="center">Somewhat increased odds of photic sneeze reflex</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" align="center"></th>
                                 <td align="center">T/T</td>
-                                <td align="center">associated with brown eyes</td>
+                                <td align="center">Decreased odds of photic sneeze reflex</td>
                             </tr>
                         </tbody>
                     </table>
                     <p>
-                      A 2007 study based on the Icelanders and Dutch concluded that individuals with an rs12821256(C) allele were ~2x fold more likely to have blond than brown hair color. The specific odds ratio claimed per (C) allele is 2.32, p = 5.5 x 10-14.[PMID 17952075]
-<br />
-                      [PMID 24880339OA] A molecular basis for classic blond hair color in Europeans: This article shows how changing just rs12821256 from (T) to (C) in a transgenic mouse leads to lighter hair color.
-<br />
-                      [PMID 18483556OA] A genome-wide association study identifies novel alleles associated with hair color and skin pigmentation.
-                      <br />
-                      [PMID 20042077OA] Genetic determinants of hair and eye colours in the Scottish and Danish populations.
-<br />
-                      [PMID 20585627OA] Web-based, participant-driven studies yield novel genetic associations for common traits.
-                    </p>
-                </div>
+                        Variation at this location on chromosome 2 has been associated with differing likelihood of experiencing photic sneeze reflex. Individuals who have the letter “C” at this location in one or both of their copies of this genetic region are more likely to experience photic sneeze reflex, with those with a “C” in both copies the most likely to sneeze in response to bright light [PMID 20585627]. 
+                        </p>
+              </div>
+            </div>
             </div>
             <br>
+
             <!-- <hr class="style18"> -->
 
+            <!-- <hr class="style18"> -->
+            <!-- START TRAIT -->
+            <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
+            <div class="card">
+                <div class="card-block card-inverse card-primary">
+                    <h1 class="card-title">Lactose Intolerance</h1>
+                    <p class="card-text"></p>
+                    <p class="card-text">The ability to digest milk varies over a lifespan and between people. The enzyme lactase, a key player in the digestion of milk, is found in high quantities among infants but often wanes as a person grows into adulthood. For some individuals, genetic variation causes the enzyme lactase to persist throughout life leading to a lifelong ability to digest milk.</p>
+                </div>
+                <div class="card-block">
+                    <p><h5>Gene: MCM6 Variant: rs4988235</h5></p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Genotype</th>
+                                <th>Impact on Trait</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-success text-white">
+                                <th scope="row" align="center">Your Genotype</th>
+                                <td align="center">C/C</td>
+                                <td align="center">Likely to be lactose intolerant</td>
+                            </tr>
+                            <tr >
+                                <th scope="row" align="center"></th>
+                                <td align="center">C/T</td>
+                                <td align="center">Likely to be able to digest milk</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" align="center"></th>
+                                <td align="center">T/T</td>
+                                <td align="center">Likely to be able to digest milk</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Variation at this location in the MCM6 gene has been associated with likelihood of lactose intolerance in humans. The MCM6 gene encodes a protein that helps regulate the nearby lactase gene. Individuals who have the letter “T” at this location in one or both of their copies of this genetic region are likely to be able to digest milk while an individual who has the letter “C” at this location in both of their copies of this gene are likely to be lactose intolerant 
+                        </p>
+              </div>
+            </div>
+            </div>
+            <br>
 
+            <!-- END TRAIT <hr class="style18"> -->
+            <!-- <hr class="style18"> -->
+            <!-- START TRAIT -->
+            <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
+            <div class="card">
+                <div class="card-block card-inverse card-primary">
+                    <h1 class="card-title">Bitter Taste Perception</h1>
+                    <p class="card-text"></p>
+                    <p class="card-text">The ability to perceive bitter taste varies between populations and among individuals within a particular population.  For some people, the inability to perceive bitter taste in some foods is linked to particular genetic variants.  Individuals who are able to perceive bitter taste may gravitate away from certain foods and substances, while those who cannot perceive this taste may select these foods with no understanding of why others might avoid them.</p>
+                </div>
+                <div class="card-block">
+                    <p><h5>Gene: TAS2R38 Variant: rs713598</h5></p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Genotype</th>
+                                <th>Impact on Trait</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-success text-white">
+                                <th scope="row" align="center">Your Genotype</th>
+                                <td align="center">G/G</td>
+                                <td align="center">May be unable to taste bitter in some foods</td>
+                            </tr>
+                            <tr >
+                                <th scope="row" align="center"></th>
+                                <td align="center">C/G</td>
+                                <td align="center">Can taste bitter</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" align="center"></th>
+                                <td align="center">C/C</td>
+                                <td align="center">Can taste bitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Variation at this location in the TAS2R38 gene has been associated with likelihood being able to perceive bitter taste in humans. The TAS2R38 gene is one of many “taste receptor” genes that encode proteins important for perception of a variety of different flavors. Individuals who have the letter “C” at this location in one or both of their copies of this genetic region are likely to be able to perceive bitter taste while an individual who has the letter “G” at this location in both of their copies of this gene may not be able to perceive bitter taste in some foods [PMID 12595690].</p>
+              </div>
+            </div>
+            </div>
+            <br>
 
-        </div>
+            <!-- END TRAIT <hr class="style18"> -->
+
+            <!-- <hr class="style18"> -->
+            <!-- START TRAIT -->
+            <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
+            <div class="card">
+                <div class="card-block card-inverse card-primary">
+                    <h1 class="card-title">Sprint vs Endurance</h1>
+                    <p class="card-text"></p>
+                    <p class="card-text">When it comes to athletics, some individuals perform better in short bursts of high-energy activity, while others tend to perform better in long-term events.  There are thousands of genes that control muscle structure and function, and genetic variation in one particular gene, ACTN3, has been associated with muscle performance and the likelihood of an individual being a sprinter or endurance athlete.</p>
+                </div>
+                <div class="card-block">
+                    <p><h5>Gene: ACTN3 Variant: rs1815739</h5></p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Genotype</th>
+                                <th>Impact on Trait</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-success text-white">
+                                <th scope="row" align="center">Your Genotype</th>
+                                <td align="center">C/C</td>
+                                <td align="center">Likely sprinter</td>
+                            </tr>
+                            <tr >
+                                <th scope="row" align="center"></th>
+                                <td align="center">C/T</td>
+                                <td align="center">Likely sprinter</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" align="center"></th>
+                                <td align="center">T/T</td>
+                                <td align="center">Likely endurance athlete</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Variation at this location in the ACTN3 gene has been associated with muscle performance and likelihood of being a sprinter or endurance athlete in humans. The ACTN3 gene is one of a group of genes that encode structural proteins important in skeletal muscle. Individuals who have the letter “C” at this location in one or both of their copies of this genetic region are slightly more likely to be sprinters while an individual who has the letter “T” at this location in both of their copies of this gene is more likely to be an endurance athlete [PMID 18043716].</p>
+              </div>
+            </div>
+            </div>
+            <br>
+
+            <!-- END TRAIT <hr class="style18"> -->
+
+            <!-- <hr class="style18"> -->
+            <!-- START TRAIT -->
+            <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
+            <div class="card">
+                <div class="card-block card-inverse card-primary">
+                    <h1 class="card-title">Freckling</h1>
+                    <p class="card-text"></p>
+                    <p class="card-text">Skin pigmentation varies among individuals and populations all over the globe.  Some individuals have darker hair and skin that tans easily, while others have light or red hair and skin that tends to freckle or burn when exposed to the sun.  Genetic variation in the MC1R gene can make a person more likely to have freckles than others.</p>
+                </div>
+                <div class="card-block">
+                    <p><h5>Gene: MC1R Variant: rs1805007</h5></p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Genotype</th>
+                                <th>Impact on Trait</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-success text-white">
+                                <th scope="row" align="center">Your Genotype</th>
+                                <td align="center">C/C</td>
+                                <td align="center">Less likely to freckle</td>
+                            </tr>
+                            <tr >
+                                <th scope="row" align="center"></th>
+                                <td align="center">C/T</td>
+                                <td align="center">Likely to freckle</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" align="center"></th>
+                                <td align="center">T/T</td>
+                                <td align="center">Likely to freckle</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Variation at this location in the MC1R gene has been associated with increased likelihood of freckling in humans. The MC1R gene encodes the melanocortin 1 receptor, which is involved in skin pigmentation. Individuals who have the letter “T” at this location in one or both of their copies of this genetic region are more likely to freckle while an individual who has the letter “C” at this location in both of their copies of this gene is less likely to have freckles [PMID 9571181].</p>
+              </div>
+            </div>
+            </div>
+            <br>
+
+            <!-- END TRAIT <hr class="style18"> -->
+
 
 </div>
 </div>

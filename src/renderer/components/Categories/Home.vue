@@ -16,10 +16,7 @@
     border-color:  #fff;
   }
 </style>
-
-
 <template>
-
   <div class="container" style="margin-top:100 auto;">
     <div class="card card-inverse card-primary text-center">
       <div class="card-block">
