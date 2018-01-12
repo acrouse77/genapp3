@@ -222,6 +222,9 @@ hr.style18:before {
             <div class="card">
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Alcohol Flush Reaction</h1>
+                        <div class="float-right col-4">
+                        <img src="static/img/alcoholflush.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
                     <p class="card-text"></p>
                     <p class="card-text">The effect that alcohol consumption has on an individual is dependent on a variety of factors, including the speed to which its chemicals are broken down and removed from the body. A subset of people have what is known as a flush reaction
                         after consuming alcohol - which can present as dizziness, nausea, headaches and flushing (turning red). This reaction can be severe and highly uncomfortable. Research has shown that whether a person has a flush reaction after consuming
@@ -271,7 +274,10 @@ hr.style18:before {
             <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
             <div class="card">
                 <div class="card-block card-inverse card-primary">
-                    <h1 class="card-title">Norovirus Susceptibility and Resistance</h1>
+                    <h1 class="card-title">Norovirus Susceptibility</h1>
+                        <div class="float-right col-4">
+                        <img src="static/img/norovirus.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
                     <p class="card-text"></p>
                     <p class="card-text">Norovirus is a highly contagious cause of gastroenteritis. Common on cruise ships and in other close quarters, norovirus can cause symptoms such as nausea, vomiting, and diarrhea, leading in some cases to serious dehydration. Although most people are susceptible to experiencing symptoms following a norovirus infection, some individuals with particular variation in the FUT2 gene are actually resistant to norovirus and may not exhibit symptoms after exposure to the virus.
                     </p>
@@ -319,6 +325,9 @@ hr.style18:before {
             <div class="card">
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Photic Sneeze Reflex</h1>
+                        <div class="float-right col-4">
+                        <img src="static/img/sneeze.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
                     <p class="card-text"></p>
                     <p class="card-text">For some individuals, walking outside on a bright sunny day can cause an involuntary sneeze or series of sneezes in response to the sudden light. Variation in a particular area of chromosome 2, between the genes ZEB2 and PABPCP2, has been shown to influence a person’s likelihood to reflexively sneeze in response to sunlight or other forms of sudden bright light. 
                     </p>
@@ -367,7 +376,9 @@ hr.style18:before {
             <div class="card">
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Lactose Intolerance</h1>
-                    <p class="card-text"></p>
+                        <div class="float-right col-4">
+                        <img src="static/img/milk.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
                     <p class="card-text">The ability to digest milk varies over a lifespan and between people. The enzyme lactase, a key player in the digestion of milk, is found in high quantities among infants but often wanes as a person grows into adulthood. For some individuals, genetic variation causes the enzyme lactase to persist throughout life leading to a lifelong ability to digest milk.</p>
                 </div>
                 <div class="card-block">
@@ -413,6 +424,9 @@ hr.style18:before {
             <div class="card">
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Bitter Taste Perception</h1>
+                        <div class="float-right col-4">
+                        <img src="static/img/Broccoli.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
                     <p class="card-text"></p>
                     <p class="card-text">The ability to perceive bitter taste varies between populations and among individuals within a particular population.  For some people, the inability to perceive bitter taste in some foods is linked to particular genetic variants.  Individuals who are able to perceive bitter taste may gravitate away from certain foods and substances, while those who cannot perceive this taste may select these foods with no understanding of why others might avoid them.</p>
                 </div>
@@ -459,6 +473,9 @@ hr.style18:before {
             <div class="card">
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Sprint vs Endurance</h1>
+                    <div class="float-right col-4">
+                        <img src="static/img/running.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
                     <p class="card-text"></p>
                     <p class="card-text">When it comes to athletics, some individuals perform better in short bursts of high-energy activity, while others tend to perform better in long-term events.  There are thousands of genes that control muscle structure and function, and genetic variation in one particular gene, ACTN3, has been associated with muscle performance and the likelihood of an individual being a sprinter or endurance athlete.</p>
                 </div>
@@ -505,6 +522,9 @@ hr.style18:before {
             <div class="card">
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Freckling</h1>
+                    <div class="float-right col-4">
+                        <img src="static/img/freckle.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
                     <p class="card-text"></p>
                     <p class="card-text">Skin pigmentation varies among individuals and populations all over the globe.  Some individuals have darker hair and skin that tans easily, while others have light or red hair and skin that tends to freckle or burn when exposed to the sun.  Genetic variation in the MC1R gene can make a person more likely to have freckles than others.</p>
                 </div>
