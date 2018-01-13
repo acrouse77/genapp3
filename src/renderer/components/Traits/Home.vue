@@ -54,23 +54,27 @@ hr.style18:before {
 </style>
 
 <template>
+
     <div class="container" style="margin-top:100 auto;">
         <!-- TABLE FOR EACH PUBLICATION -->
         <div class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1">
 
-            <!-- <hr class="style18"> -->
         <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
-            <div class="card">
+            <div class="card" >
+                <div class="card-block card-inverse card-primary" >
+                    <h1 class="card-title">Caffeine Metabolism
+                        <img src="static/img/coffee_trait.jpg" style="width:100px;" align="right" class="img-fluid text-center img-thumbnail">
+                       </h1>
+                </div>
+
+                <!--  <b-collapse visible id="collapse3"> -->
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Caffeine Metabolism</h1>
                         <div class="float-right col-4">
-                        <b-btn v-b-toggle.collapse2 class="m-1"><img src="static/img/coffee_trait.jpg" class="img-fluid text-center img-thumbnail"></b-btn>
+                        <img src="static/img/coffee_trait.jpg" class="img-fluid text-center img-thumbnail">
                         </div>
-                    
                 </div>
-                
                 <div class="card-block">
-                <b-collapse id="collapse2">
                     <p class="card-text">Some individuals find that they need to consume more coffee in the morning that their friends or family in order to feel a stimulating effect. Variation in the CYP1A2 gene may influence whether someone is fast or slow caffeine metabolizer,
                         which in turn affects whether that individual receives the same effect from a particular amount of caffeine as others. In general, individuals who are slower metabolizers of caffeine experience a larger effect from the same amount
                         of caffeine as a fast metabolizer.
@@ -107,9 +111,64 @@ hr.style18:before {
                         who have the letter “C” at this location in one or both of their copies of this genetic region are more likely to slow caffeine metabolizers while an individual who has the letter “A” at this location in both of their copies
                         of this gene is more likely to be a fast caffeine metabolizer [PMID 18759349].
                     </p>
-                    </b-collapse>
+                    <!-- </b-collapse> -->
                 </div>
                 
+            </div>
+        </div>
+            <!-- <hr class="style18"> -->
+        <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
+            <div class="card">
+                <div class="card-block card-inverse card-primary">
+                    <h1 class="card-title">Caffeine Metabolism
+                        <div class="float-right col-4">
+                        <b-btn v-b-toggle.collapse2 class="m-1"><img src="static/img/coffee_trait.jpg" class="img-fluid text-center img-thumbnail"></b-btn>
+                        </div>
+                        </h1>
+                    
+                </div>
+                <b-collapse id="collapse2">
+                <div class="card-block" >
+                
+                    <p class="card-text">Some individuals find that they need to consume more coffee in the morning that their friends or family in order to feel a stimulating effect. Variation in the CYP1A2 gene may influence whether someone is fast or slow caffeine metabolizer,
+                        which in turn affects whether that individual receives the same effect from a particular amount of caffeine as others. In general, individuals who are slower metabolizers of caffeine experience a larger effect from the same amount
+                        of caffeine as a fast metabolizer.
+                    </p>
+                    <p><h5>Gene: CYP1A2 Variant: rs762551</h5></p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Genotype</th>
+                                <th>Impact on Trait</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-bind:class="[true ? 'bg-success text-white': '']">
+                                <th scope="row" align="center">Your Genotype</th>
+                                <td align="center">A/A</td>
+                                <td align="center">Fast caffeine metabolizer</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" align="center"></th>
+                                <td align="center">A/C</td>
+                                <td align="center">Slow caffeine metabolizer</td>
+                            </tr>
+                            <tr v-bind:class="[rs762551=== 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center"></th>
+                                <td align="center">C/C</td>
+                                <td align="center">Slow caffeine metabolizer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Variation at this location in the CYP1A2 gene has been associated with the speed of caffeine metabolism in humans. The CYP1A2 gene encodes a member of a family of proteins that are responsible for metabolism of nutrients and medications . Individuals
+                        who have the letter “C” at this location in one or both of their copies of this genetic region are more likely to slow caffeine metabolizers while an individual who has the letter “A” at this location in both of their copies
+                        of this gene is more likely to be a fast caffeine metabolizer [PMID 18759349].
+                    </p>
+                    
+                </div>
+                </b-collapse>
             </div>
         </div>
        <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
@@ -596,28 +655,11 @@ export default {
   },
   data () {
     return {
-      rs762551: 'A/C'
-            // msg: 'Hello from vue-loader!',
-            // msg1: '<h1>Hello from vue-loader!</h1>',
-            // pubtable: "",
-            // //selfocus: "Hematocrit",
-            // batable: bat,
-            // //batlist:list,
-            // todisplay: []
-            // heterozygous: false,
-            // homozygous: false,
-            // norisk: false
-            // catparam: getparam
-            // selectCat: "Not Cancer",
+      rs762551: 'A/C',
+      show: true
     }
   },
   created: function () {
-        // console.log('created ran')
-        // GET PARAMS
-    // var urlarray = window.location.hash.split('/')
-    // var n = urlarray.length - 1
-    // var getparam = decodeURI(urlarray[n])
-
     // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
     var genotypes = genos.Participants.Genotypes
     console.log('genotypes')

@@ -1,8 +1,3 @@
-<!-- <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
-</template> -->
 <template>
   <div>
   <div class="Container">
@@ -15,12 +10,12 @@
     <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
     <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
 
-<h6 class="text-right"style="margin-right: 10px">Participant ID: {{participantId}}</h6>
+<h6 class="text-right" style="margin-right: 10px">Participant ID: {{participantId}}</h6>
 </ul>
 </div>
-  </nav>
+
   <div>
-    <router-view class="app"></router-view>
+    <router-view class="app" ></router-view>
   </div>
   <footer class="footer">
     <div class="container">

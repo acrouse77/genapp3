@@ -259,7 +259,7 @@ export default {
                     '<table class="table table table-hover">' +
                     '<thead>' +
                     '<tr class="tr_top">' +
-                    '<th width="20%" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Gene:" data-content="the specific gene in which the variant is located. In some cases a gene may have more than one name listed. ">Gene</th>' +
+                    '<th width="20%" v-b-popover.hover="\'I am popover content!\'" title="Popover Title">Gene</th>' +
                     '<th width="15%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="snpID:" data-content="the unique identifier for the particular variant">snpID</th>' +
                     '<th width="10%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Chromosome:" data-content="the chromosome on which the particular variant is located.">Chrom.</th>' +
                     '<th width="10%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Your Genotype:" data-content="your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.">Your Genotype</th>' +
@@ -800,9 +800,9 @@ hr.style18:before {
 <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
     <!--<h1>insert key table here</h1>-->
-    <div class="col-lg-12 col-md-12 col-sm-12">
+    <div>
 
-        <div v-if="show_genoTableOne" class="col-lg-12 col-md-12 col-sm-12 col-centered">
+        <div v-if="show_genoTableOne">
             <div style="background-color: #FD901E; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
 
                 <p v-html="genoTableOne"></p>

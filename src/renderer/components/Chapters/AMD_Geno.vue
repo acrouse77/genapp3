@@ -746,9 +746,9 @@ hr.style18:before {
     <div class="container">
 <div class="row">
     <!--<h1>insert key table here</h1>-->
-    <div class="col-lg-12 col-md-12 col-sm-12">
+    <div>
 
-        <div v-if="show_genoTableOne" class="col-lg-12 col-md-12 col-sm-12 col-centered">
+        <div v-if="show_genoTableOne">
             <div style="background-color: #FD901E; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
 
                 <p v-html="genoTableOne"></p>
@@ -756,7 +756,7 @@ hr.style18:before {
             </div>
             <hr class="style18">
         </div>
-        <div v-if="show_genoTableTwo" class="col-lg-12 col-md-12 col-sm-12 col-centered">
+        <div v-if="show_genoTableTwo">
             <div style="background-color: #1E8BFD; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
                 <p v-html="genoTableTwo"></p>
 

@@ -23,7 +23,7 @@
 
 <style scoped>
   img {
-    margin-top: -25px;
+    margin-top: -250px;
     width: 450px;
   }
 </style>
