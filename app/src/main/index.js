@@ -27,7 +27,10 @@ function createWindow () {
   console.log('mainWindow opened')
 }
 
-app.on('ready', createWindow)
+app.on('ready', function () {
+  createWindow()
+}
+)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

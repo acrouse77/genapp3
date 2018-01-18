@@ -11873,5 +11873,6 @@
 		}
 	],
 	"genomeID": "SL124309",
-	"researchID": "3333"
+	"researchID": "3333",
+	"loader": "open"
 }

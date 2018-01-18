@@ -2,20 +2,22 @@
   <div>
   <div class="container">
     <div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-        <a class="text-muted navbar-brand" href="#">
-          <img src="static/img/mini-logo.png" style="margin-left: 20px" height="30" class="text-muted d-inline-block" alt=""> Insight Genome
-        </a>
-        <router-link :to="{name: 'introduction-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
-        <router-link :to="{name: 'chapter-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
-        <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
-        <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
-        <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
-        <i class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link"  onclick="history.back();"></i>
-        <i class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link"  onclick="history.forward();"></i>
-        <h6 class="text-right" style="margin-right: 10px">Participant ID: {{genomeidshow}}</h6>
-        <h6 class="text-right" style="margin-right: 10px">Participant ID: {{researchidshow}}</h6>
+          <a class="text-muted navbar-brand" href="#">
+            <img src="static/img/mini-logo.png" style="margin-left: 20px" height="30" class="text-muted d-inline-block" alt=""> Insight Genome
+          </a>
+          <router-link :to="{name: 'introduction-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'chapter-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+          <i class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link float-right"  onclick="history.back();"></i>
+          <i class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link float-right"  onclick="history.forward();"></i>
+      <div class="row" style="margin-left: 20px;">    
+          <h6 class="text-right" style="margin-right: 10px">Genome ID: {{genomeidshow}}</h6>
+          <h6 class="text-right" style="margin-right: 10px">Participant ID: {{researchidshow}}</h6>
+      </div>
     </div>
-  <div class="row uploadbar" v-show="state==='open'">
+  <div class="row uploadbar" v-show="state!=='closed'">
       <b-card class="col-4" style="margin-left:100px">
         <h4 slot="header">Select data to load</h4>
         <!-- Simple File -->
@@ -117,9 +119,9 @@ export default {
       var input = participantDataParse['Participants']
       input['genomeID'] = genomeid
       input['researchID'] = this.researchidshow
+      input['loader'] = 'closed'
       console.log("input")
       console.log(input)
-      // ******* STINGIFYPRE
       // ********
       var participantDataWrite = JSON.stringify(input, null, "\t")
       // REWRITE THE DATA FILE
@@ -128,32 +130,26 @@ export default {
       var genos = JSON.parse(genosread)
       console.log("genos")
       console.log(genos)
-      let stateread = fs.readFileSync('static/referencedata/statecheck.json', 'utf8')
-      var stateparse = JSON.parse(stateread)
-      stateparse["loader"] = 'closed'
-      console.log('stateparse')
-      console.log(stateparse)
       console.log('this.state')
       console.log(this.state)
     },
     close () {
-      let stateread = fs.readFileSync('static/referencedata/statecheck.json', 'utf8')
-      var stateparse = JSON.parse(stateread)
-      this.state = stateparse["loader"]
+      console.log('close')
+      let genosread = fs.readFileSync('static/participantdata/participantDataTEST.json', 'utf8')
+      var genos = JSON.parse(genosread)
+      this.state = genos['loader']
+      console.log('this.state')
+      console.log(this.state)
+      console.log('genos[loader]')
+      console.log(genos['loader'])
     }
   },
   created: function () {
-    this.state = 'closed'
-    let stateread = fs.readFileSync('static/referencedata/statecheck.json', 'utf8')
-    var stateparse = JSON.parse(stateread)
-    console.log("stateparse")
-    console.log(stateparse)
-    console.log("stateparse[loader]")
-    console.log(stateparse['loader'])
+    console.log("loaderstate")
+    let genosread = fs.readFileSync('static/participantdata/participantDataTEST.json', 'utf8')
+    var genos = JSON.parse(genosread)
+    this.state = genos['loader']
     console.log('this.state')
-    console.log(this.state)
-    this.state = stateparse["loader"]
-    console.log('this.state after state update')
     console.log(this.state)
   }
 }

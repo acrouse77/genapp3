@@ -12,6 +12,8 @@ Vue.use(Electron)
 Vue.use(Router)
 Vue.config.debug = true
 
+const globalShortcut = electron.globalShortcut
+
 const scrollBehavior = (to, from, savedPosition) => {
   if (savedPosition) {
     return savedPosition

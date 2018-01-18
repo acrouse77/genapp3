@@ -8,7 +8,7 @@ var AMD = JSON.parse(AMDread)
 let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/AMD.json'), 'utf8')
 var finreduced = JSON.parse(finreducedread)
 
-let genosread = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+let genosread = fs.readFileSync(path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
 var genos = JSON.parse(genosread)
 // import AMD from './assets/data/AMD_ordered2.json'
 // import finreduced from './assets/data/AMD.json'
@@ -50,70 +50,17 @@ export default {
   created: function () {
     // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
     var genotypes = genos.Participants.Genotypes
-    // console.log('genotypes')
-    // console.log(genotypes)
-        // VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE
+    // VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE
     var focustable = ''
     var studyGeno = []
-    // var partGenotest = _.where(genotypes, {
-    //   Chr: '6',
-    //   Pos: '31903804'
-    // })
-    // console.log('partGenotest')
-    // console.log(partGenotest)
 
-        // EXAMPLE DATA FROM final_reduced data
-        // {"cat":"Blood","type":"Symptom","focus":"Cholelithiasis-related traits in sickle cell anemia","date":"6/22/12","sizeInitRep":905,"ethRep":"African American/Afro-Caribbean","pmID":22558097,"auth":"Milton JN","pubDate":"4/27/12","journ":"PLoS One","pubLink":"http://www.ncbi.nlm.nih.gov/pubmed/22558097","studyName":"A genome-wide association study of total bilirubin and cholelithiasis risk in sickle cell anemia.","studySize":"905 African American cases","repSize":"2,152 African American cases","include":"EX","snpIndex":7626,"chr":2,"chrPos":234668570,"repGene":"UGT1A1, UGT1A10","mapGene":"UGT1A10;UGT1A8;UGT1A7;UGT1A6;UGT1A5;UGT1A9;UGT1A4;UGT1A1;UGT1A3","snpID":"rs887829-A","riskAllele":"A","riskAlleleFreq":0.45,"pVal":5e-25,"mlog":24.30103,"pValText":"","OR":0.19,"ConfIntText":"[NR] unit increase","Plat":"Illumina [569,615]","FilterStatus":"Filter 5: RAs on quantitative traits","in LD block (trait)":""}
-
-        // UPDATE THE GENO file to include participant geno, genotype and table for display
     $.each(AMD, function (index, value) {
-            // console.log("value");
-            // console.log(value);
-      // var open = require('open')
-    //   var loc = parseInt(value.chrPos, 10)
-    //   var ch = parseInt(value.chr, 10)
       var loc = value.chrPos.toString()
       var ch = value.chr.toString()
-    //   var loc = value.chrPos
-    //   var ch = value.chr
-    //   var partValue = ''
-    //   console.log('value.chr.toString()')
-    //   console.log(value.chr.toString())
-    //   console.log('value.chrPos.toString()')
-    //   console.log(value.chrPos.toString())
-    //   console.log(loc)
-    //   console.log('loc')
-      // ********** lint said this was wrong here - var partValue = ''
+
       var count = 9999
       var format
       format = ''
-    //   console.log('---------------------------------')
-    //   console.log('value.chrPos')
-    //   console.log(value.chrPos)
-    //   console.log(typeof value.chrPos)
-    //   console.log('typeof value.chr')
-    //   console.log(typeof value.chr)
-    //   $.each(genotypes, function (partindex, partvalue) {
-    //     if (partvalue.Pos === loc) {
-    //     //   console.log('ch')
-    //     //   console.log(ch)
-    //     //   console.log('typeof ch')
-    //     //   console.log(typeof ch)
-    //     //   console.log('loc')
-    //     //   console.log(loc)
-    //     //   console.log('typeof loc')
-    //     //   console.log(typeof loc)
-    //     //   console.log('found match')
-    //     //   console.log('partvalue.Chr')
-    //     //   console.log(partvalue.Chr)
-    //     //   console.log('partvalue.Pos')
-    //     //   console.log(partvalue.Pos)
-    //     //   console.log('loc === partvalue.Pos')
-    //     //   console.log(loc === partvalue.Pos)
-    //     //   console.log('ch === partvalue.Chr')
-    //     //   console.log(ch === partvalue.Chr)
-    //     }
-    //   })
 
       var partGeno = _.where(genotypes, {
         Chr: ch,
