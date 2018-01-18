@@ -86,6 +86,9 @@ var genos = JSON.parse(genosread)
 let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/final_reduced.json'), 'utf8')
 var finreduced = JSON.parse(finreducedread)
 
+// console.log("genosread")
+// console.log(genosread)
+
 // import bat from './assets/BAT.json'
 // import genos from './assets/hj.json'
 // import finreduced from './assets/final_reduced.json'
@@ -131,6 +134,8 @@ export default {
     var n = urlarray.length - 1
     var getparam = decodeURI(urlarray[n])
     var genotypes = genos.Participants.Genotypes
+    console.log("genotypes")
+    console.log(genotypes)
         // VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE
     var focustable = ''
 
@@ -145,10 +150,15 @@ export default {
     var focuscat = _.groupBy(groupedData[getparam], function (d) {
       return d.pmID
     })
-    console.log('focuscat')
-    console.log(focuscat)
+    // console.log('focuscat')
+    // console.log(focuscat)
 
+    // ****************************************
+    // THIS IS THE DATA FROM THE FINREDUCED SET = SINGLE STUDY
+    // ****************************************
     $.each(focuscat, function (index, value) {
+      console.log("value[0].studyName")
+      console.log(value[0].studyName)
                 // ADD THE HEADER OF EACH STUDY
       focustable = focustable.concat(
 
@@ -179,34 +189,72 @@ export default {
                     '<tbody>'
                 )
 
+    // ****************************************
+    // THIS IS THE DATA FROM THE FINREDUCED SET - SINGLE GENO IN A STUDY
+    // ****************************************
       $.each(value, function (ind, val) {
-        var loc = val.chrPos
-        var ch = val.chr
-        var partGeno = _.where(genotypes, {Chr_id: ch, Chr_pos: loc})
-        console.log('partGeno')
+        var loc = val.chrPos.toString()
+        var ch = val.chr.toString()
+    // ****************************************
+    // CONSOLE LOG TO SEE IF A MATCH IS FOUND
+    // ****************************************
+        console.log('loc')
+        console.log(loc)
+        console.log('ch')
+        console.log(ch)
+        // console.log('risk')
+        // console.log(risk)
+        var partGeno = _.where(genotypes, {
+          Chr: ch,
+          Pos: loc
+        })
+        console.log("partGeno")
         console.log(partGeno)
-        console.log('partGeno.length')
+        console.log("partGeno.length")
         console.log(partGeno.length)
+        console.log("partGeno.Gen")
+        console.log(partGeno.Gen)
+        // if (typeof (ch) === 'string') {
+
+        // //   var partGeno = _.where(genotypes, {Chr_id: ch, Chr_pos: loc})
+        //   console.log("ch is a string")
+        // }
+        // console.log("typeof (val.chrPos)")
+        // console.log(typeof (val.chrPos))
+        // console.log("val.chrPos")
+        // console.log(val.chrPos)
+        // console.log("typeof (val.chrPos.toString())")
+        // console.log(typeof (val.chrPos.toString()))
+        // console.log("val.chrPos.toString()")
+        // console.log(val.chrPos.toString())
+        // console.log("typeof (loc)")
+        // console.log(typeof (loc))
+        // console.log(typeof ("ch"))
+        // console.log(typeof (ch))
+        // console.log('partGeno')
+        // console.log(partGeno)
+        // console.log('partGeno.length')
+        // console.log(partGeno.length)
+        // console.log('loc')
+        // console.log(loc)
+        // console.log('ch')
+        // console.log(ch)
+        // console.log("---------------- the line after shows if no match")
 
         if (partGeno.length === 0) {
           console.log('partGeno[0].Geno = 0')
-          console.log(partGeno)
+        //   console.log(partGeno)
         } else {
-          var gen = partGeno[0].Geno
-          console.log('partGeno[0].Geno passed')
-          console.log(partGeno[0].Geno)
-                // if (gen.indexOf(val.riskAllele) > 0) {
-                //   var n = gen.indexOf(val.riskAllele)
-                //   var format = 1
-                //     if((gen.indexOf(val.riskAllele, n) > 0)){
-                //
-                //     }
-                // }
-                // console.log("val")
-                // console.log(val)
+          console.log("val.riskAllele")
+          console.log(val.riskAllele)
+          var gen = partGeno[0].Gen
           var risk = new RegExp(val.riskAllele, 'g')
           console.log('temp *********')
+          console.log("risk")
           console.log(risk)
+          var matchgen = gen.match(risk)
+          console.log("matchgen")
+          console.log(matchgen)
           var count = (gen.match(risk) || []).length
           console.log('count')
           console.log(count)
@@ -237,7 +285,7 @@ export default {
                             '<td align="center">' + val.chrPos + '</td>' +
                             '<td align="center">' + val.riskAllele + '</td>' +
                             '<td align="center">' + val.OR + '</td>' +
-                            '<td align="center" class="' + format + '">' + partGeno[0].Geno + '</td>' +
+                            '<td align="center" class="' + format + '">' + partGeno[0].Gen + '</td>' +
                             '</tr>'
                         )
         }

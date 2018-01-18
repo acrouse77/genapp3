@@ -16,10 +16,10 @@ var genos = JSON.parse(genosread)
 var _ = require('underscore')
 // import genos from './assets/data/SL159977_bear.json'
 
-console.log('AMD')
-console.log(AMD)
-console.log('finreduced')
-console.log(finreduced)
+// console.log('AMD')
+// console.log(AMD)
+// console.log('finreduced')
+// console.log(finreduced)
 
 export default {
   props: ['selectCat'],
@@ -50,8 +50,8 @@ export default {
   created: function () {
     // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
     var genotypes = genos.Participants.Genotypes
-    console.log('genotypes')
-    console.log(genotypes)
+    // console.log('genotypes')
+    // console.log(genotypes)
         // VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE
     var focustable = ''
     var studyGeno = []
@@ -59,8 +59,8 @@ export default {
       Chr: '6',
       Pos: '31903804'
     })
-    console.log('partGenotest')
-    console.log(partGenotest)
+    // console.log('partGenotest')
+    // console.log(partGenotest)
 
         // EXAMPLE DATA FROM final_reduced data
         // {"cat":"Blood","type":"Symptom","focus":"Cholelithiasis-related traits in sickle cell anemia","date":"6/22/12","sizeInitRep":905,"ethRep":"African American/Afro-Caribbean","pmID":22558097,"auth":"Milton JN","pubDate":"4/27/12","journ":"PLoS One","pubLink":"http://www.ncbi.nlm.nih.gov/pubmed/22558097","studyName":"A genome-wide association study of total bilirubin and cholelithiasis risk in sickle cell anemia.","studySize":"905 African American cases","repSize":"2,152 African American cases","include":"EX","snpIndex":7626,"chr":2,"chrPos":234668570,"repGene":"UGT1A1, UGT1A10","mapGene":"UGT1A10;UGT1A8;UGT1A7;UGT1A6;UGT1A5;UGT1A9;UGT1A4;UGT1A1;UGT1A3","snpID":"rs887829-A","riskAllele":"A","riskAlleleFreq":0.45,"pVal":5e-25,"mlog":24.30103,"pValText":"","OR":0.19,"ConfIntText":"[NR] unit increase","Plat":"Illumina [569,615]","FilterStatus":"Filter 5: RAs on quantitative traits","in LD block (trait)":""}

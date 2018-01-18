@@ -16,10 +16,10 @@ var genos = JSON.parse(genosread)
 var _ = require('underscore')
 // import genos from './assets/data/SL159977_bear.json'
 
-console.log('AMD')
-console.log(AMD)
-console.log('finreduced')
-console.log(finreduced)
+// console.log('AMD')
+// console.log(AMD)
+// console.log('finreduced')
+// console.log(finreduced)
 
 export default {
   props: ['selectCat'],
@@ -50,8 +50,8 @@ export default {
   created: function () {
     // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
     var genotypes = genos.Participants.Genotypes
-    console.log('genotypes')
-    console.log(genotypes)
+    // console.log('genotypes')
+    // console.log(genotypes)
         // VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE
     var focustable = ''
     var studyGeno = []
@@ -87,40 +87,40 @@ export default {
       var count = 9999
       var format
       format = ''
-      console.log('---------------------------------')
-      console.log('value.chrPos')
-      console.log(value.chrPos)
-      console.log(typeof value.chrPos)
-      console.log('typeof value.chr')
-      console.log(typeof value.chr)
-      $.each(genotypes, function (partindex, partvalue) {
-        if (partvalue.Pos === loc) {
-          console.log('ch')
-          console.log(ch)
-          console.log('typeof ch')
-          console.log(typeof ch)
-          console.log('loc')
-          console.log(loc)
-          console.log('typeof loc')
-          console.log(typeof loc)
-          console.log('found match')
-          console.log('partvalue.Chr')
-          console.log(partvalue.Chr)
-          console.log('partvalue.Pos')
-          console.log(partvalue.Pos)
-          console.log('loc === partvalue.Pos')
-          console.log(loc === partvalue.Pos)
-          console.log('ch === partvalue.Chr')
-          console.log(ch === partvalue.Chr)
-        }
-      })
+    //   console.log('---------------------------------')
+    //   console.log('value.chrPos')
+    //   console.log(value.chrPos)
+    //   console.log(typeof value.chrPos)
+    //   console.log('typeof value.chr')
+    //   console.log(typeof value.chr)
+    //   $.each(genotypes, function (partindex, partvalue) {
+    //     if (partvalue.Pos === loc) {
+    //     //   console.log('ch')
+    //     //   console.log(ch)
+    //     //   console.log('typeof ch')
+    //     //   console.log(typeof ch)
+    //     //   console.log('loc')
+    //     //   console.log(loc)
+    //     //   console.log('typeof loc')
+    //     //   console.log(typeof loc)
+    //     //   console.log('found match')
+    //     //   console.log('partvalue.Chr')
+    //     //   console.log(partvalue.Chr)
+    //     //   console.log('partvalue.Pos')
+    //     //   console.log(partvalue.Pos)
+    //     //   console.log('loc === partvalue.Pos')
+    //     //   console.log(loc === partvalue.Pos)
+    //     //   console.log('ch === partvalue.Chr')
+    //     //   console.log(ch === partvalue.Chr)
+    //     }
+    //   })
 
       var partGeno = _.where(genotypes, {
         Chr: ch,
         Pos: loc
       })
-      console.log('partGeno')
-      console.log(partGeno)
+    //   console.log('partGeno')
+    //   console.log(partGeno)
       var partGenoObj = value
       if (partGeno.length === 0) {
         partGenoObj.Geno = '-:-'
@@ -136,7 +136,7 @@ export default {
         this.show_genoTableThree = true
       } else if (partGeno[0].Geno === 'blocked') {
         // var partGenoObj = value
-        console.log('this is blocked')
+        // console.log('this is blocked')
         format = 'blocked'
         partGenoObj.genoGroup = 'blocked'
         partGenoObj.genoTable = 4
@@ -239,8 +239,8 @@ export default {
     var genoTableTwo = ''
     var genoTableThree = ''
     var genoTableFour = ''
-    console.log('genoTableOne')
-    console.log(genoTableOne)
+    // console.log('genoTableOne')
+    // console.log(genoTableOne)
 
     // console.log('tableGroupedData')
     // console.log(tableGroupedData)
@@ -257,22 +257,6 @@ export default {
       genoTable = genoTable.concat(
 
                     '<table class="table table table-hover">' +
-                    '<thead>' +
-                    '<tr class="tr_top">' +
-                    '<th width="20%" v-b-popover.hover="\'I am popover content!\'" title="Popover Title">Gene</th>' +
-                    '<th width="15%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="snpID:" data-content="the unique identifier for the particular variant">snpID</th>' +
-                    '<th width="10%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Chromosome:" data-content="the chromosome on which the particular variant is located.">Chrom.</th>' +
-                    '<th width="10%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Your Genotype:" data-content="your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.">Your Genotype</th>' +
-                    '<th width="10%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Risk allele:" data-content="at a variant location, the particular DNA letter found to be associated with an altered disease risk.">Risk allele</th>' +
-                    '<th width="10%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Reference:" data-content="research publication number.  See references at bottom of page.">OR</th>' +
-                    '<th width="10%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Odds Ratio:" data-content="the estimated impact of the presence of the risk allele at this location.">Geno group</th>' +
-                    '<th width="10%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Odds Ratio:" data-content="the estimated impact of the presence of the risk allele at this location.">ORcalc</th>' +
-                    // '<th width="5%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Inheritance model:" data-content="Hom het or add.">ORcalc</th>' +
-                    '<th width="5%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Population strength:" data-content="">model</th>' +
-                    // '<th width="5%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Gene:" data-content="">Rep. Size</th>' +
-                    '<th width="5%" align="center" data-container="body" data-placement="top" data-trigger="hover" data-toggle="popover" title="Study Info.:" data-content="click to access more details about the research studies that have investigated the variant\'s impact.">Study Info.</th>' +
-                    '</tr>' +
-                    '</thead>' +
                     '<tbody>'
                 )
 
@@ -281,72 +265,58 @@ export default {
         if (sortTableValue.order === 1) {
           genoTable = genoTable.concat(
                             '<tr class="tr_top" >' +
-                            '<td scope="row" align="center" >' + sortTableValue.repGene + '</th>' +
-                            '<td  align="center">' + sortTableValue.snpID + '</td>' +
-                            '<td align="center">' + sortTableValue.chr + '-' + sortTableValue.chrPos + '</td>' +
-                            '<td align="center">' + sortTableValue.Geno + '</td>' +
-                            '<td align="center">' + sortTableValue.riskAllele + '</td>' +
+                            '<td width="20%" scope="row" align="center" >' + sortTableValue.repGene + '</td>' +
+                            '<td  width="15%" align="center">' + sortTableValue.snpID + '</td>' +
+                            // '<td align="center">' + sortTableValue.chr + '-' + sortTableValue.chrPos + '</td>' +
+                            '<td width="10%" align="center">' + sortTableValue.Geno + '</td>' +
+                            '<td width="10%" align="center">' + sortTableValue.riskAllele + '</td>' +
                             // '<td align="center">' + 'Ref.' + '</td>' +
-                            '<td align="center">' + sortTableValue.OR + '</td>' +
-                            '<td align="center" >' + sortTableValue.genoGroup + '</td>' +
-                            '<td align="center" >' + sortTableValue.ORcalc + '</td>' +
-                            '<td align="center" >' + sortTableValue.model + '</td>' +
+                            '<td width="5%" align="center">' + sortTableValue.OR + '</td>' +
+                            '<td width="10%" align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
+                            '<td width="5%" align="center" >' + sortTableValue.ORcalc + '</td>' +
+                            '<td width="10%" align="center" >' + sortTableValue.model + '</td>' +
                             // '<td align="center" >' + '++++' + '</td>' +
                             // '<td align="center" >' + '++++' + '</td>' +
                             // "<td align=\"center\"> <i class=\"fa fa-info-circle\" aria-hidden=\"true\" ></i></td>" +
-                            '<td><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
+                            '<div><td width="10%"><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
                             '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
                             '</tr>' +
-                            '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
-                            '<td colspan="11">' +
-                            '<div class="card">' +
-                            '<div class="card-header rounded">' +
-                            'Publication Information:' +
-                            '</div>' +
-                            '<div class="card-block">' +
-                            '<h2 class="card-title"> <em>' + sortTableValue.studyName + '</em></h2>' +
-                            // "<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>" +
-                            '</div>' +
-
-                            '<div class="card-block">' +
-                            '<h3>Study size and ancestry (when available) of studied population: </h3>' +
-                            '<div class="row">' +
-                            '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                            '<p><strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
-                            '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br /></p>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>' +
-                            '<div class="card-block">' +
-                            '<p><h3>Citation: </h3>' +
-                            '<div class="row">' +
-                            '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                            '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
-                            '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
-                            // '<strong>First Author: </strong>' + ' ' + sortTableValue.auth + '<br />' +
-                            '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>' +
-                            // "<h1 class=\"card-title\">" + sortTableValue.studyName + "</h1>" +
-                            // "<h2 class=\"card-subtitle mb-2 text-muted\">" + "h2 text" + "</h2>" +
-                            // "<p class=\"card-text\">" + "With supporting text below as a natural lead-in to additional content." + "</p>" +
-                            '<div class="card-footer">' +
-                            // '<a href="' + sortTableValue.pubLink + '">link to pubmed</a> ' +
-                            // "<small class=\"text-muted\"> Copy this link for reference to the article in pubmed: " + sortTableValue.pubLink + "</small>" +
-                            '</div>' +
-                            '</div>' +
-                            '</td>' +
-                            '</tr>'
+                                '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
+                                    '<td colspan="9" align="center">' +
+                                        '<div class="s8 box col-11" align="left">' +
+                                            '<div class="cit-header">' +
+                                                'Publication Information:' +
+                                            '</div>' +
+                                            '<div class="cit-info">' +
+                                                '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
+                                                // "<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>" +
+                                                '<div class="cit-size">' +
+                                                    'Study size and ancestry (when available) of studied population:' +
+                                                        '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                                            '<p>Initial study: ' + ' ' + sortTableValue.studySize + '<br />' +
+                                                            'Replication study:' + ' ' + sortTableValue.repSize + '<br /></p>' +
+                                                        '</div>' +
+                                                '</div>' +
+                                                '<p>Citation:' +
+                                                '<div>' +
+                                                    'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
+                                                    'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
+                                                    // '<strong>First Author: </strong>' + ' ' + sortTableValue.auth + '<br />' +
+                                                    'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</td>' +
+                                '</tr>'
 
                         )
         } else {
           genoTable = genoTable.concat(
                             '<tr class="tr_alt">' +
-                            '<th scope="row" colspan="5" align="center"></th>' +
+                            '<th scope="row" colspan="4" align="center"></th>' +
                             // '<td align="center" >' + 'Ref.' + '</td>' +
                             '<td align="center" >' + sortTableValue.OR + '</td>' +
-                            '<td align="center" >' + sortTableValue.genoGroup + '</td>' +
+                            '<td align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
                             '<td align="center" >' + sortTableValue.ORcalc + '</td>' +
                             '<td align="center" >' + sortTableValue.model + '</td>' +
                             // '<td align="center">' + 'EUR' + '</td>' +
@@ -409,8 +379,8 @@ export default {
 
                     // ------------------------------------
                     // END THE CARD
-                    '</div>' +
-                    '</div>' +
+                    // '</div>' +
+                    // '</div>' +
                     // ------------------------------------
                     // STYLED BREAK
                     '<br>'
@@ -431,19 +401,18 @@ export default {
       switch (genTableID) {
         case 1:
           console.log('case 1')
+          genoTableOne = genoTable
                         // ADD THE HEADER OF EACH STUDY
-          genoTableOne = genoTableOne.concat(
-                            '<div class="card">' +
-                            '<div class="card-block card-inverse " style="background-color: #FD901E;">' +
-                            '<h1 class="card-title">' + 'Risk Increasing Variants:</h1>' +
-                            '<p class="card-text">' +
-                            'Variants in this table are those in which your genotype includes one or more copies of the risk increasing allele. ' + '</p>' +
-                            '</div>' +
-                            '<div class="card-block">' +
-                            genoTable
-                        )
-
-                        // genoTableOne = genoTable;
+        //   genoTableOne = genoTableOne.concat(
+        //                     '<div class="card">' +
+        //                     '<div class="card-block card-inverse " style="background-color: #FD901E;">' +
+        //                     '<h1 class="card-title">' + 'Risk Increasing Variants:</h1>' +
+        //                     '<p class="card-text">' +
+        //                     'Variants in this table are those in which your genotype includes one or more copies of the risk increasing allele. ' + '</p>' +
+        //                     '</div>' +
+        //                     '<div class="card-block">' +
+        //                     genoTable
+        //                 )
           genoTable = ''
                         // console.log(value[0].genoTable);
                         // console.log("test concat genoTable");
@@ -452,15 +421,16 @@ export default {
         case 2:
           console.log('case 2')
                         // ADD THE HEADER OF EACH STUDY
-          genoTableTwo = genoTableTwo.concat(
-                            '<div class="card">' +
-                            '<div class="card-block card-inverse card-primary">' +
-                            '<h1 class="card-title">' + 'Risk Neutral Variants:</h1>' +
-                            '<p class="card-text">' + 'These variants reflect research rather than clinical findings. The variants shown in this table are those where your genotype did not match the risk variant. ' + '</p>' +
-                            '</div>' +
-                            '<div class="card-block">' +
-                            genoTable
-                        )
+          genoTableTwo = genoTable
+        //   genoTableTwo.concat(
+        //                     '<div class="card">' +
+        //                     '<div class="card-block card-inverse card-primary">' +
+        //                     '<h1 class="card-title">' + 'Risk Neutral Variants:</h1>' +
+        //                     '<p class="card-text">' + 'These variants reflect research rather than clinical findings. The variants shown in this table are those where your genotype did not match the risk variant. ' + '</p>' +
+        //                     '</div>' +
+        //                     '<div class="card-block">' +
+        //                     genoTable
+        //                 )
                         // genoTableTwo = genoTable;
           genoTable = ''
                         // console.log(value[0].genoTable);
@@ -515,8 +485,8 @@ export default {
     this.genoTableTwo = genoTableTwo
     this.genoTableThree = genoTableThree
     this.genoTableFour = genoTableFour
-    console.log('genoTableOne')
-    console.log(genoTableOne)
+    // console.log('genoTableOne')
+    // console.log(genoTableOne)
         // AND MAKE THEM VISIBLE
     if (genoTableOne.length !== 0) {
       this.show_genoTableOne = true
@@ -672,8 +642,8 @@ export default {
             // ------------------------------------
             // END THE TABLE
       focustable = focustable.concat(
-                '</tbody>' +
-                '</table>' +
+                // '</tbody>' +
+                // '</table>' +
 
                 // ------------------------------------
                 // END THE CARD
@@ -782,12 +752,127 @@ hr.style18:before {
     margin: 0 auto;
 }
 
-#myDIV {
-    width: 100%;
-    padding: 50px 0;
-    text-align: center;
-    background-color: lightblue;
-    margin-top:20px;
+table {
+  table-layout: fixed;
+}
+.tableheader{
+    color:white; 
+    padding-left:20px;
+    padding-bottom:10px;
+    border-width: 5px;
+}
+.tableheader .card-text{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.cit-header{
+    border-bottom: 1px solid darkgrey;
+    padding:10px;
+    margin:5px;
+    font-size: 30px;
+    font-weight: normal;
+    border-radius: 10px 10px 0px 0px;
+
+}
+.citation{
+    margin:10px;
+    padding:0px;
+    border-radius: 10px 10px 0px 0px;
+
+    background-color: rgb(235, 231, 231);
+
+}
+.cit-info{
+    padding:20px;
+}
+.cit-title{
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 25px;
+}
+.cit-size{
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 25px;
+}
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.box {
+    width:70%;
+    background:#FFF;
+    margin:40px auto;
+    min-height: 100px;
+    display:inline-block;
+    position:relative;
+    border:1px solid #ccc;
+    padding:5px;
+    background:#f2f2f2;
+    margin-bottom:30px;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.effect2{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+.s8:before, .s8:after {
+   z-index: -1;
+   position: absolute;
+   content: "";
+   bottom: 25px;
+   left: 10px;
+   width: 50%;
+   top: 80%;
+   max-width:300px;
+   background: #777;
+   -webkit-box-shadow: 0 35px 20px #777;
+   -moz-box-shadow: 0 35px 20px #777;
+   box-shadow: 0 35px 20px #777;
+   -webkit-transform: rotate(-8deg);
+   -moz-transform: rotate(-8deg);
+   -o-transform: rotate(-8deg);
+   -ms-transform: rotate(-8deg);
+   transform: rotate(-8deg);
+}
+.s8:after {
+   -webkit-transform: rotate(8deg);
+   -moz-transform: rotate(8deg);
+   -o-transform: rotate(8deg);
+   -ms-transform: rotate(8deg);
+   transform: rotate(8deg);
+   right: 10px;
+   left: auto;
 }
 
 </style>
@@ -797,23 +882,79 @@ hr.style18:before {
 <div class="section">
     <div class="container">
 <div class="row">
-<!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
-    <!--<h1>insert key table here</h1>-->
-    <div>
+    <div v-if="show_genoTableOne">
+        <div style="background-color: #FD901E; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
+            <div class="card" style="border: 1px;">
+                <div class="tableheader" style="background-color: #FD901E;">
+                    <p><h1>Risk Increasing Variants:</h1></p>
+                    <p class="card-text">
+                        Variants in this table are those in which your genotype includes one or more copies of the risk increasing allele.
+                    </p>
+                </div>
+                <div class="card-block">
+                    <div>
+                        <table class="table table table-hover" style="margin-bottom:0px">
+                            <thead>
+                                <tr class="tr_top">
+                                    
+                                    <th width="20%" align="center" v-b-popover.hover.top="'the specific gene in which the variant is located. In some cases a gene may have more than one name listed.'" title="Gene:"> Gene</th>
 
-        <div v-if="show_genoTableOne">
-            <div style="background-color: #FD901E; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
-
-                <p v-html="genoTableOne"></p>
-
+                                    <th width="15%" align="center" v-b-popover.hover.top="'the unique identifier for the particular variant'" title="snpID:"  data-content="the unique identifier for the particular variant">snpID</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.'" title="Your Genotype:">Your Genotype</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'at a variant location, the particular DNA letter found to be associated with an altered disease risk.'" title="Risk allele:" data-content="">Risk allele</th>
+                                    <th width="5%" align="center" v-b-popover.hover.top="'this number represents the estimated impact of the presence of the risk allele at this location. ************ (should this be removed?)'" title="Odds Ratio:" data-content="research publication number.  See references at bottom of page.">OR</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'shown for reviewers to check calculations - to be removed'" title=" Calcualted Odds Ratio:">Zyg?</th>
+                                    <th width="5%" align="center" v-b-popover.hover.top="'this number represents the estimated impact of the risk allele based on your genotype and the model used in the publication.'" title=" Calcualted Odds Ratio:">OR calc</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'the type of inheritance patern required to see the phenotype.  \'add\' means additive.  In this model, each allele adds additional risk. \'rec\' means recessive. In this model, only the homozygous genotype has an increased risk. \'dom\' means dominant.  In this model one or two risk alleles result in the same total risk.'" title="Inheritance model:" data-content="Hom het or add.">model</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'click to access more details about the research studies that have investigated the variant\'s impact.'" title="Study Info.:">Study Info.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div v-html="genoTableOne"></div>
+                    </div>
+                </div>
             </div>
-            <hr class="style18">
         </div>
-        <div v-if="show_genoTableTwo" class="col-lg-12 col-md-12 col-sm-12 col-centered">
-            <div style="background-color: #1E8BFD; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
-                <p v-html="genoTableTwo"></p>
+        <hr class="style18">
+    </div>        
+    
 
+        <div v-if="show_genoTableTwo">
+            <div style="background-color: #1E8BFD; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
+            <div class="card" style="border: 1px;">
+                <div class="tableheader" style="background-color: #1E8BFD;">
+                    <p><h1>Risk Neutral Variants:</h1></p>
+                    <p class="card-text">
+                        These variants reflect research rather than clinical findings. The variants shown in this table are those where your genotype did not match the risk variant.
+                    </p>
+                </div>
+                <div class="card-block">
+                    <div>
+                        <table class="table table table-hover" style="margin-bottom:0px">
+                            <thead>
+                                <tr class="tr_top">
+                                    
+                                    <th width="20%" align="center" v-b-popover.hover.top="'the specific gene in which the variant is located. In some cases a gene may have more than one name listed.'" title="Gene:"> Gene</th>
+
+                                    <th width="15%" align="center" v-b-popover.hover.top="'the unique identifier for the particular variant'" title="snpID:"  data-content="the unique identifier for the particular variant">snpID</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.'" title="Your Genotype:">Your Genotype</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'at a variant location, the particular DNA letter found to be associated with an altered disease risk.'" title="Risk allele:" data-content="">Risk allele</th>
+                                    <th width="5%" align="center" v-b-popover.hover.top="'this number represents the estimated impact of the presence of the risk allele at this location. ************ (should this be removed?)'" title="Odds Ratio:" data-content="research publication number.  See references at bottom of page.">OR</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'shown for reviewers to check calculations - to be removed'" title=" Calcualted Odds Ratio:">Zyg?</th>
+                                    <th width="5%" align="center" v-b-popover.hover.top="'this number represents the estimated impact of the risk allele based on your genotype and the model used in the publication.'" title=" Calcualted Odds Ratio:">OR calc</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'the type of inheritance patern required to see the phenotype.  \'add\' means additive.  In this model, each allele adds additional risk. \'rec\' means recessive. In this model, only the homozygous genotype has an increased risk. \'dom\' means dominant.  In this model one or two risk alleles result in the same total risk.'" title="Inheritance model:" data-content="Hom het or add.">model</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'click to access more details about the research studies that have investigated the variant\'s impact.'" title="Study Info.:">Study Info.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div v-html="genoTableTwo"></div>
+                    </div>
+                </div>
+            </div>
             </div>
             <hr class="style18">
         </div>
@@ -838,7 +979,9 @@ hr.style18:before {
                 </blockquote>
             </div>
         </div>-->
-
+    </div> <!-- end card -->
+    </div> <!-- end rounded style -->
+    </div>
     </div>
     </div>
     </div>

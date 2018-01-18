@@ -12,9 +12,21 @@ Vue.use(Electron)
 Vue.use(Router)
 Vue.config.debug = true
 
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition
+  } else {
+      position.x = 0
+      position.y = 0
+    }
+    return position
+  }
+}
+
 const router = new Router({
-  scrollBehavior: () => ({ y: 0 }),
-  routes
+  mode: 'history',
+  routes,
+  scrollBehavior
 })
 
 /* eslint-disable no-new */

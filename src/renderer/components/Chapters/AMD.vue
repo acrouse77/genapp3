@@ -12,7 +12,7 @@ img {
     <div class="section">
       <div class="container">
         <Geno1></Geno1>
-        
+      
       </div>
     </div>
   </div>

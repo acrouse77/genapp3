@@ -22,8 +22,8 @@
         <div class="container bot-section">
             <!--<div class="card-deck-wrapper">-->
                 <div class="card-deck">
-                    <div class="col-6">
-                        <div class="card">
+                    <div class="col-6" v-if="diseasesLength > 0">
+                        <div class="card" >
                             <div class="bg-primary text-white">
                                 <h1 class="card-title" style="margin-left:5px">Diseases</h1>
                                 <p style="margin-left:5px">A disease is something one can be diagnosed with.</p>
@@ -35,8 +35,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="card">
+                    <div class="col-6" v-if="medTraitsLength > 0">
+                        <div class="card" >
                             <div class="bg-success text-white">
                                 <h1 class="card-title" style="margin-left:5px">Medical traits</h1>
                                 <p style="margin-left:5px">Measured to help diagnose a disease.</p>
@@ -107,12 +107,21 @@ export default {
     })
     this.diseases = typeGroupedData['Disease']
     this.medtraits = typeGroupedData['Medical Traits']
+    this.diseasesLength = this.diseases.length
+    this.medTraitsLength = this.medtraits.length
     console.log('typeGroupedData')
     console.log(typeGroupedData)
     console.log('diseases')
     console.log(typeGroupedData['Disease'])
     console.log('Medical Traits')
     console.log(typeGroupedData['Medical Traits'])
+    console.log('Medical Traits length')
+    // console.log(typeGroupedData['Medical Traits'].length)
+    var getmedtraits = typeGroupedData['Medical Traits']
+    console.log("this.diseases")
+    console.log(this.diseases)
+    console.log("this.diseases.length")
+    console.log(this.diseases.length)
   }
 
 }
