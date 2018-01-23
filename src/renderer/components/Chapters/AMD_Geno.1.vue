@@ -372,7 +372,7 @@ export default {
                 // ------------------------------------
                 // END THE TABLE
 
-      genoTable = genoTable.concat(
+    genoTable = genoTable.concat(
                     '</tbody>' +
                     '</table>' +
 
@@ -394,15 +394,15 @@ export default {
                 // console.log("sortTableValue");
                 // console.log(sortTableValue);
 
-      var genTableID = value[0].genoTable
+    var genTableID = 1
                 // console.log("genoTable");
                 // console.log(genoTable);
-      switch (genTableID) {
-        case 1:
-          console.log('case 1')
-          genoTableOne = genoTable
-          this.goodcount = this.goodcount + 1
-          console.log(this.goodcount)
+    switch (genTableID) {
+      case 1:
+        console.log('case 1')
+        genoTableOne = genoTable
+        this.goodcount = this.goodcount + 1
+        console.log(this.goodcount)
                         // ADD THE HEADER OF EACH STUDY
         //   genoTableOne = genoTableOne.concat(
         //                     '<div class="card">' +
@@ -414,15 +414,15 @@ export default {
         //                     '<div class="card-block">' +
         //                     genoTable
         //                 )
-          genoTable = ''
+        genoTable = ''
                         // console.log(value[0].genoTable);
                         // console.log("test concat genoTable");
                         // console.log(genoTable);
-          break
-        case 2:
-          console.log('case 2')
+        break
+      case 2:
+        console.log('case 2')
                         // ADD THE HEADER OF EACH STUDY
-          genoTableTwo = genoTable
+        genoTableTwo = genoTable
         //   genoTableTwo.concat(
         //                     '<div class="card">' +
         //                     '<div class="card-block card-inverse card-primary">' +
@@ -433,14 +433,14 @@ export default {
         //                     genoTable
         //                 )
                         // genoTableTwo = genoTable;
-          genoTable = ''
+        genoTable = ''
                         // console.log(value[0].genoTable);
                         // console.log("genoTableTwo");
-          break
-        case 3:
-          console.log('case 3')
+        break
+      case 3:
+        console.log('case 3')
                         // ADD THE HEADER OF EACH STUDY
-          genoTableThree = genoTableThree.concat(
+        genoTableThree = genoTableThree.concat(
                             '<div class="card">' +
                             '<div class="card-block card-secondary">' +
                             '<h1 class="card-title">' + 'Undetermined Genotypes:  </h1>' +
@@ -452,14 +452,14 @@ export default {
                             genoTable
                         )
                         // genoTableThree = genoTable;
-          genoTable = ''
+        genoTable = ''
                         // console.log(value[0].genoTable);
                         // console.log("genoTableThree");
-          break
-        case 4:
-          console.log('case 4')
+        break
+      case 4:
+        console.log('case 4')
                         // ADD THE HEADER OF EACH STUDY
-          genoTableFour = genoTableFour.concat(
+        genoTableFour = genoTableFour.concat(
                             '<div class="card">' +
                             '<div class="card-block  style="background-color: #333; border-color: #333;">' +
                             '<h1 class="card-title">' + 'Opted Out Variants:</h1>' +
@@ -471,18 +471,18 @@ export default {
                             genoTable
                         )
                         // genoTableFour = genoTable;
-          genoTable = ''
+        genoTable = ''
                         // console.log(value[0].genoTable);
                         // console.log("genoTableFour");
-      }
+    }
                 // RESET genoTable
-      genoTable = ''
+    genoTable = ''
     // } //  END OF ALL TABLES)
         // )
     // *********************************************
     // PARENTHESIS AND CURLY BRACKET ABOVE IS END OF SECTION THAT USED TO FORMAT THE TABLES WHEN THEY HAD SAME DATA
     // *********************************************
-    
+
     // *********************************************
     // ASSIGN THE HTML FOR EACH TABLE
     // *********************************************

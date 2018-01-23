@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
   parserOptions: {
+    parser: 'babel-eslint',
     sourceType: 'module'
   },
   env: {
@@ -9,7 +9,10 @@ module.exports = {
     node: true,
     jquery: true
   },
-  extends: 'standard',
+  extends: [
+    "eslint:recommended",
+    "plugin:vue/recommended"
+  ],
   globals: {
     __static: true,
     "$": true,
