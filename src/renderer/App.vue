@@ -1,7 +1,7 @@
 <template>
   <div>
   <div class="container">
-    <div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+  <div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
           <a class="text-muted navbar-brand" href="#">
             <img src="static/img/mini-logo.png" style="margin-left: 20px" height="30" class="text-muted d-inline-block" alt=""> Insight Genome
           </a>
@@ -12,6 +12,7 @@
           <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
           <i class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link float-right"  onclick="history.back();"></i>
           <i class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link float-right"  onclick="history.forward();"></i>
+      <h1>{{state}}</h1>
       <div class="row" style="margin-left: 20px;">    
           <h6 class="text-right" style="margin-right: 10px">Genome ID: {{genomeidshow}}</h6>
           <h6 class="text-right" style="margin-right: 10px">Participant ID: {{researchidshow}}</h6>
@@ -34,6 +35,7 @@
             <b-list-group-item><b>Selected file: </b>{{file && file.name}}</b-list-group-item>
             <b-list-group-item><b>Genome ID: </b>{{genomeidshow}}</b-list-group-item>
             <b-list-group-item><b>Particpant ID: </b>{{researchidshow}} </b-list-group-item>
+            <b-list-group-item><b>openinput: </b>{{openinput}} </b-list-group-item>
         </b-list-group>
         <b-card-footer><button class="btn btn-outline-secondary btn-lg" v-on:click="close">Confirm and Close Loader</button></b-card-footer>
       </b-card>
@@ -142,6 +144,10 @@ export default {
       console.log(this.state)
       console.log('genos[loader]')
       console.log(genos['loader'])
+    },
+    openinput () {
+      console.log('openinput')
+      this.state = 'open'
     }
   },
   created: function () {

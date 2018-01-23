@@ -42,17 +42,26 @@ export default {
       show_genoTableTwo: false,
       show_genoTableThree: false,
       show_genoTableFour: false,
-
+      goodcount: '',
+      badcount: '',
       todisplay: []
 
     }
   },
   created: function () {
     // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
-    var genotypes = genos.Participants.Genotypes
+    var genotypes = genos.Genotypes
     // VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE
     var focustable = ''
     var studyGeno = []
+    var goodcount = 0
+    var badcount = 0
+    var lookup = {}
+        // *******
+    // var gooditems = json.DATA
+    // var baditems = json.DATA
+    var goodresult = []
+    var badresult = []
 
     $.each(AMD, function (index, value) {
       var loc = value.chrPos.toString()
@@ -66,21 +75,23 @@ export default {
         Chr: ch,
         Pos: loc
       })
-    //   console.log('partGeno')
-    //   console.log(partGeno)
+
       var partGenoObj = value
       if (partGeno.length === 0) {
         partGenoObj.Geno = '-:-'
-                // console.log("2 partGenoObj")
-                // console.log(partGenoObj)
+        // console.log("2 partGenoObj")
+        // console.log(partGenoObj)
         partGenoObj.genoGroup = 'not found'
         count = 5
         format = ''
-                // console.log("count");
-                // console.log(count);
         partGenoObj.genoTable = 3
         studyGeno.push(partGenoObj)
         this.show_genoTableThree = true
+        goodresult.push(partGeno.snpIndex)
+        console.log('partGeno.snpIndex')
+        console.log(partGeno.snpIndex)
+        console.log('goodresult')
+        console.log(goodresult)
       } else if (partGeno[0].Geno === 'blocked') {
         // var partGenoObj = value
         // console.log('this is blocked')
@@ -107,26 +118,60 @@ export default {
         count = (gen.match(risk) || []).length
         format = ''
         partGenoObj.Geno = partGeno[0].Gen
-                // console.log("3 partGenoObj")
-                // console.log(partGenoObj)
+        // console.log("3 partGenoObj")
+        // console.log(partGenoObj)
 
         switch (count) {
           case 0:
+            // *********************************************
+            // NOTHING MATCHES RISK ALLELE
+            // *********************************************
             format = 'norisk'
             partGenoObj.genoGroup = 'norisk'
+            console.log('norisk')
             partGenoObj.genoTable = 2
+            // *********************************************
+            // ONLY ADD UNIQUE TO ARRAY FOR COUNTING
+            // *********************************************
+            var currentsnpID = partGenoObj.snpID
+            // if ($.inArray(currentsnpID, goodresult) > -1) {
+            //   console.log("duplicate")
+            // }
+            if ($.inArray(currentsnpID, goodresult) === -1) {
+              console.log("new HET")
+              goodresult.push(partGenoObj.snpID)
+              console.log('length.goodresult')
+              console.log(goodresult.length)
+              this.goodcount = goodresult.length
+            }
             partGenoObj.alleleCount = 0
             this.show_genoTableTwo = true
             studyGeno.push(partGenoObj)
             break
           case 1:
+            // *********************************************
+            // HETEROZYGOUS FOR RISK ALLELE
+            // *********************************************
             format = 'heterozygous'
             partGenoObj.genoGroup = 'heterozygous'
             partGenoObj.alleleCount = 1
             this.show_genoTableOne = true
+            // *********************************************
+            // ONLY ADD UNIQUE TO ARRAY FOR COUNTING
+            // *********************************************
             if (partGenoObj.model === 'rec') {
               partGenoObj.ORcalc = partGenoObj.OR
               partGenoObj.genoTable = 2
+              if ($.inArray(currentsnpID, goodresult) === -1) {
+                console.log("new")
+                goodresult.push(partGenoObj.snpID)
+                console.log('length.goodresult')
+                console.log(goodresult.length)
+                this.goodcount = goodresult.length
+              }
+              this.goodcount = this.goodcount + 1
+            //   console.log(this.goodcount)
+            //   console.log(this.goodcount)
             } else if (partGenoObj.model === 'dom') {
               partGenoObj.ORcalc = partGenoObj.OR
               partGenoObj.genoTable = 1
@@ -173,44 +218,51 @@ export default {
     var tableGroupedData = _.groupBy(studyGeno, function (d) {
       return d.genoTable
     })
-        // console.log("tableGroupedData.1");
-        // console.log(tableGroupedData);
+    console.log("tableGroupedData.1")
+    console.log(tableGroupedData)
 
-    this.tableGroupedData = tableGroupedData // THIS IS SHOW THE TEXT OF THE JSON ON THE PAGE - CAN DELETE AFTER TROUBLE SHOOTING
+    // this.tableGroupedData = tableGroupedData // THIS IS SHOW THE TEXT OF THE JSON ON THE PAGE - CAN DELETE AFTER TROUBLE SHOOTING
 
-        // END NEW TABLE GROUPING ****************************
+    // END NEW TABLE GROUPING ****************************
 
-        // START HTML BUILD ****************************
+    // START HTML BUILD ****************************
     var genoTable = ''
     var genoTableOne = ''
     var genoTableTwo = ''
     var genoTableThree = ''
     var genoTableFour = ''
-    // console.log('genoTableOne')
-    // console.log(genoTableOne)
 
     // console.log('tableGroupedData')
     // console.log(tableGroupedData)
 
-    $.each(tableGroupedData, function (index, value) {
+    // *********************************************
+    // tableGroupedData IS GROUPED INTO TABLE 1 (RISK) AND TABLE 2 (RISK NEUTRAL)
+    // BELOW IS TO FORMAT TABLE 1 THEN TABLE 2 IN THE HTML TO BE DISPLAYED
+    // *********************************************
+
+    // $.each(tableGroupedData, function (index, value) {
                 // SORT TABLE TO GROUP SNP AND ORDER BY OR
-      var sortTable = _.sortBy(value, function (d) {
-        return d.orderID
-      })
+    // *********************************************
+    // CREATE TABLE 1 FROM GENOTYABLE = 1
+    // *********************************************
+    var soratTableOne = tableGroupedData[1]
+    var sortTable = _.sortBy(soratTableOne, function (d) {
+      return d.orderID
+    })
 
     //   console.log('sortTable')
     //   console.log(sortTable)
 
-      genoTable = genoTable.concat(
+    genoTable = genoTable.concat(
 
                     '<table class="table table table-hover">' +
                     '<tbody>'
                 )
 
                 // MAKE THE ROWS OF THE TABLE
-      $.each(sortTable, function (sortTableIndex, sortTableValue) {
-        if (sortTableValue.order === 1) {
-          genoTable = genoTable.concat(
+    $.each(sortTable, function (sortTableIndex, sortTableValue) {
+      if (sortTableValue.order === 1) {
+        genoTable = genoTable.concat(
                             '<tr class="tr_top" >' +
                             '<td width="20%" scope="row" align="center" >' + sortTableValue.repGene + '</td>' +
                             '<td  width="15%" align="center">' + sortTableValue.snpID + '</td>' +
@@ -257,8 +309,8 @@ export default {
                                 '</tr>'
 
                         )
-        } else {
-          genoTable = genoTable.concat(
+      } else {
+        genoTable = genoTable.concat(
                             '<tr class="tr_alt">' +
                             '<th scope="row" colspan="4" align="center"></th>' +
                             // '<td align="center" >' + 'Ref.' + '</td>' +
@@ -314,8 +366,8 @@ export default {
                             '</td>' +
                             '</tr>'
                         )
-        }
-      }) // END OF EACH FOR ROW A TABLE
+      }
+    }) // END OF EACH FOR ROW A TABLE
 
                 // ------------------------------------
                 // END THE TABLE
@@ -349,6 +401,8 @@ export default {
         case 1:
           console.log('case 1')
           genoTableOne = genoTable
+          this.goodcount = this.goodcount + 1
+          console.log(this.goodcount)
                         // ADD THE HEADER OF EACH STUDY
         //   genoTableOne = genoTableOne.concat(
         //                     '<div class="card">' +
@@ -423,15 +477,23 @@ export default {
       }
                 // RESET genoTable
       genoTable = ''
-    } //  END OF ALL TABLES)
-
-        )
-        // ASSIGN THE HTML FOR EACH TABLE
+    // } //  END OF ALL TABLES)
+        // )
+    // *********************************************
+    // PARENTHESIS AND CURLY BRACKET ABOVE IS END OF SECTION THAT USED TO FORMAT THE TABLES WHEN THEY HAD SAME DATA
+    // *********************************************
+    
+    // *********************************************
+    // ASSIGN THE HTML FOR EACH TABLE
+    // *********************************************
 
     this.genoTableOne = genoTableOne
     this.genoTableTwo = genoTableTwo
     this.genoTableThree = genoTableThree
     this.genoTableFour = genoTableFour
+    console.log('END OF CODE length.goodresult')
+    console.log(goodresult.length)
+    this.goodcount = goodresult.length
     // console.log('genoTableOne')
     // console.log(genoTableOne)
         // AND MAKE THEM VISIBLE
@@ -833,10 +895,11 @@ table {
         <div style="background-color: #FD901E; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
             <div class="card" style="border: 1px;">
                 <div class="tableheader" style="background-color: #FD901E;">
-                    <p><h1>Risk Increasing Variants:</h1></p>
+                    <p><h1>Risk Increasing Variants: {{goodcount}}</h1></p>
                     <p class="card-text">
                         Variants in this table are those in which your genotype includes one or more copies of the risk increasing allele.
                     </p>
+                    <p>count {{goodcount}}</p>
                 </div>
                 <div class="card-block">
                     <div>

@@ -8086,6 +8086,10 @@ vue-functional-data-merge@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-2.0.3.tgz#fe79c9f6fab13e047f1e6dcaa4a0fde63fe15587"
 
+vue-global-events@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vue-global-events/-/vue-global-events-1.0.2.tgz#63f41ad47aa969a318dc25b02f62409d1ae58d35"
+
 vue-hot-reload-api@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.1.0.tgz#9ca58a6e0df9078554ce1708688b6578754d86de"
