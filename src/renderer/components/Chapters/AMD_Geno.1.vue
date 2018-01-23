@@ -267,18 +267,18 @@ export default {
     // *********************************************
 
     $.each(tableGroupedData, function (index, value) {
-                // SORT TABLE TO GROUP SNP AND ORDER BY OR
     // *********************************************
     // CREATE TABLE 1 FROM GENOTYABLE = 1
     // *********************************************
-    // var soratTableOne = tableGroupedData
+    // switch(tableid){
+    //     case 1:
+    // }
+    // SORT TABLE TO GROUP SNP AND ORDER BY OR
     var sortTable = _.sortBy(value, function (d) {
       return d.orderID
     })
-
-    //   console.log('sortTable')
-    //   console.log(sortTable)
-
+    console.log('sortTable')
+    console.log(sortTable)
     genoTable = genoTable.concat(
 
                     '<table class="table table table-hover">' +
@@ -292,17 +292,12 @@ export default {
                             '<tr class="tr_top" >' +
                             '<td width="20%" scope="row" align="center" >' + sortTableValue.repGene + '</td>' +
                             '<td  width="15%" align="center">' + sortTableValue.snpID + '</td>' +
-                            // '<td align="center">' + sortTableValue.chr + '-' + sortTableValue.chrPos + '</td>' +
                             '<td width="10%" align="center">' + sortTableValue.Geno + '</td>' +
                             '<td width="10%" align="center">' + sortTableValue.riskAllele + '</td>' +
-                            // '<td align="center">' + 'Ref.' + '</td>' +
                             '<td width="5%" align="center">' + sortTableValue.OR + '</td>' +
                             '<td width="10%" align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
                             '<td width="5%" align="center" >' + sortTableValue.ORcalc + '</td>' +
                             '<td width="10%" align="center" >' + sortTableValue.model + '</td>' +
-                            // '<td align="center" >' + '++++' + '</td>' +
-                            // '<td align="center" >' + '++++' + '</td>' +
-                            // "<td align=\"center\"> <i class=\"fa fa-info-circle\" aria-hidden=\"true\" ></i></td>" +
                             '<div><td width="10%"><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
                             '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
                             '</tr>' +
@@ -314,7 +309,6 @@ export default {
                                             '</div>' +
                                             '<div class="cit-info">' +
                                                 '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
-                                                // "<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>" +
                                                 '<div class="cit-size">' +
                                                     'Study size and ancestry (when available) of studied population:' +
                                                         '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
@@ -326,7 +320,6 @@ export default {
                                                 '<div>' +
                                                     'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
                                                     'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
-                                                    // '<strong>First Author: </strong>' + ' ' + sortTableValue.auth + '<br />' +
                                                     'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
                                                 '</div>' +
                                             '</div>' +
@@ -339,14 +332,10 @@ export default {
         genoTable = genoTable.concat(
                             '<tr class="tr_alt">' +
                             '<th scope="row" colspan="4" align="center"></th>' +
-                            // '<td align="center" >' + 'Ref.' + '</td>' +
                             '<td align="center" >' + sortTableValue.OR + '</td>' +
                             '<td align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
                             '<td align="center" >' + sortTableValue.ORcalc + '</td>' +
                             '<td align="center" >' + sortTableValue.model + '</td>' +
-                            // '<td align="center">' + 'EUR' + '</td>' +
-                            // '<td align="center" >' + '++++' + '</td>' +
-                            // '<td align="center" >' + '++++' + '</td>' +
                             '<td><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
                             '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
                             '</tr>' +
@@ -358,7 +347,6 @@ export default {
                             '</div>' +
                             '<div class="card-block">' +
                             '<h2 class="card-title"> <em>' + sortTableValue.studyName + '</em></h2>' +
-                            // "<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>" +
                             '</div>' +
 
                             '<div class="card-block">' +
@@ -376,17 +364,11 @@ export default {
                             '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
                             '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
                             '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
-                            // '<strong>First Author: </strong>' + ' ' + sortTableValue.auth + '<br />' +
                             '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
                             '</div>' +
                             '</div>' +
                             '</div>' +
-                            // "<h1 class=\"card-title\">" + sortTableValue.studyName + "</h1>" +
-                            // "<h2 class=\"card-subtitle mb-2 text-muted\">" + "h2 text" + "</h2>" +
-                            // "<p class=\"card-text\">" + "With supporting text below as a natural lead-in to additional content." + "</p>" +
                             '<div class="card-footer">' +
-                            // '<a href="' + sortTableValue.pubLink + '">link to pubmed</a> ' +
-                            // "<small class=\"text-muted\"> Copy this link for reference to the article in pubmed: " + sortTableValue.pubLink + "</small>" +
                             '</div>' +
                             '</div>' +
                             '</td>' +
@@ -394,7 +376,6 @@ export default {
                         )
       }
     }) // END OF EACH FOR ROW A TABLE
-
                 // ------------------------------------
                 // END THE TABLE
 
@@ -402,24 +383,9 @@ export default {
                     '</tbody>' +
                     '</table>' +
 
-                    // ------------------------------------
-                    // END THE CARD
-                    // '</div>' +
-                    // '</div>' +
-                    // ------------------------------------
-                    // STYLED BREAK
                     '<br>'
                 )
-                // ASSIGN THE HTML OF FOR THE TABLE TO THE APPROPRIATE SECTION
-                // console.log("sortTableValue[0].genoTable");
-                // console.log(sortTableValue[0].genoTable);
-
-                // console.log("genoTable");
-                // console.log(genoTable);
-
-                // console.log("sortTableValue");
-                // console.log(sortTableValue);
-
+ 
     var genTableID = value[0].genoTable
                 // console.log("genoTable");
                 // console.log(genoTable);
