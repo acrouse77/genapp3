@@ -36,7 +36,9 @@ export default {
       show_genoTableFour: false,
       goodcount: '',
       badcount: '',
-      todisplay: []
+      todisplay: [],
+      table1: false,
+      table2: false
 
     }
   },
@@ -55,6 +57,8 @@ export default {
     var badresult = []
     var countall = 0
 
+    console.log('chapter')
+    console.log(chapter)
     $.each(chapter, function (index, value) {
       var loc = value.chrPos.toString()
       var ch = value.chr.toString()
@@ -125,18 +129,15 @@ export default {
             if ($.inArray(currentsnpID, goodresult) === -1) {
             //   console.log("new HET")
               goodresult.push(partGenoObj.snpID)
-              console.log('partGenoObj.snpID')
-              console.log(partGenoObj.snpID)
-              console.log('length.goodresult')
-              console.log(goodresult.length)
-            //   this.goodcount = goodresult.length
+            //   console.log('partGenoObj.snpID')
+            //   console.log(partGenoObj.snpID)
+            //   console.log('length.goodresult')
+            //   console.log(goodresult.length)
             }
             partGenoObj.alleleCount = 0
             this.show_genoTableTwo = true
             studyGeno.push(partGenoObj)
             countall++
-            // console.log("countall:" + countall)
-
             break
           case 1:
             // *********************************************
@@ -156,10 +157,10 @@ export default {
                 if ($.inArray(currentsnpID, goodresult) === -1) {
                 //   console.log("new HET")
                 goodresult.push(partGenoObj.snpID)
-                console.log('partGenoObj.snpID')
-                console.log(partGenoObj.snpID)
-                console.log('length.goodresult')
-                console.log(goodresult.length)
+                // console.log('partGenoObj.snpID')
+                // console.log(partGenoObj.snpID)
+                // console.log('length.goodresult')
+                // console.log(goodresult.length)
                 }
               this.goodcount = this.goodcount + 1
             //   console.log(this.goodcount)
@@ -171,11 +172,10 @@ export default {
                 if ($.inArray(currentsnpID, badresult) === -1) {
                 //   console.log("new HET")
                 badresult.push(partGenoObj.snpID)
-                console.log('partGenoObj.snpID')
-                console.log(partGenoObj.snpID)
-                console.log('length.goodresult')
-                console.log(goodresult.length)
-                //   this.goodcount = goodresult.length
+                // console.log('partGenoObj.snpID')
+                // console.log(partGenoObj.snpID)
+                // console.log('length.goodresult')
+                // console.log(goodresult.length)
                 }
             } else if (partGenoObj.model === 'add') {
               partGenoObj.ORcalc = partGenoObj.OR
@@ -184,11 +184,10 @@ export default {
                 if ($.inArray(currentsnpID, badresult) === -1) {
                 //   console.log("new HET")
                 badresult.push(partGenoObj.snpID)
-                console.log('partGenoObj.snpID')
-                console.log(partGenoObj.snpID)
-                console.log('length.goodresult')
-                console.log(goodresult.length)
-                //   this.goodcount = goodresult.length
+                // console.log('partGenoObj.snpID')
+                // console.log(partGenoObj.snpID)
+                // console.log('length.goodresult')
+                // console.log(goodresult.length)
                 }
             } else {
               partGenoObj.ORcalc = 42
@@ -211,10 +210,10 @@ export default {
                 if ($.inArray(currentsnpID, badresult) === -1) {
                 //   console.log("new HET")
                 badresult.push(partGenoObj.snpID)
-                console.log('partGenoObj.snpID')
-                console.log(partGenoObj.snpID)
-                console.log('length.goodresult')
-                console.log(goodresult.length)
+                // console.log('partGenoObj.snpID')
+                // console.log(partGenoObj.snpID)
+                // console.log('length.goodresult')
+                // console.log(goodresult.length)
                 //   this.goodcount = goodresult.length
                 }
             if (partGenoObj.model === 'rec') {
@@ -270,205 +269,244 @@ export default {
     // *********************************************
     // CREATE TABLE 1 FROM GENOTYABLE = 1
     // *********************************************
-    // switch(tableid){
-    //     case 1:
-    // }
-    // SORT TABLE TO GROUP SNP AND ORDER BY OR
-    var sortTable = _.sortBy(value, function (d) {
-      return d.orderID
-    })
-    console.log('sortTable')
-    console.log(sortTable)
-    genoTable = genoTable.concat(
-
-                    '<table class="table table table-hover">' +
-                    '<tbody>'
-                )
-
-                // MAKE THE ROWS OF THE TABLE
-    $.each(sortTable, function (sortTableIndex, sortTableValue) {
-      if (sortTableValue.order === 1) {
-        genoTable = genoTable.concat(
-                            '<tr class="tr_top" >' +
-                            '<td width="20%" scope="row" align="center" >' + sortTableValue.repGene + '</td>' +
-                            '<td  width="15%" align="center">' + sortTableValue.snpID + '</td>' +
-                            '<td width="10%" align="center">' + sortTableValue.Geno + '</td>' +
-                            '<td width="10%" align="center">' + sortTableValue.riskAllele + '</td>' +
-                            '<td width="5%" align="center">' + sortTableValue.OR + '</td>' +
-                            '<td width="10%" align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
-                            '<td width="5%" align="center" >' + sortTableValue.ORcalc + '</td>' +
-                            '<td width="10%" align="center" >' + sortTableValue.model + '</td>' +
-                            '<div><td width="10%"><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
-                            '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
-                            '</tr>' +
-                                '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
-                                    '<td colspan="9" align="center">' +
-                                        '<div class="s8 box col-11" align="left">' +
-                                            '<div class="cit-header">' +
-                                                'Publication Information:' +
-                                            '</div>' +
-                                            '<div class="cit-info">' +
-                                                '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
-                                                '<div class="cit-size">' +
-                                                    'Study size and ancestry (when available) of studied population:' +
-                                                        '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                                                            '<p>Initial study: ' + ' ' + sortTableValue.studySize + '<br />' +
-                                                            'Replication study:' + ' ' + sortTableValue.repSize + '<br /></p>' +
-                                                        '</div>' +
-                                                '</div>' +
-                                                '<p>Citation:' +
-                                                '<div>' +
-                                                    'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
-                                                    'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
-                                                    'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
-                                                '</div>' +
-                                            '</div>' +
-                                        '</div>' +
-                                    '</td>' +
-                                '</tr>'
-
-                        )
-      } else {
-        genoTable = genoTable.concat(
-                            '<tr class="tr_alt">' +
-                            '<th scope="row" colspan="4" align="center"></th>' +
-                            '<td align="center" >' + sortTableValue.OR + '</td>' +
-                            '<td align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
-                            '<td align="center" >' + sortTableValue.ORcalc + '</td>' +
-                            '<td align="center" >' + sortTableValue.model + '</td>' +
-                            '<td><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
-                            '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
-                            '</tr>' +
-                            '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
-                            '<td colspan="11">' +
-                            '<div class="card">' +
-                            '<div class="card-header rounded">' +
-                            'Publication Information:' +
-                            '</div>' +
-                            '<div class="card-block">' +
-                            '<h2 class="card-title"> <em>' + sortTableValue.studyName + '</em></h2>' +
-                            '</div>' +
-
-                            '<div class="card-block">' +
-                            '<h3>Study size and ancestry (when available) of studied population: </h3>' +
-                            '<div class="row">' +
-                            '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                            '<p><strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
-                            '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br /></p>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>' +
-                            '<div class="card-block">' +
-                            '<p><h3>Citation: </h3>' +
-                            '<div class="row">' +
-                            '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                            '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
-                            '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
-                            '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>' +
-                            '<div class="card-footer">' +
-                            '</div>' +
-                            '</div>' +
-                            '</td>' +
-                            '</tr>'
-                        )
-      }
-    }) // END OF EACH FOR ROW A TABLE
-                // ------------------------------------
-                // END THE TABLE
-
-    genoTable = genoTable.concat(
-                    '</tbody>' +
-                    '</table>' +
-
-                    '<br>'
-                )
- 
     var genTableID = value[0].genoTable
-                // console.log("genoTable");
-                // console.log(genoTable);
-    switch (genTableID) {
-      case 1:
-        console.log('case 1')
-        genoTableOne = genoTable
-        this.goodcount = this.goodcount + 1
-        console.log(this.goodcount)
-                        // ADD THE HEADER OF EACH STUDY
-        //   genoTableOne = genoTableOne.concat(
-        //                     '<div class="card">' +
-        //                     '<div class="card-block card-inverse " style="background-color: #FD901E;">' +
-        //                     '<h1 class="card-title">' + 'Risk Increasing Variants:</h1>' +
-        //                     '<p class="card-text">' +
-        //                     'Variants in this table are those in which your genotype includes one or more copies of the risk increasing allele. ' + '</p>' +
-        //                     '</div>' +
-        //                     '<div class="card-block">' +
-        //                     genoTable
-        //                 )
-        genoTable = ''
-                        // console.log(value[0].genoTable);
-                        // console.log("test concat genoTable");
-                        // console.log(genoTable);
-        break
-      case 2:
-        console.log('case 2')
-                        // ADD THE HEADER OF EACH STUDY
-        genoTableTwo = genoTable
-        //   genoTableTwo.concat(
-        //                     '<div class="card">' +
-        //                     '<div class="card-block card-inverse card-primary">' +
-        //                     '<h1 class="card-title">' + 'Risk Neutral Variants:</h1>' +
-        //                     '<p class="card-text">' + 'These variants reflect research rather than clinical findings. The variants shown in this table are those where your genotype did not match the risk variant. ' + '</p>' +
-        //                     '</div>' +
-        //                     '<div class="card-block">' +
-        //                     genoTable
-        //                 )
-                        // genoTableTwo = genoTable;
-        genoTable = ''
-                        // console.log(value[0].genoTable);
-                        // console.log("genoTableTwo");
-        break
-      case 3:
-        console.log('case 3')
-                        // ADD THE HEADER OF EACH STUDY
-        genoTableThree = genoTableThree.concat(
-                            '<div class="card">' +
-                            '<div class="card-block card-secondary">' +
-                            '<h1 class="card-title">' + 'Undetermined Genotypes:  </h1>' +
-                            '<p class="card-text">' + 'There was insufficient data to determine your genotype at the following locations.  Therefore, your genotype could not be distinguished as higher or lower risk.' +
-                            '</p>' +
-                            '</div>' +
+    console.log("genTableID:" + genTableID)
+    switch(genTableID){
+        case 1:
+        var genoTable = ''
+        // SORT TABLE TO GROUP SNP AND ORDER BY OR
+            var sortTable = _.sortBy(value, function (d) {
+            return d.orderID
+            })
+            console.log('sortTable')
+            console.log(sortTable)            
+            console.log('genoTable')
+            console.log(genoTable)
+            genoTable = genoTable.concat(
 
-                            '<div class="card-block">' +
-                            genoTable
+                            '<table class="table table table-hover">' +
+                            '<tbody>'
                         )
-                        // genoTableThree = genoTable;
-        genoTable = ''
-                        // console.log(value[0].genoTable);
-                        // console.log("genoTableThree");
-        break
-      case 4:
-        console.log('case 4')
-                        // ADD THE HEADER OF EACH STUDY
-        genoTableFour = genoTableFour.concat(
-                            '<div class="card">' +
-                            '<div class="card-block  style="background-color: #333; border-color: #333;">' +
-                            '<h1 class="card-title">' + 'Opted Out Variants:</h1>' +
-                            '<p class="card-text">' +
-                            'During the consent process, you opted out of learning genetic information for one or more diseases. The associated variants are listed in the table below, but your genotype(s) were not analyzed and have been excluded from the Guide.' +
-                            '</p>' +
-                            '</div>' +
-                            '<div class="card-block">' +
-                            genoTable
+
+                        // MAKE THE ROWS OF THE TABLE
+            $.each(sortTable, function (sortTableIndex, sortTableValue) {
+            if (sortTableValue.order === 1) {
+                genoTable = genoTable.concat(
+                                    '<tr class="tr_top" >' +
+                                    '<td width="20%" scope="row" align="center" >' + sortTableValue.repGene + '</td>' +
+                                    '<td  width="15%" align="center">' + sortTableValue.snpID + '</td>' +
+                                    '<td width="10%" align="center">' + sortTableValue.Geno + '</td>' +
+                                    '<td width="10%" align="center">' + sortTableValue.riskAllele + '</td>' +
+                                    '<td width="5%" align="center">' + sortTableValue.OR + '</td>' +
+                                    '<td width="10%" align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
+                                    '<td width="5%" align="center" >' + sortTableValue.ORcalc + '</td>' +
+                                    '<td width="10%" align="center" >' + sortTableValue.model + '</td>' +
+                                    '<div><td width="10%"><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
+                                    '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
+                                    '</tr>' +
+                                        '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
+                                            '<td colspan="9" align="center">' +
+                                                '<div class="s8 box col-11" align="left">' +
+                                                    '<div class="cit-header">' +
+                                                        'Publication Information:' +
+                                                    '</div>' +
+                                                    '<div class="cit-info">' +
+                                                        '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
+                                                        '<div class="cit-size">' +
+                                                            'Study size and ancestry (when available) of studied population:' +
+                                                                '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                                                    '<p>Initial study: ' + ' ' + sortTableValue.studySize + '<br />' +
+                                                                    'Replication study:' + ' ' + sortTableValue.repSize + '<br /></p>' +
+                                                                '</div>' +
+                                                        '</div>' +
+                                                        '<p>Citation:' +
+                                                        '<div>' +
+                                                            'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
+                                                            'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
+                                                            'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                                        '</div>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                            '</td>' +
+                                        '</tr>'
+
+                                )
+            } else {
+                genoTable = genoTable.concat(
+                                    '<tr class="tr_alt">' +
+                                    '<th scope="row" colspan="4" align="center"></th>' +
+                                    '<td align="center" >' + sortTableValue.OR + '</td>' +
+                                    '<td align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
+                                    '<td align="center" >' + sortTableValue.ORcalc + '</td>' +
+                                    '<td align="center" >' + sortTableValue.model + '</td>' +
+                                    '<td><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
+                                    '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
+                                    '</tr>' +
+                                    '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
+                                    '<td colspan="11">' +
+                                    '<div class="card">' +
+                                    '<div class="card-header rounded">' +
+                                    'Publication Information:' +
+                                    '</div>' +
+                                    '<div class="card-block">' +
+                                    '<h2 class="card-title"> <em>' + sortTableValue.studyName + '</em></h2>' +
+                                    '</div>' +
+
+                                    '<div class="card-block">' +
+                                    '<h3>Study size and ancestry (when available) of studied population: </h3>' +
+                                    '<div class="row">' +
+                                    '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                    '<p><strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
+                                    '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br /></p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="card-block">' +
+                                    '<p><h3>Citation: </h3>' +
+                                    '<div class="row">' +
+                                    '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                    '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
+                                    '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
+                                    '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="card-footer">' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</td>' +
+                                    '</tr>'
+                                )
+            }
+            }) // END OF EACH FOR ROW A TABLE
+                        // ------------------------------------
+                        // END THE TABLE
+
+            genoTable = genoTable.concat(
+                            '</tbody>' +
+                            '</table>' +
+
+                            '<br>'
                         )
-                        // genoTableFour = genoTable;
-        genoTable = ''
-                        // console.log(value[0].genoTable);
-                        // console.log("genoTableFour");
+            genoTableOne = genoTable
+    break
+    case 2:
+        var genoTable = ''
+        // SORT TABLE TO GROUP SNP AND ORDER BY OR
+        var sortTable = _.sortBy(value, function (d) {
+        return d.orderID
+        })
+        console.log('sortTable')
+        console.log(sortTable)
+        genoTable = genoTable.concat(
+
+                        '<table class="table table table-hover">' +
+                        '<tbody>'
+                    )
+
+                    // MAKE THE ROWS OF THE TABLE
+        $.each(sortTable, function (sortTableIndex, sortTableValue) {
+        if (sortTableValue.order === 1) {
+            genoTable = genoTable.concat(
+                                '<tr class="tr_top" >' +
+                                '<td width="20%" scope="row" align="center" >' + sortTableValue.repGene + '</td>' +
+                                '<td  width="20%" align="center">' + sortTableValue.snpID + '</td>' +
+                                '<td width="20%" align="center">' + sortTableValue.Geno + '</td>' +
+                                '<td width="20%" align="center">' + sortTableValue.riskAllele + '</td>' +
+                                // '<td width="5%" align="center">' + sortTableValue.OR + '</td>' +
+                                // '<td width="10%" align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
+                                // '<td width="5%" align="center" >' + sortTableValue.ORcalc + '</td>' +
+                                // '<td width="10%" align="center" >' + sortTableValue.model + '</td>' +
+                                '<div><td width="20%"><i class="btn fa fa-info-circle fa-align-center" style="text-align:center" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
+                                '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
+                                '</tr>' +
+                                    '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
+                                        '<td colspan="9" align="center">' +
+                                            '<div class="s8 box col-11" align="left">' +
+                                                '<div class="cit-header">' +
+                                                    'Publication Information:' +
+                                                '</div>' +
+                                                '<div class="cit-info">' +
+                                                    '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
+                                                    '<div class="cit-size">' +
+                                                        'Study size and ancestry (when available) of studied population:' +
+                                                            '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                                                '<p>Initial study: ' + ' ' + sortTableValue.studySize + '<br />' +
+                                                                'Replication study:' + ' ' + sortTableValue.repSize + '<br /></p>' +
+                                                            '</div>' +
+                                                    '</div>' +
+                                                    '<p>Citation:' +
+                                                    '<div>' +
+                                                        'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
+                                                        'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
+                                                        'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</td>' +
+                                    '</tr>'
+
+                            )
+        } else {
+            genoTable = genoTable.concat(
+                                '<tr class="tr_alt">' +
+                                '<th scope="row" colspan="4" align="center"></th>' +
+                                '<td align="center" >' + sortTableValue.OR + '</td>' +
+                                '<td align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
+                                '<td align="center" >' + sortTableValue.ORcalc + '</td>' +
+                                '<td align="center" >' + sortTableValue.model + '</td>' +
+                                '<td><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
+                                '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
+                                '</tr>' +
+                                '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
+                                '<td colspan="11">' +
+                                '<div class="card">' +
+                                '<div class="card-header rounded">' +
+                                'Publication Information:' +
+                                '</div>' +
+                                '<div class="card-block">' +
+                                '<h2 class="card-title"> <em>' + sortTableValue.studyName + '</em></h2>' +
+                                '</div>' +
+
+                                '<div class="card-block">' +
+                                '<h3>Study size and ancestry (when available) of studied population: </h3>' +
+                                '<div class="row">' +
+                                '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                '<p><strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
+                                '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br /></p>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '<div class="card-block">' +
+                                '<p><h3>Citation: </h3>' +
+                                '<div class="row">' +
+                                '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
+                                '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
+                                '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '<div class="card-footer">' +
+                                '</div>' +
+                                '</div>' +
+                                '</td>' +
+                                '</tr>'
+                            )
+        }
+        }) // END OF EACH FOR ROW A TABLE
+                    // ------------------------------------
+                    // END THE TABLE
+
+        genoTable = genoTable.concat(
+                        '</tbody>' +
+                        '</table>' +
+
+                        '<br>'
+                    )
+        genoTableTwo = genoTable
+    break
     }
-                // RESET genoTable
-    genoTable = ''
     } //  END OF ALL TABLES)
         )
     // *********************************************
@@ -494,16 +532,16 @@ export default {
     // console.log(genoTableOne)
         // AND MAKE THEM VISIBLE
     if (genoTableOne.length !== 0) {
-      this.show_genoTableOne = true
-            // console.log("this.show_genoTableOne = true;")
+        this.show_genoTableOne = true
+        console.log("this.show_genoTableOne = true;")
     }
         // console.log("genoTableOne");
         // console.log(typeof genoTableOne);
         // console.log(genoTableOne.length);
 
     if (genoTableTwo.length !== 0) {
-      this.show_genoTableTwo = true
-            // console.log("this.show_genoTableTwo = true;")
+        this.show_genoTableTwo = true
+        console.log("this.show_genoTableTwo = true;")
     }
         // console.log("genoTableTwo");
         // console.log(typeof genoTableTwo);
@@ -663,8 +701,13 @@ export default {
         // SET DATA pubtable TO FOCUSTABLE value
     this.pubtable = focustable
   },
-  computed: {
-
+  methods: {
+      tableonebutton () {
+       this.table1 = !this.table1   
+      },
+      tabletwobutton () {
+       this.table2 = !this.table2  
+      }
   }
 
 }
@@ -747,6 +790,9 @@ hr.style18:before {
     border-radius: 20px;
 }
 
+td,th {
+  text-align: center;
+}
 
 .rounded {
     border-radius: 10px;
@@ -770,7 +816,10 @@ table {
     font-size: 20px;
     font-weight: normal;
 }
-
+.tblbutton {
+    background-color: white;
+    margin-top: 10px;
+}
 .cit-header{
     border-bottom: 1px solid darkgrey;
     padding:10px;
@@ -890,13 +939,18 @@ table {
     <div v-if="show_genoTableOne">
         <div style="background-color: #FD901E; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
             <div class="card" style="border: 1px;">
-                <div class="tableheader" style="background-color: #FD901E;">
-                    <p><h1>Risk Increasing Variants: {{badcount}}</h1></p>
-                    <p class="card-text">
-                        Variants in this table are those in which your genotype includes one or more copies of the risk increasing allele.
-                    </p>
+                <div class="tableheader row" style="background-color: #FD901E;">
+                    <div class="col-9">
+                        <p><h1>Risk Increasing Variants: {{badcount}}</h1></p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-lg tblbutton" v-on:click="tableonebutton">View Details</button>
+                    </div>
+                        <p class="card-text">
+                            Variants in this table are those in which your genotype includes one or more copies of the risk increasing allele.
+                        </p>
                 </div>
-                <div class="card-block">
+                <div class="card-block" v-show="table1">
                     <div>
                         <table class="table table table-hover" style="margin-bottom:0px">
                             <thead>
@@ -929,28 +983,28 @@ table {
         <div v-if="show_genoTableTwo">
             <div style="background-color: #1E8BFD; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
             <div class="card" style="border: 1px;">
-                <div class="tableheader" style="background-color: #1E8BFD;">
+                <div class="tableheader row" style="background-color: #1E8BFD;">
+                    <div class="col-9">
                     <p><h1>Risk Neutral Variants: {{goodcount}}</h1></p>
-                    <p class="card-text">
-                        These variants reflect research rather than clinical findings. The variants shown in this table are those where your genotype did not match the risk variant.
-                    </p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-lg tblbutton" v-on:click="tabletwobutton">View Details</button>
+                    </div>
+                        <p class="card-text">
+                        The variants shown in this table are those where your genotype did not match the risk variant.                        </p>
                 </div>
-                <div class="card-block">
+                <div class="card-block" v-show="table2">
                     <div>
                         <table class="table table table-hover" style="margin-bottom:0px">
                             <thead>
-                                <tr class="tr_top">
+                                <tr class="tr_top" style="text-align:center">
                                     
-                                    <th width="20%" align="center" v-b-popover.hover.top="'the specific gene in which the variant is located. In some cases a gene may have more than one name listed.'" title="Gene:"> Gene</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'the specific gene in which the variant is located. In some cases a gene may have more than one name listed.'" title="Gene:"> Gene</th>
 
-                                    <th width="15%" align="center" v-b-popover.hover.top="'the unique identifier for the particular variant'" title="snpID:"  data-content="the unique identifier for the particular variant">snpID</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.'" title="Your Genotype:">Your Genotype</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'at a variant location, the particular DNA letter found to be associated with an altered disease risk.'" title="Risk allele:" data-content="">Risk allele</th>
-                                    <th width="5%" align="center" v-b-popover.hover.top="'this number represents the estimated impact of the presence of the risk allele at this location. ************ (should this be removed?)'" title="Odds Ratio:" data-content="research publication number.  See references at bottom of page.">OR</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'shown for reviewers to check calculations - to be removed'" title=" Calcualted Odds Ratio:">Zyg?</th>
-                                    <th width="5%" align="center" v-b-popover.hover.top="'this number represents the estimated impact of the risk allele based on your genotype and the model used in the publication.'" title=" Calcualted Odds Ratio:">OR calc</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'the type of inheritance patern required to see the phenotype.  \'add\' means additive.  In this model, each allele adds additional risk. \'rec\' means recessive. In this model, only the homozygous genotype has an increased risk. \'dom\' means dominant.  In this model one or two risk alleles result in the same total risk.'" title="Inheritance model:" data-content="Hom het or add.">model</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'click to access more details about the research studies that have investigated the variant\'s impact.'" title="Study Info.:">Study Info.</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'the unique identifier for the particular variant'" title="snpID:"  data-content="the unique identifier for the particular variant">snpID</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.'" title="Your Genotype:">Your Genotype</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'at a variant location, the particular DNA letter found to be associated with an altered disease risk.'" title="Risk allele:" data-content="">Risk allele</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'click to access more details about the research studies that have investigated the variant\'s impact.'" title="Study Info.:">Study Info.</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -963,27 +1017,7 @@ table {
             </div>
             <hr class="style18">
         </div>
-        <!-- <div v-if="show_genoTableThree" class="col-lg-12 col-md-12 col-sm-12 col-centered">
-            <div style="background-color: #7A9195; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
-                <p v-html="genoTableThree"></p>
 
-            </div>
-            <hr class="style18">
-        </div> -->
-        <!-- <div v-if="show_genoTableFour" class="text-muted col-lg-12 col-md-12 col-sm-12 col-centered">
-            <div style=" background-color: #33383D; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
-                <p v-html="genoTableFour"></p>
-
-            </div>
-            <hr class="style18">
-        </div> -->
-        <!--<div class="card card-inverse card-primary text-center">
-            <div class="card-block">
-                <blockquote class="card-blockquote">
-                <h2 class="card-text">Reminder: the genomic variants in the table(s) above are based on research findings rather than clinical finding.</h2>
-                </blockquote>
-            </div>
-        </div>-->
     </div> <!-- end card -->
     </div> <!-- end rounded style -->
     </div>

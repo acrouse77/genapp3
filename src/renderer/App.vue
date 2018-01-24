@@ -5,17 +5,18 @@
           <a class="text-muted navbar-brand" href="#">
             <img src="static/img/mini-logo.png" style="margin-left: 20px" height="30" class="text-muted d-inline-block" alt=""> Insight Genome
           </a>
-          <router-link :to="{name: 'introduction-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
-          <router-link :to="{name: 'chapter-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
-          <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
-          <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
-          <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'introduction-page'}" class="btn btn-outline-secondary btn-md"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'chapter-page'}" class="btn btn-outline-secondary btn-md"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-md "><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-md"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-md"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
           <i class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link float-right"  onclick="history.back();"></i>
           <i class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link float-right"  onclick="history.forward();"></i>
-      <h1>{{state}}</h1>
       <div class="row" style="margin-left: 20px;">    
           <h6 class="text-right" style="margin-right: 10px">Genome ID: {{genomeidshow}}</h6>
           <h6 class="text-right" style="margin-right: 10px">Participant ID: {{researchidshow}}</h6>
+          <h6 class="text-right" style="margin-right: 10px">state: {{state}}</h6>
+          
       </div>
     </div>
   <div class="row uploadbar" v-show="state!=='closed'">
@@ -64,7 +65,8 @@ import path from 'path'
 
 let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
 var participantData = JSON.parse(participantDataString)
-
+console.log('participantData')
+console.log(participantData)
 const webview = document.querySelector('webview')
 const BrowserWindow = require('electron').BrowserWindow
 
@@ -89,7 +91,9 @@ export default {
       researchID: null,
       genomeidshow: 'NO GENOMEID FOUND',
       researchidshow: 'NO RESEARCH ID FOUND',
-      state: 'open'
+      state: 'open',
+      readpartdata: path.join(__static, '/participantdata/participant.json'),
+      newdatapath: path.join(__static, '/participantdata/participantDataTEST.json')
     }
   },
   name: 'insightrebuild5',
@@ -108,6 +112,7 @@ export default {
       this.researchidshow = this.researchID
       let participantDataString = fs.readFileSync(path)
       var participantDataParse = JSON.parse(participantDataString)
+      console.log('participantDataParse')
       console.log(participantDataParse)
       // ADD GENOME ID AND RESEARCH PARTICIPANT ID TO THE FILE BEFORE WRITING
       // GET GENOMEID FROM FILE NAME
@@ -127,17 +132,23 @@ export default {
       // ********
       var participantDataWrite = JSON.stringify(input, null, "\t")
       // REWRITE THE DATA FILE
-      fs.writeFileSync('static/participantdata/participantDataTEST.json', participantDataWrite)
-      let genosread = fs.readFileSync('static/participantdata/participantDataTEST.json', 'utf8')
+      // console.log('participantDataWrite')
+      // console.log(participantDataWrite)
+      console.log("next is join writesync")
+      console.log("static")
+      console.log(__static)
+      // (path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
+      fs.writeFileSync(this.newdatapath, participantDataWrite)
+      let genosread = fs.readFileSync(this.newdatapath, 'utf8')
       var genos = JSON.parse(genosread)
-      console.log("genos")
-      console.log(genos)
+      // console.log("genos")
+      // console.log(genos)
       console.log('this.state')
       console.log(this.state)
     },
     close () {
       console.log('close')
-      let genosread = fs.readFileSync('static/participantdata/participantDataTEST.json', 'utf8')
+      let genosread = fs.readFileSync(this.newdatapath, 'utf8')
       var genos = JSON.parse(genosread)
       this.state = genos['loader']
       console.log('this.state')
@@ -152,9 +163,10 @@ export default {
   },
   created: function () {
     console.log("loaderstate")
-    let genosread = fs.readFileSync('static/participantdata/participantDataTEST.json', 'utf8')
-    var genos = JSON.parse(genosread)
-    this.state = genos['loader']
+    // let participa = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+    // let genosread = fs.readFileSync($.path.join(__static, '/participantdata/participantDataTEST.json', 'utf8'))
+    // var genos = JSON.parse(genosread)
+    this.state = participantData['loader']
     console.log('this.state')
     console.log(this.state)
   }
