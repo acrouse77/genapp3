@@ -80,7 +80,7 @@ import path from 'path'
 let batread = fs.readFileSync(path.join(__static, '/referencedata/BAT.json'), 'utf8')
 var bat = JSON.parse(batread)
 
-let genosread = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+let genosread = fs.readFileSync(path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
 var genos = JSON.parse(genosread)
 
 let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/final_reduced.json'), 'utf8')
@@ -133,7 +133,7 @@ export default {
     var urlarray = window.location.hash.split('/')
     var n = urlarray.length - 1
     var getparam = decodeURI(urlarray[n])
-    var genotypes = genos.Participants.Genotypes
+    var genotypes = genos.Genotypes
     console.log("genotypes")
     console.log(genotypes)
         // VARIABLE TO CREATE HTML FOR DISPLAY OF TABLE

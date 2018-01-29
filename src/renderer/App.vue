@@ -9,7 +9,6 @@
           <router-link :to="{name: 'chapter-page'}" class="btn btn-outline-secondary btn-md"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
           <router-link :to="{name: 'categories-page'}" class="btn btn-outline-secondary btn-md "><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
           <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-md"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
-          <router-link :to="{name: 'traits-page'}" class="btn btn-outline-secondary btn-md"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
           <i class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link float-right"  onclick="history.back();"></i>
           <i class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link float-right"  onclick="history.forward();"></i>
       <div class="row" style="margin-left: 20px;">    

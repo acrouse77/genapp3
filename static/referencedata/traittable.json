@@ -1,0 +1,233 @@
+[
+  {
+    "rsID": "rs762551",
+    "subject": "Caffeine Metabolism",
+    "chr": 15,
+    "loc": 75041917,
+    "genotypes": [
+      {
+        "trait": "caffeine",
+        "geno1": "A",
+        "geno2": "A",
+        "pheno": "Fast caffeine metabolizer"
+      },
+      {
+        "trait": "caffeine",
+        "geno1": "A",
+        "geno2": "C",
+        "pheno": "Slow caffeine metabolizer"
+      },
+      {
+        "trait": "caffeine",
+        "geno1": "C",
+        "geno2": "C",
+        "pheno": "Slow caffeine metabolizer"
+      }
+    ]
+  },
+  {
+    "rsID": "rs17822931",
+    "subject": "Stink-Free Armpits and Ear Wax Type",
+    "chr": 16,
+    "loc": 48258198,
+    "genotypes": [
+      {
+        "trait": "earwax",
+        "geno1": "C",
+        "geno2": "C",
+        "pheno": "Normal armpits and wet earwax"
+      },
+      {
+        "trait": "earwax",
+        "geno1": "C",
+        "geno2": "T",
+        "pheno": "Normal armpits and wet earwax"
+      },
+      {
+        "trait": "earwax",
+        "geno1": "T",
+        "geno2": "T",
+        "pheno": "Stink-Free armpits and dry earwax"
+      }
+    ]
+  },
+  {
+    "rsID": "rs671",
+    "subject": "Alcohol Flush Reaction",
+    "chr": 12,
+    "loc": 112241766,
+    "genotypes": [
+      {
+        "trait": "flush",
+        "geno1": "G",
+        "geno2": "G",
+        "pheno": "Little to no flushing"
+      },
+      {
+        "trait": "flush",
+        "geno1": "G",
+        "geno2": "A",
+        "pheno": "Moderate flushing"
+      },
+      {
+        "trait": "flush",
+        "geno1": "A",
+        "geno2": "A",
+        "pheno": "Extreme flushing"
+      }
+    ]
+  },
+  {
+    "rsID": "rs601338",
+    "subject": "Norovirus Susceptibility",
+    "chr": 19,
+    "loc": 49206674,
+    "genotypes": [
+      {
+        "trait": "norovirus",
+        "geno1": "G",
+        "geno2": "G",
+        "pheno": "Susceptible"
+      },
+      {
+        "trait": "norovirus",
+        "geno1": "G",
+        "geno2": "A",
+        "pheno": "Susceptible"
+      },
+      { "trait": "norovirus", 
+        "geno1": "A", 
+        "geno2": "A", 
+        "pheno": "Resistant" }
+    ]
+  },
+  {
+    "rsID": "rs10427255",
+    "subject": "Photic Sneeze Reflex",
+    "chr": 2,
+    "loc": 146125523,
+    "genotypes": [
+        {
+            "trait": "sneeze",
+            "geno1": "C",
+            "geno2": "C",
+            "pheno": "Increased odds of photic sneeze reflex"
+          },
+          {
+            "trait": "sneeze",
+            "geno1": "C",
+            "geno2": "T",
+            "pheno": "Somewhat increased odds of photic sneeze reflex"
+          },
+          {
+            "trait": "sneeze",
+            "geno1": "T",
+            "geno2": "T",
+            "pheno": "Decreased odds of photic sneeze reflex"
+          }
+    ]
+  },
+  {
+    "rsID": "rs4988235",
+    "subject": "Lactose Intolerance",
+    "chr": 2,
+    "loc": 136608646,
+    "genotypes": [
+        {
+            "trait": "lactose",
+            "geno1": "C",
+            "geno2": "C",
+            "pheno": "Likely to be lactose intolerant"
+          },
+          {
+            "trait": "lactose",
+            "geno1": "C",
+            "geno2": "T",
+            "pheno": "Likely to be able to digest milk"
+          },
+          {
+            "trait": "lactose",
+            "geno1": "T",
+            "geno2": "T",
+            "pheno": "Likely to be able to digest milk"
+          }
+    ]
+  },
+  {
+    "rsID": "rs713598",
+    "subject": "Bitter Taste Perception",
+    "chr": 7,
+    "loc": 141673345,
+    "genotypes": [
+        {
+            "trait": "bitter",
+            "geno1": "G",
+            "geno2": "G",
+            "pheno": "May be unable to taste bitter in some foods"
+          },
+          {
+            "trait": "bitter",
+            "geno1": "C",
+            "geno2": "G",
+            "pheno": "Can taste bitter"
+          },
+          {
+            "trait": "bitter",
+            "geno1": "C",
+            "geno2": "C",
+            "pheno": "Can taste bitter"
+          }        
+    ]
+  },
+  {
+    "rsID": "rs1815739",
+    "subject": "Sprint vs Endurance",
+    "chr": 11,
+    "loc": 66328095,
+    "genotypes": [{
+        "trait": "sprinter",
+        "geno1": "C",
+        "geno2": "C",
+        "pheno": "Likely sprinter"
+      },
+      {
+        "trait": "sprinter",
+        "geno1": "C",
+        "geno2": "T",
+        "pheno": "Likely sprinter"
+      },
+      {
+        "trait": "sprinter",
+        "geno1": "T",
+        "geno2": "T",
+        "pheno": "Likely endurance athlete"
+      }
+    ]
+  },
+  {
+    "rsID": "rs1805007",
+    "subject": "Freckling",
+    "chr": 16,
+    "loc": 89986117,
+    "genotypes": [
+        {
+            "trait": "freckle",
+            "geno1": "C",
+            "geno2": "C",
+            "pheno": "Less likely to freckle"
+          },
+          {
+            "trait": "freckle",
+            "geno1": "C",
+            "geno2": "T",
+            "pheno": "Likely to freckle"
+          },
+          {
+            "trait": "freckle",
+            "geno1": "T",
+            "geno2": "T",
+            "pheno": "Likely to freckle"
+          }
+    ]
+  }
+]
