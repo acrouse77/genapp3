@@ -18,6 +18,7 @@ img {
 
 <script>
 import Geno from './RA_Geno'
+// import RA from path.join(__static, '/referencedata/03-Rheumatoid-arthritis.vue')
 import RA from './assets/03-Rheumatoid-arthritis.vue'
 import Key from './Key.vue'
 

@@ -63,8 +63,12 @@
 </template>
 
 <script>
+import path from 'path'
 // import bat from './assets/BAT.json'
-import categories from './assets/categories.json'
+// var datapath = path.join(__static, '/referencedata/categories.json')
+// console.log('datapath')
+// console.log(datapath)
+// import categories from datapath
 var _ = require('underscore')
 // import Vue from 'vue'
 
@@ -96,6 +100,8 @@ export default {
     var getparam = decodeURI(urlarray[n])
     console.log('getparam')
     console.log(getparam)
+    let categoryread = fs.readFileSync(path.join(__static, '/referencedata/categories.json'), 'utf8')
+    var categories = JSON.parse(categoryread)
 
       // GROUPING BY FOCUS - eg. Hematocrit
     var catGroupedData = _.groupBy(categories, function (d) {

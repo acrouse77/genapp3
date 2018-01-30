@@ -86,13 +86,6 @@ var genos = JSON.parse(genosread)
 let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/final_reduced.json'), 'utf8')
 var finreduced = JSON.parse(finreducedread)
 
-// console.log("genosread")
-// console.log(genosread)
-
-// import bat from './assets/BAT.json'
-// import genos from './assets/hj.json'
-// import finreduced from './assets/final_reduced.json'
-// import Vue from 'vue'
 var _ = require('underscore')
 // import genos from '/app/dist/data/SL159977_bear.json'
 // SHOWING THAT VARIABLE CAN BE SET TO VALUE AND USED IN JSON INPUT FOR where

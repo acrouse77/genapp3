@@ -16,6 +16,7 @@
 <script>
   import Geno3 from './CAD_Geno.vue'
   import CAD from './assets/02-Coronary-Artery-Disease2.vue'
+  // import CAD from path.join(__static, '/referencedata/02-Coronary-Artery-Disease2.vue')
   import Key from './Key.vue'
 
   export default {

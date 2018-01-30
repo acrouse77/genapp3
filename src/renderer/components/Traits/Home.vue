@@ -634,13 +634,10 @@ hr.style18:before {
 import fs from 'fs'
 import path from 'path'
 
-let AMDread = fs.readFileSync(path.join(__static, '/referencedata/AMD_ordered2.json'), 'utf8')
-var AMD = JSON.parse(AMDread)
+let traitread = fs.readFileSync(path.join(__static, '/referencedata/traittable.json'), 'utf8')
+var traitdata = JSON.parse(traitread)
 
-let finreducedread = fs.readFileSync(path.join(__static, '/referencedata/AMD.json'), 'utf8')
-var finreduced = JSON.parse(finreducedread)
-
-let genosread = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+let genosread = fs.readFileSync(path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
 var genos = JSON.parse(genosread)
 
 var _ = require('underscore')
@@ -661,10 +658,23 @@ export default {
   },
   created: function () {
     // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
-    var genotypes = genos.Participants.Genotypes
-    console.log('genotypes')
-    console.log(genotypes)
-  },
+    var genotypes = genos.Genotypes
+    console.log('traitdata')
+    console.log(traitdata[0])
+    $.each(traitdata, function (index, value) {
+      var traitloc = value.loc.toString()
+      var traitch = value.chr.toString()
+
+      var partGeno = _.findWhere(genotypes, {
+        Chr: traitch,
+        Pos: traitloc
+      })
+      console.log('partGeno')
+      console.log(partGeno)
+      
+    })
+
+    },
   computed: {
 
   }

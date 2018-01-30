@@ -19,26 +19,27 @@
       </div>
     </div>
   <div class="row uploadbar" v-show="state!=='closed'">
-      <b-card class="col-4" style="margin-left:100px">
-        <h4 slot="header">Select data to load</h4>
-        <!-- Simple File -->
-        <b-form-file id="file_input1" v-model="file" ></b-form-file>
-          <br>
-        <b-form-input v-model="researchID" type="text" placeholder="Enter the participant's identifier"></b-form-input>
-          <br>
-        <button class="btn btn-outline-secondary btn-lg" v-on:click="confirm">confirm</button>
-      </b-card>
+      <div class="col-4" style="margin-left:100px">
+        <b-card>
+          <h4 slot="header">Select data to load</h4>
+          <!-- Simple File -->
+          <b-form-file id="file_input1" v-model="file" ></b-form-file>
+            <br>
+          <b-form-input v-model="researchID" type="text" placeholder="Enter the participant's identifier"></b-form-input>
+            <br>
+          <button class="btn btn-outline-secondary btn-lg" v-on:click="confirm">confirm</button>
+        </b-card>
+      </div>
       <div class=" col-5" style="margin-left:100px">
-      <b-card>
-        <h4 slot="header">Review data to be loaded</h4>
-        <b-list-group flush>
-            <b-list-group-item><b>Selected file: </b>{{file && file.name}}</b-list-group-item>
-            <b-list-group-item><b>Genome ID: </b>{{genomeidshow}}</b-list-group-item>
-            <b-list-group-item><b>Particpant ID: </b>{{researchidshow}} </b-list-group-item>
-            <b-list-group-item><b>openinput: </b>{{openinput}} </b-list-group-item>
-        </b-list-group>
-        <b-card-footer><button class="btn btn-outline-secondary btn-lg" v-on:click="close">Confirm and Close Loader</button></b-card-footer>
-      </b-card>
+        <b-card>
+          <h4 slot="header">Review data to be loaded</h4>
+          <b-list-group flush>
+              <b-list-group-item><b>Selected file: </b>{{file && file.name}}</b-list-group-item>
+              <b-list-group-item><b>Genome ID: </b>{{genomeidshow}}</b-list-group-item>
+              <b-list-group-item><b>Particpant ID: </b>{{researchidshow}} </b-list-group-item>
+          </b-list-group>
+          <b-card-footer><button class="btn btn-outline-secondary btn-lg" v-on:click="close">Confirm and Close Loader</button></b-card-footer>
+        </b-card>
       </div>
   </div>  
 </div>
@@ -64,7 +65,7 @@ import path from 'path'
 
 let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
 var participantData = JSON.parse(participantDataString)
-console.log('participantData')
+console.log('participantData first?')
 console.log(participantData)
 const webview = document.querySelector('webview')
 const BrowserWindow = require('electron').BrowserWindow
@@ -90,7 +91,7 @@ export default {
       researchID: null,
       genomeidshow: 'NO GENOMEID FOUND',
       researchidshow: 'NO RESEARCH ID FOUND',
-      state: 'open',
+      state: 'closed',
       readpartdata: path.join(__static, '/participantdata/participant.json'),
       newdatapath: path.join(__static, '/participantdata/participantDataTEST.json')
     }
@@ -162,12 +163,27 @@ export default {
   },
   created: function () {
     console.log("loaderstate")
-    // let participa = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
-    // let genosread = fs.readFileSync($.path.join(__static, '/participantdata/participantDataTEST.json', 'utf8'))
-    // var genos = JSON.parse(genosread)
-    this.state = participantData['loader']
-    console.log('this.state')
-    console.log(this.state)
+    // let exampledata = fs.readFileSync('static/participantdata/participant.json', 'utf8')
+    let genosread = fs.readFileSync('static/participantdata/participantDataTEST.json', 'utf8')
+    var genos = JSON.parse(genosread)
+    console.log('genos')
+    console.log(genos)
+    console.log('genos.loader')
+    console.log(genos.loader)
+    this.state = genos.loader
+    this.genomeidshow = genos.genomeID
+    this.researchidshow = genos.ID
+    // var examplegenos = JSON.parse(exampledata)
+    // this.state = participantData['loader']
+    // console.log('participantData second?')
+    // console.log(participantData)
+    // console.log("examplegenos")
+    // console.log(examplegenos)
+    // console.log('examplegenos.Participants.loader')
+    // console.log(examplegenos.Participants.loader)
+    // this.state = examplegenos.Participants.loader
+    // console.log('this.state')
+    // console.log(this.state)
   }
 }
 </script>

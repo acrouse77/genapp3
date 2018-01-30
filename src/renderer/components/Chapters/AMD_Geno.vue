@@ -10,16 +10,8 @@ var finreduced = JSON.parse(finreducedread)
 
 let genosread = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
 var genos = JSON.parse(genosread)
-// import AMD from './assets/data/AMD_ordered2.json'
-// import finreduced from './assets/data/AMD.json'
-// import genos from './assets/data/hj.json'
-var _ = require('underscore')
-// import genos from './assets/data/SL159977_bear.json'
 
-// console.log('AMD')
-// console.log(AMD)
-// console.log('finreduced')
-// console.log(finreduced)
+var _ = require('underscore')
 
 export default {
   props: ['selectCat'],

@@ -22,14 +22,15 @@ img {
 import Geno from './AMD_Geno.vue'
 import Geno1 from './AMD_Geno.1.vue'
 import AMD from './assets/01-age-related-macular-degeneration.vue'
+// import AMD from 'static/referencedata/01-age-related-macular-degeneration.vue'
 import Key from './Key.vue'
 
 export default {
   components: {
     Geno1,
-    Geno,
-    AMD,
-    Key
+    // Geno,
+    AMD
+    // Key
   },
   name: 'AMD-page',
   data () {
