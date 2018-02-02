@@ -18,7 +18,7 @@
           
       </div>
     </div>
-  <div class="row uploadbar" v-show="state!=='closed'">
+  <div class="row uploadbar" v-show="checkstate!=='closed' && state ==='open'">
       <div class="col-4" style="margin-left:100px">
         <b-card>
           <h4 slot="header">Select data to load</h4>
@@ -53,7 +53,7 @@
       <p class="text-muted">
         <H1>DISCLAIMER </H1>
         <!--<BR /> RESEARCH ONLY - DON'T EVEN CONSIDER THINKING THIS IS NOT RESEARCH OR MIKE WILL GET YOU.</p>-->
-        <BR /> RESEARCH ONLY APPLICATION</p>
+        <br />> RESEARCH ONLY APPLICATION</p>
     </div>
   </footer>
   </div>
@@ -65,8 +65,8 @@ import path from 'path'
 
 let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
 var participantData = JSON.parse(participantDataString)
-console.log('participantData first?')
-console.log(participantData)
+// console.log('participantData first?')
+// console.log(participantData)
 const webview = document.querySelector('webview')
 const BrowserWindow = require('electron').BrowserWindow
 
@@ -91,37 +91,43 @@ export default {
       researchID: null,
       genomeidshow: 'NO GENOMEID FOUND',
       researchidshow: 'NO RESEARCH ID FOUND',
-      state: 'closed',
-      readpartdata: path.join(__static, '/participantdata/participant.json'),
+      state: 'open',
+      // readpartdata: path.join(__static, '/participantdata/participant.json'),
       newdatapath: path.join(__static, '/participantdata/participantDataTEST.json')
     }
   },
   name: 'insightrebuild5',
+  computed: {
+    compparticipantData: function(){
+    let genosread = fs.readFileSync(path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
+    var participantgenos = JSON.parse(genosread)
+    return participantgenos
+    },
+    checkstate: function(){
+    let genosread = fs.readFileSync(path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
+    var participantgenos = JSON.parse(genosread)
+    return participantgenos.loader
+    }
+  },
   methods: {
-    open () {
-      this.$refs.file_input1.click()
-      var partfile = this.file
-      console.log(partfile)
-    },
-    consolelog () {
-      console.log(this.file)
-    },
     confirm () {
-      console.log("confirm button pressed")
+    console.log('************* confirm method')
       var path = this.file.path
       this.researchidshow = this.researchID
-      let participantDataString = fs.readFileSync(path)
-      var participantDataParse = JSON.parse(participantDataString)
+      let newparticipantDataString = fs.readFileSync(path)
+      var participantDataParse = JSON.parse(newparticipantDataString)
       console.log('participantDataParse')
       console.log(participantDataParse)
       // ADD GENOME ID AND RESEARCH PARTICIPANT ID TO THE FILE BEFORE WRITING
-      // GET GENOMEID FROM FILE NAME
+
+      // BREAK OUT THE SLNNNNN FROM REST BASED ON "_"
       let fullfilename = this.file.name.toString()
       let n = fullfilename.indexOf("_")
+      // GET GENOMEID FROM FILE NAME
       let genomeid = fullfilename.substring(0, n)
       console.log("genomeid")
       console.log(genomeid)
-      // UPDATE APP VIEW
+      // UPDATE APP VIEW - ADD IDS AND CLOSED STATUS
       this.genomeidshow = genomeid
       var input = participantDataParse['Participants']
       input['genomeID'] = genomeid
@@ -129,52 +135,68 @@ export default {
       input['loader'] = 'closed'
       console.log("input")
       console.log(input)
-      // ********
+      // ************************************************
+      // ************************************************
+      // THE FOLLOWING TAKES THE AMENDED FILE WHICH INCLUDES 
+      // THE GENOTYPES, THE FILE NAME, THE RESEARCH ID FOR PARTICIPANT
+      // AND THE LOADER CHANGED TO CLOSE.
+      // THE FILE IS STRINGIFIED AND THEN WRITTEN TO THE LOCAL DRIVE
+      // ************************************************
       var participantDataWrite = JSON.stringify(input, null, "\t")
-      // REWRITE THE DATA FILE
-      // console.log('participantDataWrite')
-      // console.log(participantDataWrite)
-      console.log("next is join writesync")
-      console.log("static")
-      console.log(__static)
-      // (path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
       fs.writeFileSync(this.newdatapath, participantDataWrite)
-      let genosread = fs.readFileSync(this.newdatapath, 'utf8')
-      var genos = JSON.parse(genosread)
-      // console.log("genos")
-      // console.log(genos)
-      console.log('this.state')
-      console.log(this.state)
+      // let genosread = fs.readFileSync(this.newdatapath, 'utf8')
+      // var genos = JSON.parse(genosread)
+      // // console.log("genos")
+      // // console.log(genos)
+      // console.log('this.state')
+      // console.log(this.state)
     },
     close () {
-      console.log('close')
-      let genosread = fs.readFileSync(this.newdatapath, 'utf8')
-      var genos = JSON.parse(genosread)
-      this.state = genos['loader']
+    console.log('************* close method')
+      // let genosread = fs.readFileSync(this.newdatapath, 'utf8')
+      // var genos = JSON.parse(genosread)
+      this.state = 'closed'
+      // console.log('this.state')
+      // console.log(this.state)
+      // console.log('genos[loader]')
+      // console.log(genos['loader'])
+      // console.log('this.checkstate')
+      // console.log(this.checkstate)
+      console.log('this.checkstate')
+      console.log(this.checkstate)
       console.log('this.state')
       console.log(this.state)
-      console.log('genos[loader]')
-      console.log(genos['loader'])
-    },
-    openinput () {
-      console.log('openinput')
-      this.state = 'open'
     }
+    // openinput () {
+    //   console.log('openinput')
+    //   this.state = 'open'
+    // }
   },
-  created: function () {
-    console.log("loaderstate")
+  // beforeCreate: function () {
+  //   alert('beforeCreate this.state =' + this.state)
+  // },
+  // created: function () {
+  //   alert('created this.state =' + this.state)
+  // },
+  beforeMount: function () {
+    // alert('beforeMount this.state =' + this.state)
+    // console.log("compparticipantData")
+    // console.log(this.compparticipantData)
+    // console.log("checkstate")
+    // console.log(this.checkstate)    
     // let exampledata = fs.readFileSync('static/participantdata/participant.json', 'utf8')
-    let genosread = fs.readFileSync('static/participantdata/participantDataTEST.json', 'utf8')
-    var genos = JSON.parse(genosread)
-    console.log('genos')
-    console.log(genos)
-    console.log('genos.loader')
-    console.log(genos.loader)
-    this.state = genos.loader
-    this.genomeidshow = genos.genomeID
-    this.researchidshow = genos.ID
+    // let genosread = fs.readFileSync('static/participantdata/participantDataTEST.json', 'utf8')
+    // var genos = JSON.parse(genosread)
+    // console.log('genos')
+    // console.log(genos)
+    // console.log('genos.loader')
+    // console.log(genos.loader)
+    // this.state = genos.loader
+    // this.genomeidshow = genos.genomeID
+    // this.researchidshow = genos.ID
     // var examplegenos = JSON.parse(exampledata)
     // this.state = participantData['loader']
+    // alert('beforeMount2 this.state =' + this.state)
     // console.log('participantData second?')
     // console.log(participantData)
     // console.log("examplegenos")
@@ -184,6 +206,17 @@ export default {
     // this.state = examplegenos.Participants.loader
     // console.log('this.state')
     // console.log(this.state)
+    // alert('beforeMount this.state =' + this.state)
+    // alert('beforeMount newdatapath = ' + this.newdatapath)
+    // alert('beforeMount genosread = ' + genosread)
+  },
+  mounted: function(){
+    console.log('************* mounted')
+    console.log('this.checkstate')
+    console.log(this.checkstate)
+    console.log('this.state')
+    console.log(this.state)
+    // alert('mounted this.state =' + this.state)
   }
 }
 </script>

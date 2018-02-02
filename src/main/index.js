@@ -23,12 +23,13 @@ function createWindow () {
     height: 800,
     useContentSize: true,
     width: 1200,
-    resizable: false
+    resizable: true
 
   })
 
   mainWindow.loadURL(winURL)
-
+  // ADDED NEXT LINE TO SEE TOOLS AFTER BUILD
+  mainWindow.openDevTools()
   mainWindow.on('closed', () => {
     mainWindow = null
   })

@@ -1,6 +1,7 @@
 <style scope>
 .card {
-    min-width: 200px
+    min-width: 200px;
+    border-style: none
 }
 
 .card-block {
@@ -17,7 +18,6 @@
 
 .norisk {
     background-color: #4CAF50;
-    /*GREEN*/
     color: white;
 }
 
@@ -55,124 +55,14 @@ hr.style18:before {
 
 <template>
 
-    <div class="container" style="margin-top:100 auto;">
+    <div class="container-fluid" style="margin-top:100 auto;">
         <!-- TABLE FOR EACH PUBLICATION -->
-        <div class="col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1">
+        <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2">
 
-        <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
-            <div class="card" >
-                <div class="card-block card-inverse card-primary" >
-                    <h1 class="card-title">Caffeine Metabolism
-                        <img src="static/img/coffee_trait.jpg" style="width:100px;" align="right" class="img-fluid text-center img-thumbnail">
-                       </h1>
-                </div>
-
-                <!--  <b-collapse visible id="collapse3"> -->
-                <div class="card-block card-inverse card-primary">
-                    <h1 class="card-title">Caffeine Metabolism</h1>
-                        <div class="float-right col-4">
-                        <img src="static/img/coffee_trait.jpg" class="img-fluid text-center img-thumbnail">
-                        </div>
-                </div>
-                <div class="card-block">
-                    <p class="card-text">Some individuals find that they need to consume more coffee in the morning that their friends or family in order to feel a stimulating effect. Variation in the CYP1A2 gene may influence whether someone is fast or slow caffeine metabolizer,
-                        which in turn affects whether that individual receives the same effect from a particular amount of caffeine as others. In general, individuals who are slower metabolizers of caffeine experience a larger effect from the same amount
-                        of caffeine as a fast metabolizer.
-                    </p>
-                    <p><h5>Gene: CYP1A2 Variant: rs762551</h5></p>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-bind:class="[true ? 'bg-success text-white': '']">
-                                <th scope="row" align="center">Your Genotype</th>
-                                <td align="center">A/A</td>
-                                <td align="center">Fast caffeine metabolizer</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
-                                <td align="center">A/C</td>
-                                <td align="center">Slow caffeine metabolizer</td>
-                            </tr>
-                            <tr v-bind:class="[rs762551=== 'C/C'? 'bg-success text-white': '']">
-                                <th scope="row" align="center"></th>
-                                <td align="center">C/C</td>
-                                <td align="center">Slow caffeine metabolizer</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        Variation at this location in the CYP1A2 gene has been associated with the speed of caffeine metabolism in humans. The CYP1A2 gene encodes a member of a family of proteins that are responsible for metabolism of nutrients and medications . Individuals
-                        who have the letter “C” at this location in one or both of their copies of this genetic region are more likely to slow caffeine metabolizers while an individual who has the letter “A” at this location in both of their copies
-                        of this gene is more likely to be a fast caffeine metabolizer [PMID 18759349].
-                    </p>
-                    <!-- </b-collapse> -->
-                </div>
-                
-            </div>
-        </div>
-            <!-- <hr class="style18"> -->
-        <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
-            <div class="card">
-                <div class="card-block card-inverse card-primary">
-                    <h1 class="card-title">Caffeine Metabolism
-                        <div class="float-right col-4">
-                        <b-btn v-b-toggle.collapse2 class="m-1"><img src="static/img/coffee_trait.jpg" class="img-fluid text-center img-thumbnail"></b-btn>
-                        </div>
-                        </h1>
-                    
-                </div>
-                <b-collapse id="collapse2">
-                <div class="card-block" >
-                
-                    <p class="card-text">Some individuals find that they need to consume more coffee in the morning that their friends or family in order to feel a stimulating effect. Variation in the CYP1A2 gene may influence whether someone is fast or slow caffeine metabolizer,
-                        which in turn affects whether that individual receives the same effect from a particular amount of caffeine as others. In general, individuals who are slower metabolizers of caffeine experience a larger effect from the same amount
-                        of caffeine as a fast metabolizer.
-                    </p>
-                    <p><h5>Gene: CYP1A2 Variant: rs762551</h5></p>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-bind:class="[true ? 'bg-success text-white': '']">
-                                <th scope="row" align="center">Your Genotype</th>
-                                <td align="center">A/A</td>
-                                <td align="center">Fast caffeine metabolizer</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
-                                <td align="center">A/C</td>
-                                <td align="center">Slow caffeine metabolizer</td>
-                            </tr>
-                            <tr v-bind:class="[rs762551=== 'C/C'? 'bg-success text-white': '']">
-                                <th scope="row" align="center"></th>
-                                <td align="center">C/C</td>
-                                <td align="center">Slow caffeine metabolizer</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        Variation at this location in the CYP1A2 gene has been associated with the speed of caffeine metabolism in humans. The CYP1A2 gene encodes a member of a family of proteins that are responsible for metabolism of nutrients and medications . Individuals
-                        who have the letter “C” at this location in one or both of their copies of this genetic region are more likely to slow caffeine metabolizers while an individual who has the letter “A” at this location in both of their copies
-                        of this gene is more likely to be a fast caffeine metabolizer [PMID 18759349].
-                    </p>
-                    
-                </div>
-                </b-collapse>
-            </div>
-        </div>
+        <!-- <hr class="style18"> -->
        <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
-            <div class="card">
+            <div class="card" style="border: 0px">
                 <div class="card-block card-inverse card-primary">
                     <h1 class="card-title">Caffeine Metabolism</h1>
                         <div class="float-right col-4">
@@ -184,28 +74,30 @@ hr.style18:before {
                     </p>
                 </div>
                 <div class="card-block">
-                    <p><h5>Gene: CYP1A2 Variant: rs762551</h5></p>
+                    <p>
+                        <h5>Gene: CYP1A2 Variant: rs762551 {{rs762551}}</h5>
+                    </p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-bind:class="[true ? 'bg-success text-white': '']">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs762551=== 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">A/A</td>
                                 <td align="center">Fast caffeine metabolizer</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs762551=== 'A/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">A/C</td>
                                 <td align="center">Slow caffeine metabolizer</td>
                             </tr>
-                            <tr v-bind:class="[rs762551=== 'C/C'? 'bg-success text-white': '']">
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs762551=== 'C:C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/C</td>
                                 <td align="center">Slow caffeine metabolizer</td>
                             </tr>
@@ -240,28 +132,28 @@ hr.style18:before {
                     </p>
                 </div>
                 <div class="card-block">
-                    <p><h5>Gene: ABCC11 Variant: rs17822931</h5></p>
+                    <p><h5>Gene: ABCC11 Variant: rs17822931 {{rs17822931}}</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs17822931 === 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/C</td>
                                 <td align="center">Wet</td>
                             </tr>
-                            <tr class="bg-success text-white">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs17822931 === 'C/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/T</td>
                                 <td align="center">Wet</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs17822931 === 'T/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">T/T</td>
                                 <td align="center">Dry</td>
                             </tr>
@@ -292,28 +184,28 @@ hr.style18:before {
                     </p>
                 </div>
                 <div class="card-block">
-                    <p><h5>Gene: ALDH2 Variant: rs671</h5></p>
+                    <p><h5>Gene: ALDH2 Variant: rs671 {{rs671}}</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-success text-white">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs671 === 'G/G'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">G/G</td>
                                 <td align="center">Little to no flushing</td>
                             </tr>
-                            <tr >
-                                <th scope="row" align="center"></th>
-                                <td align="center">G/A</td>
+                            <tr v-bind:class="[rs671 === 'A/G'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
+                                <td align="center">A/G</td>
                                 <td align="center">Moderate flushing</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs671 === 'A/A'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">A/A</td>
                                 <td align="center">Extreme flushing</td>
                             </tr>
@@ -342,28 +234,28 @@ hr.style18:before {
                     </p>
                 </div>
                 <div class="card-block">
-                    <p><h5>Gene: FUT2 Variant: rs601338</h5></p>
+                    <p><h5>Gene: FUT2 Variant: rs601338 {{rs601338}}</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-success text-white">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs601338 === 'G/G'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">G/G</td>
                                 <td align="center">Susceptible</td>
                             </tr>
-                            <tr >
-                                <th scope="row" align="center"></th>
-                                <td align="center">G/A</td>
+                            <tr v-bind:class="[rs601338 === 'A/G'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
+                                <td align="center">A/G</td>
                                 <td align="center">Susceptible</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs601338 === 'A/A'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">A/A</td>
                                 <td align="center">Resistant</td>
                             </tr>
@@ -392,28 +284,28 @@ hr.style18:before {
                     </p>
                 </div>
                 <div class="card-block">
-                    <p><h5>On chromosome 2 between the genes ZEB2 and PABPCP2 Variant: rs10427255</h5></p>
+                    <p><h5>On chromosome 2 between the genes ZEB2 and PABPCP2 Variant: rs10427255 {{rs10427255}}</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-success text-white">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs10427255 === 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/C</td>
                                 <td align="center">Increased odds of photic sneeze reflex</td>
                             </tr>
-                            <tr >
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs10427255 === 'C/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/T</td>
                                 <td align="center">Somewhat increased odds of photic sneeze reflex</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs10427255 === 'T/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">T/T</td>
                                 <td align="center">Decreased odds of photic sneeze reflex</td>
                             </tr>
@@ -441,28 +333,28 @@ hr.style18:before {
                     <p class="card-text">The ability to digest milk varies over a lifespan and between people. The enzyme lactase, a key player in the digestion of milk, is found in high quantities among infants but often wanes as a person grows into adulthood. For some individuals, genetic variation causes the enzyme lactase to persist throughout life leading to a lifelong ability to digest milk.</p>
                 </div>
                 <div class="card-block">
-                    <p><h5>Gene: MCM6 Variant: rs4988235</h5></p>
+                    <p><h5>Gene: MCM6 Variant: rs4988235 {{rs4988235}}</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-success text-white">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs4988235 === 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/C</td>
                                 <td align="center">Likely to be lactose intolerant</td>
                             </tr>
-                            <tr >
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs4988235 === 'C/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/T</td>
                                 <td align="center">Likely to be able to digest milk</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs4988235 === 'T/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">T/T</td>
                                 <td align="center">Likely to be able to digest milk</td>
                             </tr>
@@ -490,28 +382,28 @@ hr.style18:before {
                     <p class="card-text">The ability to perceive bitter taste varies between populations and among individuals within a particular population.  For some people, the inability to perceive bitter taste in some foods is linked to particular genetic variants.  Individuals who are able to perceive bitter taste may gravitate away from certain foods and substances, while those who cannot perceive this taste may select these foods with no understanding of why others might avoid them.</p>
                 </div>
                 <div class="card-block">
-                    <p><h5>Gene: TAS2R38 Variant: rs713598</h5></p>
+                    <p><h5>Gene: TAS2R38 Variant: rs713598 {{rs713598}}</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-success text-white">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs713598 === 'G/G'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">G/G</td>
                                 <td align="center">May be unable to taste bitter in some foods</td>
                             </tr>
-                            <tr >
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs713598 === 'C/G'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/G</td>
                                 <td align="center">Can taste bitter</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs713598 === 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/C</td>
                                 <td align="center">Can taste bitter</td>
                             </tr>
@@ -539,28 +431,28 @@ hr.style18:before {
                     <p class="card-text">When it comes to athletics, some individuals perform better in short bursts of high-energy activity, while others tend to perform better in long-term events.  There are thousands of genes that control muscle structure and function, and genetic variation in one particular gene, ACTN3, has been associated with muscle performance and the likelihood of an individual being a sprinter or endurance athlete.</p>
                 </div>
                 <div class="card-block">
-                    <p><h5>Gene: ACTN3 Variant: rs1815739</h5></p>
+                    <p><h5>Gene: ACTN3 Variant: rs1815739 {{rs1815739}}</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-success text-white">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs1815739 === 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/C</td>
                                 <td align="center">Likely sprinter</td>
                             </tr>
-                            <tr >
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs1815739 === 'C/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/T</td>
                                 <td align="center">Likely sprinter</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs1815739 === 'T/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">T/T</td>
                                 <td align="center">Likely endurance athlete</td>
                             </tr>
@@ -572,7 +464,6 @@ hr.style18:before {
             </div>
             </div>
             <br>
-
             <!-- END TRAIT <hr class="style18"> -->
 
             <!-- <hr class="style18"> -->
@@ -588,28 +479,28 @@ hr.style18:before {
                     <p class="card-text">Skin pigmentation varies among individuals and populations all over the globe.  Some individuals have darker hair and skin that tans easily, while others have light or red hair and skin that tends to freckle or burn when exposed to the sun.  Genetic variation in the MC1R gene can make a person more likely to have freckles than others.</p>
                 </div>
                 <div class="card-block">
-                    <p><h5>Gene: MC1R Variant: rs1805007</h5></p>
+                    <p><h5>Gene: MC1R Variant: rs1805007 = {{rs1805007}}</h5></p>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Genotype</th>
-                                <th>Impact on Trait</th>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-success text-white">
-                                <th scope="row" align="center">Your Genotype</th>
+                            <tr v-bind:class="[rs1805007 === 'C/C'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/C</td>
                                 <td align="center">Less likely to freckle</td>
                             </tr>
-                            <tr >
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs1805007 === 'C/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">C/T</td>
                                 <td align="center">Likely to freckle</td>
                             </tr>
-                            <tr>
-                                <th scope="row" align="center"></th>
+                            <tr v-bind:class="[rs1805007 === 'T/T'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">T/T</td>
                                 <td align="center">Likely to freckle</td>
                             </tr>
@@ -625,6 +516,7 @@ hr.style18:before {
             <!-- END TRAIT <hr class="style18"> -->
 
 
+</div>
 </div>
 </div>
 </div>
@@ -652,16 +544,39 @@ export default {
   },
   data () {
     return {
-      rs762551: 'A/C',
-      show: true
+        rs762551: "",
+        rs17822931: "",
+        rs671: "",
+        rs601338: "",
+        rs10427255: "",
+        rs4988235: "",
+        rs713598: "",
+        rs1815739: "",
+        rs1805007: "",
+        show: true
     }
   },
   created: function () {
+    //   this.rs1805007 = "C:T"
     // GET OBJECTS WITH GENOTYPES OF PARTICIPANTS
     var genotypes = genos.Genotypes
-    console.log('traitdata')
-    console.log(traitdata[0])
+    // console.log('traitdata')
+    // console.log(traitdata)
+    var checkrs762551 = ""
+    var checkrs1805007 = ""
+    var checkrs762551 = ""
+    var checkrs17822931 = ""
+    var checkrs671 = ""
+    var checkrs601338 = ""
+    var checkrs10427255 = ""
+    var checkrs4988235 = ""
+    var checkrs713598 = ""
+    var checkrs1815739 = ""
+    var check1805007 = ""
+
     $.each(traitdata, function (index, value) {
+      console.log('value')
+      console.log(value)
       var traitloc = value.loc.toString()
       var traitch = value.chr.toString()
 
@@ -669,11 +584,115 @@ export default {
         Chr: traitch,
         Pos: traitloc
       })
-      console.log('partGeno')
-      console.log(partGeno)
+    //   console.log('partGeno')
+    //   console.log(partGeno)
+      // **********************
+      // AFTER TRAIT IS MATCHED TO GENOTYPE
+      // SPLIT THE GENO AND ALPHABETIZE 
+      // THEN UPDATE VALUE IN THIS.DATA   
+      // **********************
       
-    })
+      var rsID = value.rsID
+      console.log('rsID')
+      console.log(rsID)
+      console.log('rs1805007 === rsID')
+      console.log(rsID === 'rs1805007')
+      let geno = partGeno.Gen
+      let genosplit = geno.split(':')
+      let genoorder = genosplit.sort()
 
+      var concatgeno = (genoorder[0] + "/" + genoorder[1])
+      console.log('concatgeno')
+      console.log(concatgeno)
+      
+
+
+      switch (rsID) {
+          case 'rs762551':
+          checkrs762551 = concatgeno
+          console.log('case concatgeno')
+          console.log(concatgeno)
+          console.log('this.rs762551=' + this.rs762551)
+          console.log('checkrs762551')
+          console.log(checkrs762551)
+          checkrs762551 = checkrs762551
+          break;
+          
+          case 'rs17822931':
+            console.log('case concatgeno')
+          console.log(concatgeno)
+          checkrs17822931 = concatgeno
+          break;
+
+          case 'rs671':
+            console.log('case concatgeno')
+          console.log(concatgeno)
+          checkrs671 = concatgeno
+          break;
+
+          case 'rs601338':
+            console.log('case concatgeno')
+          console.log(concatgeno)
+          checkrs601338 = concatgeno
+          break;
+          
+          case 'rs10427255':
+          console.log('case concatgeno')
+          console.log(concatgeno)
+          checkrs10427255 = concatgeno
+          break;
+
+          case 'rs4988235':
+          checkrs4988235 = concatgeno
+          break;
+
+          case 'rs713598':
+            console.log('case concatgeno')
+          console.log(concatgeno)
+          checkrs713598 = concatgeno
+          break;
+
+          case 'rs1815739':
+            console.log('case concatgeno')
+          console.log(concatgeno)
+          checkrs1815739 = concatgeno
+          break;
+          
+          case 'rs17822931':
+          checkrs17822931 = concatgeno
+          break;
+
+          case 'rs1805007':
+          console.log('case concatgeno rs1805007')
+          console.log(concatgeno)
+          checkrs1805007 = concatgeno     
+          break;
+      }
+
+    })
+    
+    this.rs1805007 = checkrs1805007
+    this.rs762551 = checkrs762551
+    this.rs1805007 = checkrs1805007
+    this.rs762551 = checkrs762551
+    this.rs17822931 = checkrs17822931
+    this.rs671 = checkrs671
+    this.rs601338 = checkrs601338
+    this.rs10427255 = checkrs10427255
+    this.rs4988235 = checkrs4988235
+    this.rs713598 = checkrs713598
+    this.rs1815739 = checkrs1815739
+    this.rs1805007 = checkrs1805007
+    //  console.log('checkrs1805007')
+    //  console.log(checkrs1805007)
+    //  console.log('this.rs1805007')
+    //  console.log(this.rs1805007)
+    //  console.log('this.rs762551 1')
+    //  console.log(this.rs762551)
+    //  console.log('checkrs762551')
+    //  console.log(checkrs762551)
+    //  console.log('this.rs762551 2')
+    //  console.log(this.rs762551)
     },
   computed: {
 
