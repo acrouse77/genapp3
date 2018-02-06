@@ -5,6 +5,7 @@ import BootstrapVue from 'bootstrap-vue'
 import router from './router'
 import store from './store'
 import path from 'path'
+import db from './datastore' // ADDED AS PART OF NEDB
 import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -18,6 +19,8 @@ window.jQuery = require('jquery')
 var $ = global.jQuery
 window.$ = $
 // require('bootstrap')
+
+Vue.prototype.$db = db
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios

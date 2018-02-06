@@ -15,10 +15,9 @@
           <h6 class="text-right" style="margin-right: 10px">Genome ID: {{genomeidshow}}</h6>
           <h6 class="text-right" style="margin-right: 10px">Participant ID: {{researchidshow}}</h6>
           <h6 class="text-right" style="margin-right: 10px">state: {{state}}</h6>
-          
       </div>
     </div>
-  <div class="row uploadbar" v-show="checkstate!=='closed' && state ==='open'">
+  <div class="row uploadbar" v-show="checkstate!=='closed' || state ==='open'">
       <div class="col-4" style="margin-left:100px">
         <b-card>
           <h4 slot="header">Select data to load</h4>
@@ -62,23 +61,149 @@
 // import store from 'renderer/vuex/store'
 import fs from 'fs'
 import path from 'path'
+import Datastore from 'nedb'
 
 let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
 var participantData = JSON.parse(participantDataString)
-// console.log('participantData first?')
-// console.log(participantData)
+let paticipant_getgeno = participantData.Participants.Genotypes
+
+var part_geno_db_array = []
+var Chr_Pos_check = []
+
+// console.log('length.paticipant_getgeno')
+// console.log(paticipant_getgeno.length)
+$.each(paticipant_getgeno, function (index, value) {
+  // console.log(value)
+  value["Chr_Pos"] = (value.Chr + "_" + value.Pos)
+
+  if ($.inArray(value["Chr_Pos"], Chr_Pos_check) === -1) {
+        Chr_Pos_check.push(value["Chr_Pos"]);
+        part_geno_db_array.push(value);
+    }
+  return part_geno_db_array
+})
+// console.log('Chr_Pos_check')
+// console.log(Chr_Pos_check)
+// console.log('part_geno_db_array uniqued')
+// console.log(part_geno_db_array)
+// console.log('length.paticipant_getgeno')
+// console.log(paticipant_getgeno.length)
+// console.log('length.part_geno_db_array')
+// console.log(part_geno_db_array.length)
+
+// let unique = [...new Set(Chr_Pos_check)];
+// // console.log('unique');
+// // console.log(unique);
+// console.log('unique.length');
+// console.log(unique.length);
+
+// var newcountarr = []
+// var sort_part_geno_db_array = part_geno_db_array.sort()
+// // console.log('sort_part_geno_db_array')
+// // console.log(sort_part_geno_db_array)
+// for (var i = 0; i < paticipant_getgeno.length; i++) {
+//   newcountarr.push(paticipant_getgeno[i].Chr_Pos)
+//   // return newcountarr
+// }
+// // console.log('newcountarr')
+// // console.log(newcountarr)
+
+// var newcountarrsort = newcountarr.sort()
+// // console.log('newcountarrsort')
+// // console.log(newcountarrsort)
+// var finddup = []
+// for (var i = 0; i < newcountarrsort.length; i++) {
+//   var n = i++
+//   if (newcountarrsort[i] === newcountarrsort[n] ) {
+//     finddup.push(newcountarrsort[i]);
+//     // console.log('newcountarrsort[i]  i = ' + i)
+//     // console.log(newcountarrsort[i])
+//   }
+// }
+
+// **************************************************************************
+// CREATE NEW DATASTORE
+// **************************************************************************
+    var partgenosdb = new Datastore({ filename: path.join(__static, '/participantdata/participant.db'), autoload: true})
+
+    // **************************************************************************
+    // RESET DATABASE TO - REMOVE ALL DOCUMENTS
+    // **************************************************************************
+      // Removing all documents with the 'match-all' query 
+      partgenosdb.count({}, function (err, count) {
+        console.log('partgenosdb count before remove all')
+        console.log(count)
+      });
+      partgenosdb.remove({}, { multi: true }, function (err, numRemoved) {
+        console.log('numRemoved')
+        console.log(numRemoved)
+      });
+      partgenosdb.count({}, function (err, count) {
+        console.log('partgenosdb count after remove all')
+        console.log(count)
+      });
+    // **************************************************************************
+    // TESTING UNIQUE INDEX
+    // **************************************************************************
+    partgenosdb.removeIndex('chr_pos', function (err) {
+    });
+    // Using a unique constraint with the index
+    // partgenosdb.ensureIndex({ fieldName: 'chr_pos', unique: true }, function (err) {
+    //   if(err){
+    //     console.log('err')
+    //     console.log(err)
+    //     alert('err = ' + err)
+    //     return;
+    //   }
+    //   else {
+    //     console.log('indexed')
+    //     console.log('err')
+    //     console.log(err)
+    //   }
+    // });
+// **************************************************************************
+// INSERT DOCUEMNTS FROM GENOTYPE JSON
+// **************************************************************************    
+    partgenosdb.insert(part_geno_db_array, function (err, newDoc) {
+    // inserting participant's genos
+    // newDoc is the newly inserted document, including its _id
+    // newDoc has no key called notToBeSaved since its value was undefined
+      console.log('part_geno_db_array newDoc')
+      console.log(newDoc)
+      console.log('err')
+      console.log(err)
+    })
+    partgenosdb.count({}, function (err, count) {
+      console.log('partgenosdb count after putting all back')
+      console.log(count)
+    });
+    // **************************************************************************
+    // TEST FINDING A DOCUMENT IN THE DB
+    // **************************************************************************           
+      partgenosdb.find({ Pos: '124214448' }, function (err, docs) {
+        console.log('docs from partgenosdb')
+        console.log(docs)
+        // docs is an array containing documents Mars, Earth, Jupiter
+        // If no document is found, docs is equal to []
+      });
+    // **************************************************************************
+    // FIND ALL DOC IN DB - MAY BE MORE THAN JUST INSERTED 
+    // ************************************************************************** 
+      // partgenosdb.persistence.compactDatafile          
+      partgenosdb.find({}, function (err, docs) {
+        console.log('all docs from db')
+        console.log(docs)
+        });
+
+      partgenosdb.count({}, function (err, count) {
+        console.log('partgenosdb count')
+        console.log(count)
+      });
+
 const webview = document.querySelector('webview')
 const BrowserWindow = require('electron').BrowserWindow
-
-// console.log('participantData App.vue')
-// console.log(participantData)
-
 var participantId = participantData.Participants.ID
-// console.log('participantId')
-// console.log(participantId)
 var partIdText = participantId.toString()
-// console.log('partIdText')
-// console.log(partIdText)
 
 export default {
   data () {
@@ -116,8 +241,8 @@ export default {
       this.researchidshow = this.researchID
       let newparticipantDataString = fs.readFileSync(path)
       var participantDataParse = JSON.parse(newparticipantDataString)
-      console.log('participantDataParse')
-      console.log(participantDataParse)
+      // console.log('participantDataParse')
+      // console.log(participantDataParse)
       // ADD GENOME ID AND RESEARCH PARTICIPANT ID TO THE FILE BEFORE WRITING
 
       // BREAK OUT THE SLNNNNN FROM REST BASED ON "_"
@@ -125,16 +250,16 @@ export default {
       let n = fullfilename.indexOf("_")
       // GET GENOMEID FROM FILE NAME
       let genomeid = fullfilename.substring(0, n)
-      console.log("genomeid")
-      console.log(genomeid)
+      // console.log("genomeid")
+      // console.log(genomeid)
       // UPDATE APP VIEW - ADD IDS AND CLOSED STATUS
       this.genomeidshow = genomeid
       var input = participantDataParse['Participants']
       input['genomeID'] = genomeid
       input['researchID'] = this.researchidshow
       input['loader'] = 'closed'
-      console.log("input")
-      console.log(input)
+      // console.log("input")
+      // console.log(input)
       // ************************************************
       // ************************************************
       // THE FOLLOWING TAKES THE AMENDED FILE WHICH INCLUDES 
@@ -153,6 +278,30 @@ export default {
     },
     close () {
     console.log('************* close method')
+    //  ******************************************************
+    //  
+    // let genosread = fs.readFileSync(path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
+    // var participantgenos = JSON.parse(genosread)
+    // var getgeno = JSON.stringify(participantgenos.Genotypes, null, "\t")
+    // console.log('participantgenos.Genotypes')
+    // console.log(participantgenos.Genotypes)
+    // partgenosdb.insert(getgeno, function (err, newDoc) {
+    // // inserting participant's genos
+    // // newDoc is the newly inserted document, including its _id
+    // // newDoc has no key called notToBeSaved since its value was undefined
+    // })
+    // console.log('************* geno in db')
+    
+
+
+    // // partgenosdb.find({}, function (err, docs) {
+    // // console.log('all docs from db')
+    // // console.log(docs)     
+    // // });
+    // console.log('partgenosdb db')
+    // console.log(partgenosdb) 
+
+    // ******************************************************
       // let genosread = fs.readFileSync(this.newdatapath, 'utf8')
       // var genos = JSON.parse(genosread)
       this.state = 'closed'
@@ -162,10 +311,10 @@ export default {
       // console.log(genos['loader'])
       // console.log('this.checkstate')
       // console.log(this.checkstate)
-      console.log('this.checkstate')
-      console.log(this.checkstate)
-      console.log('this.state')
-      console.log(this.state)
+      // console.log('this.checkstate')
+      // console.log(this.checkstate)
+      // console.log('this.state')
+      // console.log(this.state)
     }
     // openinput () {
     //   console.log('openinput')
@@ -211,11 +360,11 @@ export default {
     // alert('beforeMount genosread = ' + genosread)
   },
   mounted: function(){
-    console.log('************* mounted')
-    console.log('this.checkstate')
-    console.log(this.checkstate)
-    console.log('this.state')
-    console.log(this.state)
+    // console.log('************* mounted')
+    // console.log('this.checkstate')
+    // console.log(this.checkstate)
+    // console.log('this.state')
+    // console.log(this.state)
     // alert('mounted this.state =' + this.state)
   }
 }
