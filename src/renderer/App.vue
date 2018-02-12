@@ -1,6 +1,37 @@
 <template>
 <div>
-        <div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+<nav class="navbar navbar-expand-lg navbar-inverse bg-inverse fixed-top">
+  <a class="text-muted navbar-brand" href="#">
+    <img src="static/img/mini-logo.png" style="margin-left: 20px; margin-right: 5px" height="50" class="text-muted d-inline-block" alt=""> Insight Genome
+  </a> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item" style="margin-left:20px">
+          <router-link :to="{name: 'introduction-page'}" class="col btn btn-outline-secondary  btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
+        </li>
+        <li class="nav-item" style="margin-left:20px">
+          <router-link :to="{name: 'chapter-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
+        </li>
+        <li class="nav-item" style="margin-left:20px">
+          <router-link :to="{name: 'categories-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
+        </li>
+        <li class="nav-item" style="margin-left:20px">
+          <router-link :to="{name: 'traits-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+        </li>
+    </ul>
+    <div class="btn-group">
+        <button class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link"  onclick="history.back();"></button>
+        <button class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link"  onclick="history.forward();"></button>
+    </div>
+        <div  style="margin-right: 10px">Genome ID: {{genomeidshow}}</div>  
+        <div  style="margin-right: 10px">Participant ID: {{researchidshow}}</div>
+  </div> <!-- END CLASS = COLLAPSE -->
+</nav>
+  <!--      <div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
               <a class="text-muted navbar-brand" href="#">
                 <img src="static/img/mini-logo.png" style="margin-left: 20px; margin-right: 5px" height="50" class="text-muted d-inline-block" alt=""> Insight Genome
               </a>            
@@ -18,7 +49,7 @@
               <div class="col-7 text-left" style="margin-right: 10px"></div>
           </div>
       </div>
- <!--  <div class="row uploadbar" v-show="checkstate!=='closed' || state ==='open'" style="margin-bottom: 20px;">
+   <div class="row uploadbar" v-show="checkstate!=='closed' || state ==='open'" style="margin-bottom: 20px;">
       <div class="col-4" style="margin-left:100px">
         <b-card>
           <h4 slot="header">Select data to load</h4>
