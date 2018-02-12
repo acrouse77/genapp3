@@ -14,7 +14,9 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 800,
     width: 800,
-    resizable: true
+    resizable: true,
+    icon: path.join(__static, '/img/icon/InsightButtonBevel.png')
+
   })
 
   mainWindow.loadURL(winURL)

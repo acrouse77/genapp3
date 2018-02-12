@@ -1,6 +1,9 @@
 'use strict'
 
 import { app, BrowserWindow } from 'electron'
+// ADDED TO TEST IF CAN REWRITE 
+import fs from "fs";
+import path from "path";
 
 /**
  * Set `__static` path to static files in production
@@ -33,9 +36,15 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+  let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+  var participantData = JSON.parse(participantDataString);
+
 }
 
-app.on('ready', createWindow)
+app.on('ready', 
+  createWindow
+  
+)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

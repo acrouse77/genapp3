@@ -1,4 +1,4 @@
-# genapp3
+# Insight Genome
 
 > An electron-vue project
 
