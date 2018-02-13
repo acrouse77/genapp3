@@ -1,78 +1,36 @@
 <template>
 <div>
-<nav class="navbar navbar-expand-lg navbar-inverse bg-inverse fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="text-muted navbar-brand" href="#">
     <img src="static/img/mini-logo.png" style="margin-left: 20px; margin-right: 5px" height="50" class="text-muted d-inline-block" alt=""> Insight Genome
   </a> 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <i class="svg-inline--fa fa-bars fa-w-14 fa-7x"></i>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item" style="margin-left:20px">
-          <router-link :to="{name: 'introduction-page'}" class="col btn btn-outline-secondary  btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'introduction-page'}" class="col btn btn-outline-secondary  btn-lg"><font-awesome-icon :icon="infocircle" />Introduction </i><span class="sr-only">(current)</span></router-link>
         </li>
         <li class="nav-item" style="margin-left:20px">
-          <router-link :to="{name: 'chapter-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'chapter-page'}" class="col btn btn-outline-secondary   btn-lg"><font-awesome-icon :icon="book" /> Chapters </i><span class="sr-only">(current)</span></router-link>
         </li>
         <li class="nav-item" style="margin-left:20px">
-          <router-link :to="{name: 'categories-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'categories-page'}" class="col btn btn-outline-secondary   btn-lg"><font-awesome-icon :icon="chart" /> Research </i><span class="sr-only">(current)</span></router-link>
         </li>
         <li class="nav-item" style="margin-left:20px">
-          <router-link :to="{name: 'traits-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+          <router-link :to="{name: 'traits-page'}" class="col btn btn-outline-secondary   btn-lg"><font-awesome-icon :icon="eye" /> <i class="fa fa-eye nav-link" aria-hidden="true">Traits </i><span class="sr-only">(current)</span></router-link>
         </li>
     </ul>
-    <div class="btn-group">
-        <button class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link"  onclick="history.back();"></button>
-        <button class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link"  onclick="history.forward();"></button>
-    </div>
-        <div  style="margin-right: 10px">Genome ID: {{genomeidshow}}</div>  
-        <div  style="margin-right: 10px">Participant ID: {{researchidshow}}</div>
   </div> <!-- END CLASS = COLLAPSE -->
-</nav>
-  <!--      <div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-              <a class="text-muted navbar-brand" href="#">
-                <img src="static/img/mini-logo.png" style="margin-left: 20px; margin-right: 5px" height="50" class="text-muted d-inline-block" alt=""> Insight Genome
-              </a>            
-              <router-link :to="{name: 'introduction-page'}" class="col btn btn-outline-secondary btn-md btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
-              <router-link :to="{name: 'chapter-page'}" class="col btn btn-outline-secondary  btn-md btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
-              <router-link :to="{name: 'categories-page'}" class="col btn btn-outline-secondary  btn-md btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
-              <router-link :to="{name: 'traits-page'}" class="col btn btn-outline-secondary  btn-md btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
-          <div class="col-2">
-            <i class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link float-right"  onclick="history.forward();"></i>
-            <i class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link float-right"  onclick="history.back();"></i>
-          </div>
-          <div class="container-fluid text-left">
-              <div class="col-2 text-left" style="margin-right: 10px">Genome ID: {{genomeidshow}}</div>  
-              <div class="col-2 text-left" style="margin-right: 10px">Participant ID: {{researchidshow}}</div>
-              <div class="col-7 text-left" style="margin-right: 10px"></div>
-          </div>
-      </div>
-   <div class="row uploadbar" v-show="checkstate!=='closed' || state ==='open'" style="margin-bottom: 20px;">
-      <div class="col-4" style="margin-left:100px">
-        <b-card>
-          <h4 slot="header">Select data to load</h4>
-          <b-form-file id="file_input1" v-model="file" ></b-form-file>
-            <br>
-          <b-form-input v-model="researchID" type="text" placeholder="Enter the participant's identifier"></b-form-input>
-            <br>
-          <button class="btn btn-outline-secondary btn-lg" v-on:click="confirm">confirm</button>
-        </b-card>
-      </div>
-      <div class=" col-5" style="margin-left:100px">
-        <b-card>
-          <h4 slot="header">Review data to be loaded</h4>
-          <b-list-group flush>
-              <b-list-group-item><b>Selected file: </b>{{file && file.name}}</b-list-group-item>
-              <b-list-group-item><b>Genome ID: </b>{{genomeidshow}}</b-list-group-item>
-              <b-list-group-item><b>Particpant ID: </b>{{researchidshow}} </b-list-group-item>
-          </b-list-group>
-          <b-card-footer><button class="btn btn-outline-secondary btn-lg" v-on:click="close">Confirm and Close Loader</button></b-card-footer>
-        </b-card>
-      </div>
-  </div> -->
-
+    <div class="btn-group">
+        <button class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link" style="margin-left:20px" onclick="history.back();"></button>
+        <button class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link" style="margin-left:20px; margin-right:20px" onclick="history.forward();"></button>
+    </div>
+  </nav>
+        <div  style="margin-right: 10px">Genome ID: {{genomeidshow}}</div>  <font-awesome-icon :icon="coffee" />
+        <div  style="margin-right: 10px">Participant ID: {{researchidshow}}</div>
 
   <div>
     <router-view class="app" ></router-view>
@@ -94,6 +52,15 @@
 import fs from "fs";
 import path from "path";
 
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee'
+import faInfoCircle from '@fortawesome/fontawesome-free-solid/faInfoCircle'
+import faEye from '@fortawesome/fontawesome-free-solid/faEye'
+import faBook from '@fortawesome/fontawesome-free-solid/faBook'
+import faChartBar from '@fortawesome/fontawesome-free-solid/faChartBar'
+
+
+
 // REGEX TO MATCH SL FILE = ^SL(?=.*\d+).*json$
 let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
 var participantData = JSON.parse(participantDataString);
@@ -101,138 +68,6 @@ let paticipant_getgeno = participantData.Participants.Genotypes;
 
 var part_geno_db_array = [];
 var Chr_Pos_check = [];
-
-// console.log('length.paticipant_getgeno')
-// console.log(paticipant_getgeno.length)
-// $.each(paticipant_getgeno, function(index, value) {
-//   // console.log(value)
-//   value["Chr_Pos"] = value.Chr + "_" + value.Pos;
-
-//   if ($.inArray(value["Chr_Pos"], Chr_Pos_check) === -1) {
-//     Chr_Pos_check.push(value["Chr_Pos"]);
-//     part_geno_db_array.push(value);
-//   }
-//   return part_geno_db_array;
-// });
-// console.log('Chr_Pos_check')
-// console.log(Chr_Pos_check)
-// console.log('part_geno_db_array uniqued')
-// console.log(part_geno_db_array)
-// console.log('length.paticipant_getgeno')
-// console.log(paticipant_getgeno.length)
-// console.log('length.part_geno_db_array')
-// console.log(part_geno_db_array.length)
-
-// let unique = [...new Set(Chr_Pos_check)];
-// // console.log('unique');
-// // console.log(unique);
-// console.log('unique.length');
-// console.log(unique.length);
-
-// var newcountarr = []
-// var sort_part_geno_db_array = part_geno_db_array.sort()
-// // console.log('sort_part_geno_db_array')
-// // console.log(sort_part_geno_db_array)
-// for (var i = 0; i < paticipant_getgeno.length; i++) {
-//   newcountarr.push(paticipant_getgeno[i].Chr_Pos)
-//   // return newcountarr
-// }
-// // console.log('newcountarr')
-// // console.log(newcountarr)
-
-// var newcountarrsort = newcountarr.sort()
-// // console.log('newcountarrsort')
-// // console.log(newcountarrsort)
-// var finddup = []
-// for (var i = 0; i < newcountarrsort.length; i++) {
-//   var n = i++
-//   if (newcountarrsort[i] === newcountarrsort[n] ) {
-//     finddup.push(newcountarrsort[i]);
-//     // console.log('newcountarrsort[i]  i = ' + i)
-//     // console.log(newcountarrsort[i])
-//   }
-// }
-
-// // **************************************************************************
-// // CREATE NEW DATASTORE
-// // **************************************************************************
-// var partgenosdb = new Datastore({
-//   filename: path.join(__static, "/participantdata/participant.db"),
-//   autoload: true
-// });
-
-// // **************************************************************************
-// // RESET DATABASE TO - REMOVE ALL DOCUMENTS
-// // **************************************************************************
-// // Removing all documents with the 'match-all' query
-// partgenosdb.count({}, function(err, count) {
-//   // console.log("partgenosdb count before remove all");
-//   // console.log(count);
-// });
-// partgenosdb.remove({}, { multi: true }, function(err, numRemoved) {
-//   // console.log("numRemoved");
-//   // console.log(numRemoved);
-// });
-// partgenosdb.count({}, function(err, count) {
-//   // console.log("partgenosdb count after remove all");
-//   // console.log(count);
-// });
-// // **************************************************************************
-// // TESTING UNIQUE INDEX
-// // **************************************************************************
-// partgenosdb.removeIndex("chr_pos", function(err) {});
-// // Using a unique constraint with the index
-// // partgenosdb.ensureIndex({ fieldName: 'chr_pos', unique: true }, function (err) {
-// //   if(err){
-// //     console.log('err')
-// //     console.log(err)
-// //     alert('err = ' + err)
-// //     return;
-// //   }
-// //   else {
-// //     console.log('indexed')
-// //     console.log('err')
-// //     console.log(err)
-// //   }
-// // });
-// // **************************************************************************
-// // INSERT DOCUEMNTS FROM GENOTYPE JSON
-// // **************************************************************************
-// partgenosdb.insert(part_geno_db_array, function(err, newDoc) {
-//   // inserting participant's genos
-//   // newDoc is the newly inserted document, including its _id
-//   // newDoc has no key called notToBeSaved since its value was undefined
-//   // console.log("part_geno_db_array newDoc");
-//   // console.log(newDoc);
-//   // console.log("err");
-//   // console.log(err);
-// });
-// partgenosdb.count({}, function(err, count) {
-//   // console.log("partgenosdb count after putting all back");
-//   // console.log(count);
-// });
-// // **************************************************************************
-// // TEST FINDING A DOCUMENT IN THE DB
-// // **************************************************************************
-// partgenosdb.find({ Pos: "124214448" }, function(err, docs) {
-//   // console.log("docs from partgenosdb");
-//   // console.log(docs);
-//   // docs is an array containing documents Mars, Earth, Jupiter
-//   // If no document is found, docs is equal to []
-// });
-// // **************************************************************************
-// // FIND ALL DOC IN DB - MAY BE MORE THAN JUST INSERTED
-// // **************************************************************************
-// // partgenosdb.persistence.compactDatafile
-// partgenosdb.find({}, function(err, docs) {
-//   // console.log("all docs from db");
-//   // console.log(docs);
-// });
-
-// partgenosdb.count({}, function(err, count) {
-//   // console.log("partgenosdb count");
-//   // console.log(count);
-// });
 
 const webview = document.querySelector("webview");
 const BrowserWindow = require("electron").BrowserWindow;
@@ -276,6 +111,21 @@ export default {
       var participantgenos = JSON.parse(genosread);
       this.state = participantgenos.loader;
       return participantgenos.loader;
+    },
+    coffee () {
+      return faCoffee
+    },     
+    eye () {
+      return faEye
+    },    
+    infocircle () {
+      return faInfoCircle
+    },
+    book () {
+      return faBook
+    },
+    chart () {
+      return faChartBar
     }
   },
   methods: {
@@ -379,14 +229,17 @@ export default {
     // console.log('this.state')
     // console.log(this.state)
     // alert('mounted this.state =' + this.state)
+  },
+  components: {
+    FontAwesomeIcon
   }
 };
 </script>
 
 <style>
-/*@import url(https://fonts.googleapis.com/css?family=Lato:300);*/
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
 
-@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"; 
 
 .fixed-top {
   position: fixed;
