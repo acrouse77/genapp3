@@ -12,7 +12,9 @@
 </script>
 
 <style>
- @import url(https://fonts.googleapis.com/css?family=Lato:300); 
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"; 
 
   * {
     margin: 0;

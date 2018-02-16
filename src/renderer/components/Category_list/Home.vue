@@ -13,7 +13,7 @@
 </style>
 
 <template>
-<div class="container" style="margin-top:100 auto;">
+<div class="container">
 <div class="row">
 
     <!-- COLUMNS FOR DISEASE AND MEDICAL TRAITS -->
@@ -63,12 +63,9 @@
 </template>
 
 <script>
-import path from 'path'
-// import bat from './assets/BAT.json'
-// var datapath = path.join(__static, '/referencedata/categories.json')
-// console.log('datapath')
-// console.log(datapath)
-// import categories from datapath
+import fs from "fs";
+import path from "path";
+
 var _ = require('underscore')
 // import Vue from 'vue'
 
@@ -111,10 +108,32 @@ export default {
     var typeGroupedData = _.groupBy(catGroupedData[getparam], function (d) {
       return d.type
     })
+
+
     this.diseases = typeGroupedData['Disease']
     this.medtraits = typeGroupedData['Medical Traits']
-    this.diseasesLength = this.diseases.length
-    this.medTraitsLength = this.medtraits.length
+    try {
+        this.diseasesLength = this.diseases.length;
+    }
+    catch(error) {
+    console.log(error);
+        this.diseasesLength = 0
+    // expected output: SyntaxError: unterminated string literal
+    // Note - error messages will vary depending on browser
+    }
+    try {
+        this.medTraitsLength = this.medtraits.length;
+    }
+    catch(error) {
+    console.log(error);
+        this.medTraitsLength = 0
+    // expected output: SyntaxError: unterminated string literal
+    // Note - error messages will vary depending on browser
+    }
+
+
+    // this.diseasesLength = this.diseases.length
+    // this.medTraitsLength = this.medtraits.length
     console.log('typeGroupedData')
     console.log(typeGroupedData)
     console.log('diseases')

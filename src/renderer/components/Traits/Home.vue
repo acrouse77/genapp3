@@ -58,7 +58,7 @@ hr.style18:before {
     <div class="container-fluid" style="margin-top:100 auto;">
         <!-- TABLE FOR EACH PUBLICATION -->
         <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2">
+        <div class="col-lg-8 col-md-8 col-sm-8">
 
         <!-- <hr class="style18"> -->
        <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
@@ -86,7 +86,7 @@ hr.style18:before {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-bind:class="[rs762551=== 'C/C'? 'bg-success text-white': '']">
+                            <tr v-bind:class="[rs762551=== 'A/A'? 'bg-success text-white': '']">
                                 <th scope="row" align="center" class="text-white">Your Genotype</th>
                                 <td align="center">A/A</td>
                                 <td align="center">Fast caffeine metabolizer</td>

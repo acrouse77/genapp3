@@ -6,7 +6,7 @@
 </style>
 
 <template>
-  <home :bat="bat"></home>
+  <home></home>
 </template>
 
 

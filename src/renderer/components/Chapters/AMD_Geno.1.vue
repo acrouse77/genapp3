@@ -73,6 +73,8 @@ export default {
       })
 
       var partGenoObj = value
+      console.log('value')
+      console.log(value)
       if (partGeno.length === 0) {
         partGenoObj.Geno = '-:-'
 
@@ -243,8 +245,8 @@ export default {
     var tableGroupedData = _.groupBy(studyGeno, function (d) {
       return d.genoTable
     })
-    console.log("tableGroupedData.1")
-    console.log(tableGroupedData)
+    // console.log("tableGroupedData.1")
+    // console.log(tableGroupedData)
 
     // this.tableGroupedData = tableGroupedData // THIS IS SHOW THE TEXT OF THE JSON ON THE PAGE - CAN DELETE AFTER TROUBLE SHOOTING
 
@@ -278,10 +280,10 @@ export default {
             var sortTable = _.sortBy(value, function (d) {
             return d.orderID
             })
-            console.log('sortTable')
-            console.log(sortTable)            
-            console.log('genoTable')
-            console.log(genoTable)
+            // console.log('sortTable')
+            // console.log(sortTable)            
+            // console.log('genoTable')
+            // console.log(genoTable)
             genoTable = genoTable.concat(
 
                             '<table class="table table table-hover">' +
@@ -396,8 +398,8 @@ export default {
         var sortTable = _.sortBy(value, function (d) {
         return d.orderID
         })
-        console.log('sortTable')
-        console.log(sortTable)
+        // console.log('sortTable')
+        // console.log(sortTable)
         genoTable = genoTable.concat(
 
                         '<table class="table table table-hover">' +
@@ -521,19 +523,19 @@ export default {
     this.genoTableTwo = genoTableTwo
     this.genoTableThree = genoTableThree
     this.genoTableFour = genoTableFour
-    console.log('END OF CODE length.goodresult')
-    console.log('goodresult.length')
-    console.log(goodresult.length)
+    // console.log('END OF CODE length.goodresult')
+    // console.log('goodresult.length')
+    // console.log(goodresult.length)
     this.goodcount = goodresult.length
-    console.log('badresult.length')
-    console.log(badresult.length)
+    // console.log('badresult.length')
+    // console.log(badresult.length)
     this.badcount = badresult.length
     // console.log('genoTableOne')
     // console.log(genoTableOne)
         // AND MAKE THEM VISIBLE
     if (genoTableOne.length !== 0) {
         this.show_genoTableOne = true
-        console.log("this.show_genoTableOne = true;")
+        // console.log("this.show_genoTableOne = true;")
     }
         // console.log("genoTableOne");
         // console.log(typeof genoTableOne);
@@ -541,7 +543,7 @@ export default {
 
     if (genoTableTwo.length !== 0) {
         this.show_genoTableTwo = true
-        console.log("this.show_genoTableTwo = true;")
+        // console.log("this.show_genoTableTwo = true;")
     }
         // console.log("genoTableTwo");
         // console.log(typeof genoTableTwo);

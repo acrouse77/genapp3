@@ -11,7 +11,7 @@ img {
     <AMD></AMD>
     <div class="section">
       <div class="container">
-        <Geno1></Geno1>
+        <Geno></Geno>
       
       </div>
     </div>
@@ -27,8 +27,8 @@ import Key from './Key.vue'
 
 export default {
   components: {
-    Geno1,
-    // Geno,
+    // Geno1,
+    Geno,
     AMD
     // Key
   },

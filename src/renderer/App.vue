@@ -1,37 +1,37 @@
 <template>
 <div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="text-muted navbar-brand" href="#">
-    <img src="static/img/mini-logo.png" style="margin-left: 20px; margin-right: 5px" height="50" class="text-muted d-inline-block" alt=""> Insight Genome
-  </a> 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="svg-inline--fa fa-bars fa-w-14 fa-7x"></i>
-  </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="text-muted navbar-brand" href="#">
+      <img src="static/img/mini-logo.png" style="margin-left: 20px; margin-right: 5px" height="50" class="text-muted d-inline-block" alt=""> Insight Genome
+    </a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"> Menu</i>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item" style="margin-left:20px">
-          <router-link :to="{name: 'introduction-page'}" class="col btn btn-outline-secondary  btn-lg"><font-awesome-icon :icon="infocircle" />Introduction </i><span class="sr-only">(current)</span></router-link>
-        </li>
-        <li class="nav-item" style="margin-left:20px">
-          <router-link :to="{name: 'chapter-page'}" class="col btn btn-outline-secondary   btn-lg"><font-awesome-icon :icon="book" /> Chapters </i><span class="sr-only">(current)</span></router-link>
-        </li>
-        <li class="nav-item" style="margin-left:20px">
-          <router-link :to="{name: 'categories-page'}" class="col btn btn-outline-secondary   btn-lg"><font-awesome-icon :icon="chart" /> Research </i><span class="sr-only">(current)</span></router-link>
-        </li>
-        <li class="nav-item" style="margin-left:20px">
-          <router-link :to="{name: 'traits-page'}" class="col btn btn-outline-secondary   btn-lg"><font-awesome-icon :icon="eye" /> <i class="fa fa-eye nav-link" aria-hidden="true">Traits </i><span class="sr-only">(current)</span></router-link>
-        </li>
-    </ul>
-  </div> <!-- END CLASS = COLLAPSE -->
-    <div class="btn-group">
-        <button class="btn btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link" style="margin-left:20px" onclick="history.back();"></button>
-        <button class="btn btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link" style="margin-left:20px; margin-right:20px" onclick="history.forward();"></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item" style="margin-left:20px">
+            <router-link :to="{name: 'introduction-page'}" class="col btn btn-outline-secondary  btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
+          </li>
+          <li class="nav-item" style="margin-left:20px">
+            <router-link :to="{name: 'chapter-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
+          </li>
+          <li class="nav-item" style="margin-left:20px">
+            <router-link :to="{name: 'categories-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
+          </li>
+          <li class="nav-item" style="margin-left:20px">
+            <router-link :to="{name: 'traits-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+          </li>
+      </ul>
+    </div> <!-- END CLASS = COLLAPSE -->
+    <div class="col-1">
+          <button class="btn btn-lg btn-outline-secondary fa fa-arrow-circle-o-left fa-3x fa-border nav-link" style="margin-right=10%" onclick="history.back();"></button>
+      </div>
+        <div class="col-1" >
+
+          <button class="btn btn-lg btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link"  onclick="history.forward();"></button>
     </div>
   </nav>
-        <div  style="margin-right: 10px">Genome ID: {{genomeidshow}}</div>  <font-awesome-icon :icon="coffee" />
-        <div  style="margin-right: 10px">Participant ID: {{researchidshow}}</div>
-
   <div>
     <router-view class="app" ></router-view>
   </div>
@@ -42,7 +42,9 @@
       <p class="text-muted">
         <H1>DISCLAIMER </H1>
         <!--<BR /> RESEARCH ONLY - DON'T EVEN CONSIDER THINKING THIS IS NOT RESEARCH OR MIKE WILL GET YOU.</p>-->
-        <br />> RESEARCH ONLY APPLICATION</p>
+        <br /> RESEARCH ONLY APPLICATION</p>
+        <div  style="margin-right: 10px">Genome ID: {{genomeidshow}}</div>  
+        <div  style="margin-right: 10px">Participant ID: {{researchidshow}}</div>
     </div>
   </footer>
   </div>
@@ -52,27 +54,25 @@
 import fs from "fs";
 import path from "path";
 
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee'
-import faInfoCircle from '@fortawesome/fontawesome-free-solid/faInfoCircle'
-import faEye from '@fortawesome/fontawesome-free-solid/faEye'
-import faBook from '@fortawesome/fontawesome-free-solid/faBook'
-import faChartBar from '@fortawesome/fontawesome-free-solid/faChartBar'
-
-
+// import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+// import faCoffee from '@fortawesome/fontawesome-free-solid/faCoffee'
+// import faInfoCircle from '@fortawesome/fontawesome-free-solid/faInfoCircle'
+// import faEye from '@fortawesome/fontawesome-free-solid/faEye'
+// import faBook from '@fortawesome/fontawesome-free-solid/faBook'
+// import faChartBar from '@fortawesome/fontawesome-free-solid/faChartBar'
 
 // REGEX TO MATCH SL FILE = ^SL(?=.*\d+).*json$
-let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
-var participantData = JSON.parse(participantDataString);
-let paticipant_getgeno = participantData.Participants.Genotypes;
+// let participantDataString = fs.readFileSync(path.join(__static, '/participantdata/participant.json'), 'utf8')
+// var participantData = JSON.parse(participantDataString);
+// let paticipant_getgeno = participantData.Participants.Genotypes;
 
-var part_geno_db_array = [];
-var Chr_Pos_check = [];
+// var part_geno_db_array = [];
+// var Chr_Pos_check = [];
 
 const webview = document.querySelector("webview");
 const BrowserWindow = require("electron").BrowserWindow;
-var participantId = participantData.Participants.ID;
-var partIdText = participantId.toString();
+// var participantId = participantData.Participants.ID;
+// var partIdText = participantId.toString();
 
 export default {
   data() {
@@ -101,6 +101,8 @@ export default {
         "utf8"
       );
       var participantgenos = JSON.parse(genosread);
+      // this.genomeidshow = participantgenos.genomeID
+      // console.log(participantgenos.genomeID)
       return participantgenos;
     },
     checkstate: function() {
@@ -112,21 +114,21 @@ export default {
       this.state = participantgenos.loader;
       return participantgenos.loader;
     },
-    coffee () {
-      return faCoffee
-    },     
-    eye () {
-      return faEye
-    },    
-    infocircle () {
-      return faInfoCircle
-    },
-    book () {
-      return faBook
-    },
-    chart () {
-      return faChartBar
-    }
+    // coffee () {
+    //   return faCoffee
+    // },     
+    // eye () {
+    //   return faEye
+    // },    
+    // infocircle () {
+    //   return faInfoCircle
+    // },
+    // book () {
+    //   return faBook
+    // },
+    // chart () {
+    //   return faChartBar
+    // }
   },
   methods: {
     confirm() {
@@ -169,58 +171,15 @@ export default {
       // // console.log(genos)
       // console.log('this.state')
       // console.log(this.state)
-    },
-    close() {
-      // console.log("************* close method");
-      //  ******************************************************
-      //
-      // let genosread = fs.readFileSync(path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
-      // var participantgenos = JSON.parse(genosread)
-      // var getgeno = JSON.stringify(participantgenos.Genotypes, null, "\t")
-      // console.log('participantgenos.Genotypes')
-      // console.log(participantgenos.Genotypes)
-      // partgenosdb.insert(getgeno, function (err, newDoc) {
-      // // inserting participant's genos
-      // // newDoc is the newly inserted document, including its _id
-      // // newDoc has no key called notToBeSaved since its value was undefined
-      // })
-      // console.log('************* geno in db')
-
-      // // partgenosdb.find({}, function (err, docs) {
-      // // console.log('all docs from db')
-      // // console.log(docs)
-      // // });
-      // console.log('partgenosdb db')
-      // console.log(partgenosdb)
-
-      // ******************************************************
-      // let genosread = fs.readFileSync(this.newdatapath, 'utf8')
-      // var genos = JSON.parse(genosread)
-      this.state = "closed";
-      // console.log('this.state')
-      // console.log(this.state)
-      // console.log('genos[loader]')
-      // console.log(genos['loader'])
-      // console.log('this.checkstate')
-      // console.log(this.checkstate)
-      // console.log('this.checkstate')
-      // console.log(this.checkstate)
-      // console.log('this.state')
-      // console.log(this.state)
     }
-    // openinput () {
-    //   console.log('openinput')
-    //   this.state = 'open'
-    // }
   },
-  // beforeCreate: function () {
-  //   alert('beforeCreate this.state =' + this.state)
-  // },
-  // created: function () {
-  //   alert('created this.state =' + this.state)
-  // },
   beforeMount: function() {
-  
+    this.genomeidshow = this.compparticipantData.genomeID
+    console.log('this.compparticipantData.genomeID')
+    console.log(this.compparticipantData.genomeID)
+    this.researchidshow = this.compparticipantData.researchID
+    console.log('this.compparticipantData.researchID')
+    console.log(this.compparticipantData.researchID)
   },
   mounted: function() {
     // console.log('************* mounted')
@@ -229,10 +188,10 @@ export default {
     // console.log('this.state')
     // console.log(this.state)
     // alert('mounted this.state =' + this.state)
-  },
-  components: {
-    FontAwesomeIcon
   }
+  // components: {
+  //   FontAwesomeIcon
+  // }
 };
 </script>
 
@@ -247,20 +206,15 @@ export default {
   right: 0;
   left: 0;
   z-index: 1030;
-  margin-bottom: 10px;
 }
 body {
-  padding-top: 125px; /* This should be equal to the height of your header */
-}
-.uploadbar {
-  padding-top: 100px;
+  padding-top: 100px; /* This should be equal to the height of your header */
 }
 * {
   margin: 0;
   padding: 0;
 }
-.app {
-}
+
 .navbar {
   background-color: #f7f7f7;
 }
@@ -270,8 +224,8 @@ body {
 .btn {
   margin-top: 5px;
   margin-bottom: 10px;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .fa {

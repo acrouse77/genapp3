@@ -60,8 +60,11 @@ export default {
     console.log('chapter')
     console.log(chapter)
     $.each(chapter, function (index, value) {
-        console.log('value chapter[]')
-        console.log(value)
+        var next = index++
+        console.log('next')
+        console.log(next)
+        console.log('chapter[next]')
+        console.log(chapter[next])
       var loc = value.chrPos.toString()
       var ch = value.chr.toString()
 
@@ -75,6 +78,8 @@ export default {
       })
 
       var partGenoObj = value
+      console.log('value')
+      console.log(value)
       if (partGeno.length === 0) {
         partGenoObj.Geno = '-:-'
 
@@ -245,8 +250,8 @@ export default {
     var tableGroupedData = _.groupBy(studyGeno, function (d) {
       return d.genoTable
     })
-    console.log("tableGroupedData.1")
-    console.log(tableGroupedData)
+    // console.log("tableGroupedData.1")
+    // console.log(tableGroupedData)
 
     // this.tableGroupedData = tableGroupedData // THIS IS SHOW THE TEXT OF THE JSON ON THE PAGE - CAN DELETE AFTER TROUBLE SHOOTING
 
@@ -280,10 +285,10 @@ export default {
             var sortTable = _.sortBy(value, function (d) {
             return d.orderID
             })
-            console.log('sortTable')
-            console.log(sortTable)            
-            console.log('genoTable')
-            console.log(genoTable)
+            // console.log('sortTable')
+            // console.log(sortTable)            
+            // console.log('genoTable')
+            // console.log(genoTable)
             genoTable = genoTable.concat(
 
                             '<table class="table table table-hover">' +
@@ -344,40 +349,31 @@ export default {
                                     '<td><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
                                     '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
                                     '</tr>' +
-                                    '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
-                                    '<td colspan="11">' +
-                                    '<div class="card">' +
-                                    '<div class="card-header rounded">' +
-                                    'Publication Information:' +
-                                    '</div>' +
-                                    '<div class="card-block">' +
-                                    '<h2 class="card-title"> <em>' + sortTableValue.studyName + '</em></h2>' +
-                                    '</div>' +
-
-                                    '<div class="card-block">' +
-                                    '<h3>Study size and ancestry (when available) of studied population: </h3>' +
-                                    '<div class="row">' +
-                                    '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                                    '<p><strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
-                                    '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br /></p>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '<div class="card-block">' +
-                                    '<p><h3>Citation: </h3>' +
-                                    '<div class="row">' +
-                                    '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                                    '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
-                                    '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
-                                    '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '<div class="card-footer">' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '</td>' +
-                                    '</tr>'
+                                    '<tr class="collapse" id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
+                                            '<td colspan="9" align="center">' +
+                                                '<div class="s8 box col-11" align="left">' +
+                                                    '<div class="cit-header">' +
+                                                        'Publication Information:' +
+                                                    '</div>' +
+                                                    '<div class="cit-info">' +
+                                                        '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
+                                                        '<div class="cit-size">' +
+                                                            'Study size and ancestry (when available) of studied population:' +
+                                                                '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                                                    '<p>Initial study: ' + ' ' + sortTableValue.studySize + '<br />' +
+                                                                    'Replication study:' + ' ' + sortTableValue.repSize + '<br /></p>' +
+                                                                '</div>' +
+                                                        '</div>' +
+                                                        '<p>Citation:' +
+                                                        '<div>' +
+                                                            'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
+                                                            'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
+                                                            'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                                        '</div>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                            '</td>' +
+                                        '</tr>'
                                 )
             }
             }) // END OF EACH FOR ROW A TABLE
@@ -393,13 +389,16 @@ export default {
             genoTableOne = genoTable
     break
     case 2:
+    // *********************************************
+    // CREATE TABLE 2 FROM GENOTABLE = 2
+    // *********************************************
         var genoTable = ''
         // SORT TABLE TO GROUP SNP AND ORDER BY OR
         var sortTable = _.sortBy(value, function (d) {
         return d.orderID
         })
-        console.log('sortTable')
-        console.log(sortTable)
+        // console.log('sortTable')
+        // console.log(sortTable)
         genoTable = genoTable.concat(
 
                         '<table class="table table table-hover">' +
@@ -422,78 +421,69 @@ export default {
                                 '<div><td width="20%"><i class="btn fa fa-info-circle fa-align-center" style="text-align:center" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
                                 '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
                                 '</tr>' +
-                                    '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
-                                        '<td colspan="9" align="center">' +
-                                            '<div class="s8 box col-11" align="left">' +
-                                                '<div class="cit-header">' +
-                                                    'Publication Information:' +
-                                                '</div>' +
-                                                '<div class="cit-info">' +
-                                                    '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
-                                                    '<div class="cit-size">' +
-                                                        'Study size and ancestry (when available) of studied population:' +
-                                                            '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                                                                '<p>Initial study: ' + ' ' + sortTableValue.studySize + '<br />' +
-                                                                'Replication study:' + ' ' + sortTableValue.repSize + '<br /></p>' +
-                                                            '</div>' +
+                                    '<tr class="collapse" id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
+                                            '<td colspan="9" align="center">' +
+                                                '<div class="s8 box col-11" align="left">' +
+                                                    '<div class="cit-header">' +
+                                                        'Publication Information:' +
                                                     '</div>' +
-                                                    '<p>Citation:' +
-                                                    '<div>' +
-                                                        'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
-                                                        'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
-                                                        'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                                    '<div class="cit-info">' +
+                                                        '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
+                                                        '<div class="cit-size">' +
+                                                            'Study size and ancestry (when available) of studied population:' +
+                                                                '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                                                    '<p>Initial study: ' + ' ' + sortTableValue.studySize + '<br />' +
+                                                                    'Replication study:' + ' ' + sortTableValue.repSize + '<br /></p>' +
+                                                                '</div>' +
+                                                        '</div>' +
+                                                        '<p>Citation:' +
+                                                        '<div>' +
+                                                            'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
+                                                            'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
+                                                            'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                                        '</div>' +
                                                     '</div>' +
                                                 '</div>' +
-                                            '</div>' +
-                                        '</td>' +
-                                    '</tr>'
+                                            '</td>' +
+                                        '</tr>'
 
                             )
         } else {
             genoTable = genoTable.concat(
                                 '<tr class="tr_alt">' +
                                 '<th scope="row" colspan="4" align="center"></th>' +
-                                '<td align="center" >' + sortTableValue.OR + '</td>' +
-                                '<td align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
-                                '<td align="center" >' + sortTableValue.ORcalc + '</td>' +
-                                '<td align="center" >' + sortTableValue.model + '</td>' +
+                                // '<td align="center" >' + sortTableValue.OR + '</td>' +
+                                // '<td align="center" >' + sortTableValue.genoGroup.substring(0, 4) + '</td>' +
+                                // '<td align="center" >' + sortTableValue.ORcalc + '</td>' +
+                                // '<td align="center" >' + sortTableValue.model + '</td>' +
                                 '<td><i class="btn fa fa-info-circle" data-toggle="collapse" data-target="#collapseExample_SNPID' + sortTableValue.snpIndex +
                                 '"aria-expanded="false" aria-controls="collapseExample"></i></td>' +
                                 '</tr>' +
-                                '<tr class="collapse"  id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
-                                '<td colspan="11">' +
-                                '<div class="card">' +
-                                '<div class="card-header rounded">' +
-                                'Publication Information:' +
-                                '</div>' +
-                                '<div class="card-block">' +
-                                '<h2 class="card-title"> <em>' + sortTableValue.studyName + '</em></h2>' +
-                                '</div>' +
-
-                                '<div class="card-block">' +
-                                '<h3>Study size and ancestry (when available) of studied population: </h3>' +
-                                '<div class="row">' +
-                                '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                                '<p><strong>Initial study: </strong>' + ' ' + sortTableValue.studySize + '<br />' +
-                                '<strong>Replication study: </strong>' + ' ' + sortTableValue.repSize + '<br /></p>' +
-                                '</div>' +
-                                '</div>' +
-                                '</div>' +
-                                '<div class="card-block">' +
-                                '<p><h3>Citation: </h3>' +
-                                '<div class="row">' +
-                                '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
-                                '<strong>Journal: </strong>' + ' ' + sortTableValue.journ + '<br />' +
-                                '<strong>Publication date: </strong>' + ' ' + sortTableValue.pubDate + '<br />' +
-                                '<strong>Pubmed ID: </strong>' + ' ' + sortTableValue.pmID + '<br /></p>' +
-                                '</div>' +
-                                '</div>' +
-                                '</div>' +
-                                '<div class="card-footer">' +
-                                '</div>' +
-                                '</div>' +
-                                '</td>' +
-                                '</tr>'
+                                '<tr class="collapse" id="collapseExample_SNPID' + sortTableValue.snpIndex + '">' +
+                                            '<td colspan="9" align="center">' +
+                                                '<div class="s8 box col-11" align="left">' +
+                                                    '<div class="cit-header">' +
+                                                        'Publication Information:' +
+                                                    '</div>' +
+                                                    '<div class="cit-info">' +
+                                                        '<div class="cit-title">Title: <i>' + sortTableValue.studyName + '</i></div>' +
+                                                        '<div class="cit-size">' +
+                                                            'Study size and ancestry (when available) of studied population:' +
+                                                                '<div class=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 offset-md-1 offset-sm-1 ">' +
+                                                                    '<p>Initial study: ' + ' ' + sortTableValue.studySize + '<br />' +
+                                                                    'Replication study:' + ' ' + sortTableValue.repSize + '<br /></p>' +
+                                                                '</div>' +
+                                                        '</div>' +
+                                                        '<p>Citation:' +
+                                                        '<div>' +
+                                                            'Journal:  ' + ' ' + sortTableValue.journ + '<br />' +
+                                                            'Publication date: ' + ' ' + sortTableValue.pubDate + '<br />' +
+                                                            'Pubmed ID: ' + ' ' + sortTableValue.pmID + '<br /></p>' +
+                                                        '</div>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                            '</td>' +
+                                        '</tr>'
                             )
         }
         }) // END OF EACH FOR ROW A TABLE
@@ -523,19 +513,19 @@ export default {
     this.genoTableTwo = genoTableTwo
     this.genoTableThree = genoTableThree
     this.genoTableFour = genoTableFour
-    console.log('END OF CODE length.goodresult')
-    console.log('goodresult.length')
-    console.log(goodresult.length)
+    // console.log('END OF CODE length.goodresult')
+    // console.log('goodresult.length')
+    // console.log(goodresult.length)
     this.goodcount = goodresult.length
-    console.log('badresult.length')
-    console.log(badresult.length)
+    // console.log('badresult.length')
+    // console.log(badresult.length)
     this.badcount = badresult.length
     // console.log('genoTableOne')
     // console.log(genoTableOne)
         // AND MAKE THEM VISIBLE
     if (genoTableOne.length !== 0) {
         this.show_genoTableOne = true
-        console.log("this.show_genoTableOne = true;")
+        // console.log("this.show_genoTableOne = true;")
     }
         // console.log("genoTableOne");
         // console.log(typeof genoTableOne);
@@ -543,7 +533,7 @@ export default {
 
     if (genoTableTwo.length !== 0) {
         this.show_genoTableTwo = true
-        console.log("this.show_genoTableTwo = true;")
+        // console.log("this.show_genoTableTwo = true;")
     }
         // console.log("genoTableTwo");
         // console.log(typeof genoTableTwo);

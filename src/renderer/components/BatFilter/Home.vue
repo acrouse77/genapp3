@@ -16,18 +16,18 @@
 }
 
 .norisk {
-    background-color: #1E8BFD;/*GREEN*/
-    color: white;
+    background-color: #496e9c !important;/*BLUE*/
+    color: white !important;
 }
 
 .heterozygous {
-    background-color: #FDDA1E;/*BLUE*/
-    color: white;
+    background-color: #17978E !important;/*BLUE*/
+    color: white !important;
 }
 
 .homozygous {
-    background-color: #FD901E;/*RED*/
-    color: white;
+    background-color: #F68026 !important;/*RED*/
+    color: white !important;
 }
 
 hr.style18 {
@@ -51,9 +51,9 @@ hr.style18:before {
 </style>
 
 <template>
-    <div class="section" style="margin-top:100 auto;">
+    <div class="section" style="margin-top:0px auto;">
         <div class="container">
-                    <b-card bg-variant="dark" text-variant="white" style="margin:20px; margin-top:100px;">
+                    <b-card bg-variant="dark" text-variant="white" style="margin-top:50px;">
                         <p class="card-text">
                             <h2>Your genotype is matched to variants found in each study below:</h2>
                         </p>
@@ -77,8 +77,8 @@ hr.style18:before {
 import fs from 'fs'
 import path from 'path'
 
-let batread = fs.readFileSync(path.join(__static, '/referencedata/BAT.json'), 'utf8')
-var bat = JSON.parse(batread)
+// let batread = fs.readFileSync(path.join(__static, '/referencedata/BAT.json'), 'utf8')
+// var bat = JSON.parse(batread)
 
 let genosread = fs.readFileSync(path.join(__static, '/participantdata/participantDataTEST.json'), 'utf8')
 var genos = JSON.parse(genosread)
@@ -115,7 +115,7 @@ export default {
       msg: 'Hello from vue-loader!',
       msg1: '<h1>Hello from vue-loader!</h1>',
       pubtable: '',
-      batable: bat,
+    //   batable: bat,
       todisplay: []
     }
   },
@@ -149,33 +149,37 @@ export default {
     // ****************************************
     // THIS IS THE DATA FROM THE FINREDUCED SET = SINGLE STUDY
     // ****************************************
+    var counter = 1
     $.each(focuscat, function (index, value) {
       console.log("value[0].studyName")
       console.log(value[0].studyName)
                 // ADD THE HEADER OF EACH STUDY
       focustable = focustable.concat(
 
+                        // '<div class="card" style="border-radius: 25px; border: 1px solid; padding: 5px; border-color: rgb(140, 139, 139)">' +
                         '<div class="card">' +
                         '<div class="card-block card-inverse card-primary">' +
-                        '<h1 class="card-title">' + value[0].studyName + '</h1>' +
+                        '<h1 class="card-header"> Study #' + counter + ':<br>' + value[0].studyName + '</h1>' +
+                        // '<h1 class="card-title">' + value[0].studyName + '</h1>' +
                         '<p class="card-text">' + 'Initial study size: ' + value[0].studySize + '</p>' +
                         '<p class="card-text"> Replication study size: ' + value[0].repSize + '</p>' +
                         '</div>' +
                         '<div class="card-block">'
                     )
+      counter++
                     // ------------------------------------
                     // START THE table
       focustable = focustable.concat(
                     '<table class="table table-bordered">' +
                     '<thead>' +
                     '<tr>' +
-                    '<th>Gene</th>' +
-                    '<th align="center">snpID</th>' +
-                    '<th align="center">Chrom.</th>' +
-                    '<th align="center">Position</th>' +
-                    '<th align="center">Risk allele</th>' +
-                    '<th align="center">Odds Ratio</th>' +
-                    "<th align=\"center\">Participant's genotype</th>" +
+                    '<th width="20%" scope="row" align="center">Gene</th>' +
+                    '<th width="15%" align="center">snpID</th>' +
+                    '<th width="5%" align="center">Chrom.</th>' +
+                    '<th width="10%" align="center">Position</th>' +
+                    '<th width="10%" align="center">Risk allele</th>' +
+                    '<th width="15%" align="center">Odds Ratio</th>' +
+                    "<th width=\"25%\" align=\"center\">Participant's genotype</th>" +
 
                     '</tr>' +
                     '</thead>' +

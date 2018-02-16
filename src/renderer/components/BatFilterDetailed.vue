@@ -5,7 +5,7 @@
   }
 </style>
 <template>
-  <!-- <home></home> -->
+  <home></home> 
   <printall></printall>
 </template>
 <!--<template>

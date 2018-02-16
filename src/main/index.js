@@ -32,7 +32,7 @@ function createWindow () {
 
   mainWindow.loadURL(winURL)
   // ADDED NEXT LINE TO SEE TOOLS AFTER BUILD
-  mainWindow.openDevTools()
+  // mainWindow.openDevTools()
   mainWindow.on('closed', () => {
     mainWindow = null
   })

@@ -1,5 +1,5 @@
 {
-	"ID": "1234scramble",
+	"ID": "1234567890",
 	"Genotypes": [
 		{
 		  "Chr": "4",
@@ -12771,8 +12771,8 @@
 		  "Pos": "125307053",
 		  "Gen": "G:G"
 		}
-	],
-	"genomeID": "SLscramble",
-	"researchID": "scramble",
+	  ],
+	"genomeID": "SL124309",
+	"researchID": "1234",
 	"loader": "open"
 }
