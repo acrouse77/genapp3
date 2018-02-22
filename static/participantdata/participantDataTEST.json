@@ -1,6 +1,180 @@
 {
 	"ID": "1234scramble",
 	"Genotypes": [
+		{ "_comment": "this was manually added for eye color",
+			"rsID": "rs12913832",
+			"Chr": "15",
+			"Pos": "28365618",
+			"Gen": "A:A"
+		},		{ "_comment": "this was manually added for eye color",
+			"rsID": "rs12203592",
+			"Chr": "6",
+			"Pos": "396321",
+			"Gen": "A:G"
+		},
+		{ "_comment": "this was manually added for eye color",
+			"rsID": "rs6119471",
+			"Chr": "20",
+			"Pos": "32785212",
+			"Gen": "G:G"
+		},
+		{ "_comment": "this was manually added for eye color",
+			"rsID": "rs16891982",
+			"Chr":"5",
+			"Pos": "33951693",
+			"Gen": "A:A"
+		},
+		{ "_comment": "this was manually added for eye color",
+			"rsID": "rs12896399",
+			"Chr": "14",
+			"Pos": "92773663",
+			"Gen": "A:A"
+		},
+		{
+			"Chr": "15",
+			"Pos": "75041917",
+			"Gen": "A:A"
+		},
+		{
+			"Chr": "1",
+			"Pos": "248496863",
+			"Gen": "A:G"			
+		},
+		{
+			"Chr": "16",
+			"Pos": "48258198",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "12",
+			"Pos": "110659067",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "4",
+			"Pos": "110659067",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "12",
+			"Pos": "112241766",
+			"Gen": "G:A"
+		},
+		{
+			"Chr": "19",
+			"Pos": "49206674",
+			"Gen": "A:A"
+		},
+		{
+			"Chr": "2",
+			"Pos": "146125523",
+			"Gen": "C:C"
+		},
+		{
+			"Chr": "2",
+			"Pos": "136608646",
+			"Gen": "C:C"
+		},
+		{
+			"Chr": "7",
+			"Pos": "141673345",
+			"Gen": "G:G"
+		},
+		{
+			"Chr": "11",
+			"Pos": "66328095",
+			"Gen": "C:C"
+		},
+		{
+			"Chr": "16",
+			"Pos": "89986117",
+			"Gen": "C:C"
+		},
+		{
+			"Chr": "4",
+			"Pos": "110659067",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "10",
+			"Pos": "124214448",
+			"Gen": "G:G"
+		},
+		{
+			"Chr": "1",
+			"Pos": "196659237",
+			"Gen": "C:C"
+		},
+		{
+			"Chr": "1",
+			"Pos": "196679455",
+			"Gen": "A:A"
+		},
+		{
+			"Chr": "1",
+			"Pos": "196660261",
+			"Gen": "A:A"
+		},
+		{
+			"Chr": "10",
+			"Pos": "124220544",
+			"Gen": "G:G"
+		},
+		{
+			"Chr": "6",
+			"Pos": "7118990",
+			"Gen": "G:G"
+		},
+		{
+			"Chr": "6",
+			"Pos": "32074804",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "3",
+			"Pos": "99396272",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "8",
+			"Pos": "23082971",
+			"Gen": "G:G"
+		},
+		{
+			"Chr": "1",
+			"Pos": "196646176",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "4",
+			"Pos": "57786450",
+			"Gen": "G:T"
+		},
+		{
+			"Chr": "6",
+			"Pos": "32171683",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "19",
+			"Pos": "45395619",
+			"Gen": "A:A"
+		},
+		{
+			"Chr": "19",
+			"Pos": "6718387",
+			"Gen": "G:G"
+		},
+		{
+			"Chr": "4",
+			"Pos": "110638810",
+			"Gen": "T:T"
+		},
+		{
+			"Chr": "16",
+			"Pos": "56993324",
+			"Gen": "C:C"
+		},
 		{
 		  "Chr": "4",
 		  "Pos": "110659067",

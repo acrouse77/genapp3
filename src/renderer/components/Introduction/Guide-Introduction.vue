@@ -4,11 +4,11 @@
 <a name="INTRODUCTION"></a>
   <h1 class="text-primary">INTRODUCTION</h1>
   <h3><strong>Welcome to Your Genome</strong></h3>
-    <p>The information in this Insight Genome Research Guide (ÒGuideÓ) is based upon current scientific knowledge and technology as of the date of this Guide and is subject to change. This Guide and its contents are provided as part of a research study and,
+    <p>The information in this Insight Genome Research Guide (Guide) is based upon current scientific knowledge and technology as of the date of this Guide and is subject to change. This Guide and its contents are provided as part of a research study and,
         as a research product, is not intended to offer medical advice or diagnosis. The content of this Guide is for educational and informational purposes only and does not replace the advice and recommendations provided by your physician. You must
         consult your physician or other qualified health care provider before taking any drug, supplement, changing your diet, making lifestyle changes, or commencing or discontinuing any course of treatment. </p>
 
-    <p>The following pages provide details about your genetic information as identified through whole genome sequencing. You are receiving this Guide as a participant in the IRB-approved study entitled, ÒImpact of Genomic SequencingÓ, (IRB Protocol #________).The
+    <p>The following pages provide details about your genetic information as identified through whole genome sequencing. You are receiving this Guide as a participant in the IRB-approved study entitled, Impact of Genomic Sequencing, (IRB Protocol #077).The
         physician who ordered your whole genome sequencing test received a clinical report from the testing laboratory. The clinical report differs from this Guide in that it only includes genetic variants which are known as of the date of the test to
         be highly impactful on disease risk, influence your clinical care, or offer suggestions pertaining to which medications you should or should not take. This Guide, provided under the auspices of research, relates your genetic information to a broader
         academic and biomedical research initiative. If you have not already, we encourage you to talk with your physician about the clinical report and any next steps indicated by your clinical results. </p>

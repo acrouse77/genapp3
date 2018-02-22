@@ -636,347 +636,347 @@
         "category": "Ocular"
     }, {
         "name": "Cholelithiasis-related traits in sickle cell anemia",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Erythrocyte sedimentation rate",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Fetal hemoglobin levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Glycated hemoglobin levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Haptoglobin levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Hematocrit",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Hematological parameters",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Hematology traits",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Hemoglobin",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Hemostatic factors and hematological phenotypes",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Immunoglobulin A",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Mean corpuscular hemoglobin",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Mean corpuscular volume",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Other erythrocyte phenotypes",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Red blood cell traits",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Blood"
     }, {
         "name": "Brain structure",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Brain"
     }, {
         "name": "Cortical thickness",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Brain"
     }, {
         "name": "Hippocampal volume",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Brain"
     }, {
         "name": "Intracranial volume",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Brain"
     }, {
         "name": "Progranulin levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Brain"
     }, {
         "name": "Prostate-specific antigen levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cancer"
     }, {
         "name": "Activated partial thromboplastin time",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Amyloid A Levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Angiotensin-converting enzyme activity",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Ankle-brachial index",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Aortic root size",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Blood pressure",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "C-reactive protein",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "C-reactive protein and white blood cell count",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Cardiac repolarization",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Cardiac structure and function",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Carotid intima media thickness",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Cholesterol, total",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Coagulation factor levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Coronary artery calcification",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Cardiovascular disease risk factors",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "D-dimer levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Diastolic blood pressure",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Electrocardiographic traits",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Fibrinogen",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "HDL cholesterol",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "HDL Cholesterol - Triglycerides (HDLC-TG)",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Homocysteine levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "LDL cholesterol",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Lipoprotein-associated phospholipase A2 activity and mass",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Mean platelet volume",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "N-glycan levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Natriuretic peptide levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Phospholipid levels (plasma)",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Phytosterol levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Platelet counts",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "PR interval",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Protein C levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Prothrombin time",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "QT interval",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Quantitative traits",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Resistin levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Resting heart rate",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Soluble ICAM-1",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Soluble levels of adhesion molecules",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Sphingolipid levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Systolic blood pressure",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Triglycerides",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Triglycerides-Blood Pressure (TG-BP)",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Vaspin levels",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Ventricular conduction",
-        "type": "Medical Traits",
+        "type": "Medical Trait",
         "category": "Cardiovascular"
     }, {
         "name": "Black vs. blond hair color",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Black vs. red hair color",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Blond vs. brown hair color",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Blue vs. brown eyes",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Blue vs. green eyes",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Breast size",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Common traits (Other)",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Cutaneous nevi",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Eye color",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Eye color traits",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Facial morphology",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Freckles",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Freckling",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Hair color",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Hair morphology",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Height",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Iris characteristics",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Male-pattern baldness",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Red vs non-red hair color",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Tanning",
-        "type": "Nonmedical Traits",
+        "type": "NonMedical Trait",
         "category": "Physical attributes"
     }, {
         "name": "Optic disc size (disc)",

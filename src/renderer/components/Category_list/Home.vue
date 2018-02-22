@@ -109,9 +109,13 @@ export default {
       return d.type
     })
 
+    console.log('typeGroupedData')
+    console.log(typeGroupedData)
+    console.log("typeGroupedData['Medical Trait']")
+    console.log(typeGroupedData['Medical Trait'])
 
     this.diseases = typeGroupedData['Disease']
-    this.medtraits = typeGroupedData['Medical Traits']
+    this.medtraits = typeGroupedData['Medical Trait']
     try {
         this.diseasesLength = this.diseases.length;
     }
@@ -134,19 +138,19 @@ export default {
 
     // this.diseasesLength = this.diseases.length
     // this.medTraitsLength = this.medtraits.length
-    console.log('typeGroupedData')
-    console.log(typeGroupedData)
-    console.log('diseases')
-    console.log(typeGroupedData['Disease'])
-    console.log('Medical Traits')
-    console.log(typeGroupedData['Medical Traits'])
-    console.log('Medical Traits length')
-    // console.log(typeGroupedData['Medical Traits'].length)
-    var getmedtraits = typeGroupedData['Medical Traits']
-    console.log("this.diseases")
-    console.log(this.diseases)
-    console.log("this.diseases.length")
-    console.log(this.diseases.length)
+    // console.log('typeGroupedData')
+    // console.log(typeGroupedData)
+    // console.log('diseases')
+    // console.log(typeGroupedData['Disease'])
+    // console.log('Medical Traits')
+    // console.log(typeGroupedData['Medical Traits'])
+    // console.log('Medical Traits length')
+    // // console.log(typeGroupedData['Medical Traits'].length)
+    // var getmedtraits = typeGroupedData['Medical Traits']
+    // console.log("this.diseases")
+    // console.log(this.diseases)
+    // console.log("this.diseases.length")
+    // console.log(this.diseases.length)
   }
 
 }

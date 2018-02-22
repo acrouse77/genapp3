@@ -67,7 +67,7 @@ h3 {
     <div>
       <div class=" section">
       <div class="container" style="margin-top:100px;">
-        <h1><strong>Chapter: Coronary Artery Disease Disease</strong></h1><br />
+        <h1><strong>Chapter: Coronary Artery Disease</strong></h1><br />
       </div>
       </div>
     <div class=" section">
@@ -84,7 +84,7 @@ h3 {
                   </div>
                 <h1 class="text-primary">Description</h1>
 
-                    <p>CAD can be divided into several subtypes: asymptomatic, angina pectoris, and myocardial infarction.<sup>2</sup> Asymptomatic CAD occurs when an individual&#39;s cardiac vessels have blockage, but that individual does not have pain or other symptoms of disease.
+                    <p>Coronary Artery Disease (CAD) can be divided into several subtypes: asymptomatic, angina pectoris, and myocardial infarction.<sup>2</sup> Asymptomatic CAD occurs when an individual&#39;s cardiac vessels have blockage, but that individual does not have pain or other symptoms of disease.
                         Over time, asymptomatic CAD may progress to angina pectoris and myocardial infarction.<sup>3</sup></p>
 
                     <p>Angina pectoris, or chest pain, occurs when the heart muscle does not receive as much blood as it needs due to blockage of the arteries. An individual with angina may experience feelings of pressure, fullness, squeezing, or pain in their chest region
@@ -113,7 +113,7 @@ h3 {
                         population. The average age at which CAD develops in women is approximately 7-10 years later than men.<sup>3,5,10</sup></p>
                     <p>Cigarette smoking is a well-described risk factor for the development of CAD, with the likelihood of developing CAD increased by approximately two times among smokers. This is due to the fact that smoking can trigger a buildup of plaque in a person&#39;s
                         arteries and increase the risk of blood clots forming in those narrowed arteries. The amount and duration of smoking affects the degree to which this risk is increased. Importantly, studies have shown that individuals who stop smoking almost immediately
-                        begin to see risk reduction and return to nearly baseline population risk for CAD over time.1,11</p>
+                        begin to see risk reduction and return to nearly baseline population risk for CAD over time.<sup>1,11</sup></p>
                     <p>Having high blood pressure is also a risk factor for developing CAD, as it causes the muscle of the heart to become thicker and stiffer due to overwork. In addition to high blood pressure, high blood cholesterol can also increase a person&#39;s risk
                         for CAD by increasing the likelihood of plaque formation. Both of these factors can be influenced by a person&#39;s lifestyle in terms of activity level and diet.<sup>1, 11</sup></p>
                     <p>Another risk factor for CAD is diabetes mellitus. The risk is lower if a person&#39;s blood sugar levels are under control. Over ⅔ of people over the age of 65 die from some form of heart disease, so it is critical for those with diabetes to manage
@@ -124,7 +124,7 @@ h3 {
                     <p>It is important to keep in mind that many of these environmental and lifestyle risk factors can be changed in order to lower risk. A person&#39;s risk increases further with each additional factor modified, so addressing even one area can begin to
                         lower overall risk. Because many of these risk factors are linked together by lifestyle habits, the American Heart Association recommends that the best way for a person to lower their total risk for CAD is to avoid tobacco, become more active,
                         and choose good nutrition.<sup>1</sup></p>
-                    <h2 id="genetic-risk-factors">Genetic Risk Factors</h2>
+                    <h2>Risk Factors</h2>
 
 
 
@@ -163,7 +163,7 @@ h3 {
                         <br>
 
             <hr class="style18">
-            <h2><strong>Genetic Risk Factors</strong></h2>
+            <h1>Your Genetic Risk Factors</h1>
             <p>Below is a summary of several <em>selected</em> genetic variants which have been identified as influencing a person&#39;s genetic risk.</p>
         </div> <!-- col-->
         </div> <!-- ROW2-->

@@ -1,57 +1,4 @@
-<style scope>
-.card {
-    min-width: 200px;
-    border-style: none
-}
 
-.card-block {
-    min-height: 75px
-}
-
-.jumbotron-buffer {
-    min-height: 40px
-}
-
-.bat_jumbotron {
-    margin-top: 4rem
-}
-
-.norisk {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.heterozygous {
-    background-color: #4c57af;
-    /*BLUE*/
-    color: white;
-}
-
-.homozygous {
-    background-color: #af4c4c;
-    /*RED*/
-    color: white;
-}
-
-hr.style18 {
-    height: 30px;
-    border-style: solid;
-    border-color: #8c8b8b;
-    border-width: 1px 0 0 0;
-    border-radius: 20px;
-}
-
-hr.style18:before {
-    display: block;
-    content: "";
-    height: 30px;
-    margin-top: -31px;
-    border-style: solid;
-    border-color: #8c8b8b;
-    border-width: 0 0 1px 0;
-    border-radius: 20px;
-}
-</style>
 
 <template>
 
@@ -123,12 +70,10 @@ hr.style18:before {
                         <img src="static/img/armpit.jpg" class="img-fluid text-center img-thumbnail">
                         </div>
                     <p class="card-text"></p>
-                    <p class="card-text">2% of people of european decent, many east asians and almost all Koreans are the lucky few who do not have to wear deoderant.  A variant in the ABCC11 gene prevents their armpits from producing an offensive odor.  This variant is thought 
-                    to affect apocrine sweat glands by reducing secretion of odorous molecules and its precursors.  This make using deoderant unneccesary for the select lucky few.  
+                    <p class="card-text">Two percent of people of European decent, many east Asians and almost all Koreans are the lucky few who do not have to wear deodorant.  A variant in the ABCC11 gene prevents their armpits from producing an offensive odor.  This variant is thought 
+                    to affect apocrine sweat glands by reducing secretion of odorous molecules and its precursors.  This make using deodorant unnecessary for the select lucky few.  
                     </p>
-                    <p>This variant also affects earwax consistancy.  Earwax is ubiquitous to everyone but you may not know that it comes two types - wet and dry. Wet earwax is the most common form in most populations (except East Asian) and can be described as yellow to brown colored and sticky. The
-                        less common dry earwax is often described as grey in color and as the name suggests, is dry and flakey. Earwax type is determined by variation in a single gene, ABCC11. No matter which type of earwax you have, it serves an important
-                        job in your body keeping your ear canals clean.
+                    <p>This variant also affects earwax consistency.  Earwax is ubiquitous to everyone, but you may not know that it comes two types - wet and dry. Wet earwax is the most common form in most populations (except East Asian) and can be described as yellow to brown colored and sticky. The less common dry earwax is often described as grey in color and as the name suggests, is dry and flakey. Earwax type is determined by variation in a single gene, ABCC11. No matter which type of earwax you have, it serves an important job in your body keeping your ear canals clean.
                     </p>
                 </div>
                 <div class="card-block">
@@ -506,6 +451,7 @@ hr.style18:before {
                             </tr>
                         </tbody>
                     </table>
+
                     <p>
                         Variation at this location in the MC1R gene has been associated with increased likelihood of freckling in humans. The MC1R gene encodes the melanocortin 1 receptor, which is involved in skin pigmentation. Individuals who have the letter “T” at this location in one or both of their copies of this genetic region are more likely to freckle while an individual who has the letter “C” at this location in both of their copies of this gene is less likely to have freckles [PMID 9571181].</p>
               </div>
@@ -515,11 +461,257 @@ hr.style18:before {
 
             <!-- END TRAIT <hr class="style18"> -->
 
+            <!-- <hr class="style18"> -->
+            <!-- START TRAIT -->
+            <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
+            <div class="card">
+                <div class="card-block card-inverse card-primary">
+                    <h1 class="card-title">Asparagus Anosmia - "Urine Luck"</h1>
+                    <div class="float-right col-4">
+                        <img src="static/img/asparagus.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
+                    <p class="card-text">Metabolites are the chemicals that result as our body breaks down food.  Metabolites provide a number of functions from fuel for our cells to signals for body systems.  Most go unnoticed.  
+                    However, if you are one ones (about half the population is) then you have an additional olfactory receptor that can detect methanethiol and S-methyl thioesters, then you have likely noticed a sulfur-like oder in your urine.  
+                    </p>
+                    <p>Olfactory receptors are the genes that allow us to smell oders, pleaseant and not so pleasent.  Smelling, is a surprisingly complex biological process. Humans have approximately 800 olfactory genes.  Each one can detect a range of different chemicals. The marker that was discovered to be related to this ability is closest to the OR2M7 gene [PMC5154975].
+                    It is likely that changes to this gene decrease its function and result in anosmia (inability to smell) some chemicals like those stinky asparagus metabolites.        
+                    </p>
+                </div>
+                <div class="card-block">
+                    <p><h5>Gene: OR2M7 Variant: rs4481887 = {{rs4481887}}</h5></p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th width="30%" class="text-center"></th>
+                                <th width="20%" class="text-center">Genotype</th>
+                                <th width="50%" class="text-center">Impact on Trait</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-bind:class="[rs4481887 === 'A/A'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
+                                <td align="center">A/A</td>
+                                <td align="center">most likely to smell asparagus metabolites in urine</td>
+                            </tr>
+                            <tr v-bind:class="[rs4481887 === 'A/G'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
+                                <td align="center">A/G</td>
+                                <td align="center">more likely to be able to smell asparagus metabolites in urine</td>
+                            </tr>
+                            <tr v-bind:class="[rs4481887 === 'G/G'? 'bg-success text-white': '']">
+                                <th scope="row" align="center" class="text-white">Your Genotype</th>
+                                <td align="center">G/G</td>
+                                <td align="center">least likely to be able to smell asparagus metabolites in urine</td>
+                            </tr>
+                        </tbody>
+                    </table>                  
+              </div>
+            </div>
+            </div>
+            <br>
+
+            <!-- END TRAIT <hr class="style18"> -->
+        <!-- <hr class="style18"> -->
+            <!-- START TRAIT -->
+            <div class="float-right" style="margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px; ">
+            <div class="card">
+                <div class="card-block card-inverse card-primary">
+                    <h1 class="card-title">Eye Color Predictions</h1>
+                    <div class="float-right col-4">
+                        <img src="static/img/eyecolor.jpg" class="img-fluid text-center img-thumbnail">
+                        </div>
+                    <p class="card-text">Metabolites are the chemicals that result as our body breaks down food.  Metabolites provide a number of functions from fuel for our cells to signals for body systems.  Most go unnoticed.  
+                    However, if you are one ones (about half the population is) then you have an additional olfactory receptor that can detect methanethiol and S-methyl thioesters, then you have likely noticed a sulfur-like oder in your urine.  
+                    </p>
+                    <p>Olfactory receptors are the genes that allow us to smell odors, pleaseant and not so pleasent.  Smelling, is a surprisingly complex biological process. Humans have approximately 800 olfactory genes.  Each one can detect a range of different chemicals. The marker that was discovered to be related to this ability is closest to the OR2M7 gene [PMC5154975].
+                    It is likely that changes to this gene decrease its function and result in anosmia (inability to smell) some chemicals like those stinky asparagus metabolites.        
+                    </p>
+                </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                    <p><h5>This table depicts the two step process that can be used to determine 95% of peoples' eye color.</h5></p>
+                    <p>
+                        <ul style="list-style-type:none">
+                            <li>1. The genotype of rs12203592 can eliminate brown or blue as a potential color, but can not eliminate green. </li>
+                            <li>2a. The genotype of 3 additional SNPs are used to predict color.</li>
+                            <li>2b. If none of the 3 match your allele then a 4th allele is used to predict eye color.  </li>
+                        </ul>
+                    </p>
+                <div class="container">
+                    <div class="row">
+                        <table style="width:100%">                           
+                            <tr>
+                                <th rowspan="3"><h5>Step 1</h5></th>
+                                <th rowspan="3"></th>
+                                <th colspan="3">
+                                    <div class="card text-center">
+                                        <div class="card-header"><h5>rs12913832 = {{rs12913832}} </h5></div>
+                                    </div>
+                                </th> 
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="card text-center "> 
+                                        <div class="card-body">
+                                            <h5 class="card-title" v-bind:class="[rs12913832 === 'A/A' || rs12913832 === 'A/G'? 'genomatch': '']"><i class="browneye fa fa-eye fa-6"></i> <i class="greeneye fa fa-eye"></i> NOT Blue</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>                
+                                    <div class="card text-center">
+                                        <div class="card-body" >
+                                            <h5 class="card-title"><i class="greeneye fa fa-eye"></i> <i class="blueeye fa fa-eye"></i> NOT Brown </h5>
+                                        </div>
+                                    </div>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="card text-center "> 
+                                        <div class="card-body" v-bind:class="[rs12913832 === 'A/A'? 'rcorners2': '']">
+                                            <h5 class="card-title"> A/A </h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>                
+                                    <div class="card text-center">
+                                        <div class="card-body" v-bind:class="[rs12913832 === 'A/G'? 'rcorners2': '']">
+                                            <h5 class="card-title"> A/G </h5>
+                                        </div>
+                                    </div>
+                                </td>                             
+                                <td>                
+                                    <div class="card text-center">
+                                        <div class="card-body" v-bind:class="[rs12913832 === 'G/G'? 'rcorners2': '']">
+                                            <h5 class="card-title"> G/G </h5>
+                                        </div>
+                                    </div>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td rowspan="3"><h5>Step 2a</h5></td>
+                                <td>
+                                    <div class="card text-center">
+                                        <div class="card-header"><h5>rs6119471 = {{rs6119471}}</h5> </i></div>
+                                    </div>
+                                </td>
+                                <td >                    
+                                    <div class="card text-center">
+                                        <div class="card-body" v-bind:class="[rs6119471 === 'G/G' && rs12913832 === 'A/A'? 'rcorners2': '']">
+                                            <h5 class="card-title"><i class="browneye fa fa-eye"></i>G/G Brown</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>                    
+                                    <div class="card text-center">
+                                        <div class="card-body" v-bind:class="[rs6119471 === 'G/G'  && rs12913832 === 'A/G'? 'rcorners2': '']">
+                                            <h5 class="card-title"><i class="browneye fa fa-eye"></i>G/G Brown</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="card text-center">
+                                        <div class="card-header"><h5>rs16891982 = {{rs16891982}} </h5> </i></div>
+                                    </div>
+                                </td>
+                                <td>                    
+                                    <div class="card text-center">
+                                        <div class="card-body" v-bind:class="[rs16891982 === 'C/C'  && rs12913832 === 'A/A'? 'rcorners2': '']">
+                                            <h5 class="card-title"><i class="browneye fa fa-eye"></i>C/C Brown</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>                    
+                                    <div class="card text-center">
+                                        <div class="card-body" v-bind:class="[rs16891982 === 'C/C' && rs12913832 === 'A/G'? 'rcorners2': '']">
+                                            <h5 class="card-title"><i class="browneye fa fa-eye"></i>C/C Brown</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>                    
+                                    <div class="card text-center">
+                                        <div class="card-body" v-bind:class="[rs16891982 === 'C/C'? 'rcorners2': '']">
+                                            <h5 class="card-title"><i class="greeneye fa fa-eye"></i>C/C Green</h5>
+                                        </div>
+                                    </div>
+                                </td>                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="card text-center">
+                                        <div class="card-header"><h5>rs12203592 = {{rs12203592}} </h5> </i></div>
+                                    </div>
+                                </td>
+                                <td></td>                                
+                                <td>                    
+                                    <div class="card text-center" v-bind:class="[rs12203592 === 'T/T'? 'rcorners2': '']">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="greeneye fa fa-eye"></i>T/T Green</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>                    
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="blueeye fa fa-eye"></i>T/T Blue</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td colspan="3">
+                                    <div class="card text-center">
+                                        <div class="card-header"><h5></h5> </i></div>
+                                    </div>                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h5>Step 2b</h5></td>
+                                <td>
+                                    <div class="card text-center">
+                                        <div class="card-header"><h5>rs12896399 = {{rs12896399}} </h5> </i></div>
+                                    </div>
+                                </td>
+                                <td>                    
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="browneye fa fa-eye"></i>G/G Brown</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>                    
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="blueeye fa fa-eye"></i>T/T Blue</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>            
+                        </table>
+                    </div>
+                </div>
+                  </li>
+              </ul>
+            </div>
+            </div>
+            <br>
+
+            <!-- END TRAIT <hr class="style18"> -->
 
 </div>
 </div>
+
+            <!-- START TABLE TEST NEW TRAITS -->
+
+            <!-- START TABLE TEST NEW TRAITS -->
+
 </div>
-</div>
+
 </template>
 
 <script>
@@ -553,6 +745,12 @@ export default {
         rs713598: "",
         rs1815739: "",
         rs1805007: "",
+        rs4481887: "",
+        rs12203592: "", 
+        rs12896399: "", 
+        rs6119471: "", 
+        rs12913832: "", 
+        rs16891982: "", 
         show: true
     }
   },
@@ -573,7 +771,15 @@ export default {
     var checkrs713598 = ""
     var checkrs1815739 = ""
     var check1805007 = ""
-
+    var checkrs4481887 = ""
+    var checkrs12203592 = ""
+    var checkrs12896399 = ""
+    var checkrs6119471 = ""
+    var checkrs12913832 = ""
+    var checkrs16891982 = ""
+    // var checkrrs6119471 = ""
+console.log("this.rs16891982 1")
+console.log(this.rs16891982)
     $.each(traitdata, function (index, value) {
       console.log('value')
       console.log(value)
@@ -593,10 +799,10 @@ export default {
       // **********************
       
       var rsID = value.rsID
-      console.log('rsID')
-      console.log(rsID)
-      console.log('rs1805007 === rsID')
-      console.log(rsID === 'rs1805007')
+    //   console.log('rsID')
+    //   console.log(rsID)
+    //   console.log('rs1805007 === rsID')
+    //   console.log(rsID === 'rs1805007')
       let geno = partGeno.Gen
       let genosplit = geno.split(':')
       let genoorder = genosplit.sort()
@@ -619,46 +825,50 @@ export default {
           break;
           
           case 'rs17822931':
-            console.log('case concatgeno')
+            console.log('case concatgeno rs17822931')
           console.log(concatgeno)
           checkrs17822931 = concatgeno
           break;
 
           case 'rs671':
-            console.log('case concatgeno')
+            console.log('case concatgeno rs671')
           console.log(concatgeno)
           checkrs671 = concatgeno
           break;
 
           case 'rs601338':
-            console.log('case concatgeno')
+            console.log('case concatgeno rs601338')
           console.log(concatgeno)
           checkrs601338 = concatgeno
           break;
           
           case 'rs10427255':
-          console.log('case concatgeno')
+          console.log('case concatgeno rs10427255')
           console.log(concatgeno)
           checkrs10427255 = concatgeno
           break;
 
           case 'rs4988235':
+          console.log('case concatgeno rs4988235')
+          console.log(concatgeno)
           checkrs4988235 = concatgeno
           break;
 
           case 'rs713598':
-            console.log('case concatgeno')
+            console.log('case concatgeno rs713598')
           console.log(concatgeno)
           checkrs713598 = concatgeno
           break;
 
           case 'rs1815739':
-            console.log('case concatgeno')
+            console.log('case concatgeno rs1815739')
           console.log(concatgeno)
           checkrs1815739 = concatgeno
           break;
           
           case 'rs17822931':
+            console.log('case concatgeno rs17822931')
+          console.log(concatgeno)
           checkrs17822931 = concatgeno
           break;
 
@@ -667,12 +877,46 @@ export default {
           console.log(concatgeno)
           checkrs1805007 = concatgeno     
           break;
+          
+          case 'rs4481887':
+          console.log('case concatgeno rs4481887')
+          console.log(concatgeno)
+          checkrs4481887 = concatgeno     
+          break;          
+          
+          case 'rs12203592':
+          console.log('case concatgeno rs12203592')
+          console.log(concatgeno)
+          checkrs12203592 = concatgeno     
+          break;   
+                    
+          case 'rs6119471':
+          console.log('case concatgeno rs6119471')
+          console.log(concatgeno)
+          checkrs6119471 = concatgeno     
+          break;   
+                    
+          case 'rs16891982':
+          console.log('case concatgeno rs16891982')
+          console.log(concatgeno)
+          checkrs16891982 = concatgeno     
+          break;   
+                    
+          case 'rs12896399':
+          console.log('case concatgeno rs12896399')
+          console.log(concatgeno)
+          checkrs12896399 = concatgeno     
+          break;   
+                    
+          case 'rs12913832':
+          console.log('case concatgeno rs12913832')
+          console.log(concatgeno)
+          checkrs12913832 = concatgeno     
+          break;   
       }
 
     })
     
-    this.rs1805007 = checkrs1805007
-    this.rs762551 = checkrs762551
     this.rs1805007 = checkrs1805007
     this.rs762551 = checkrs762551
     this.rs17822931 = checkrs17822931
@@ -682,21 +926,94 @@ export default {
     this.rs4988235 = checkrs4988235
     this.rs713598 = checkrs713598
     this.rs1815739 = checkrs1815739
-    this.rs1805007 = checkrs1805007
-    //  console.log('checkrs1805007')
-    //  console.log(checkrs1805007)
-    //  console.log('this.rs1805007')
-    //  console.log(this.rs1805007)
-    //  console.log('this.rs762551 1')
-    //  console.log(this.rs762551)
-    //  console.log('checkrs762551')
-    //  console.log(checkrs762551)
-    //  console.log('this.rs762551 2')
-    //  console.log(this.rs762551)
-    },
-  computed: {
+    this.rs4481887 = checkrs4481887
+    this.rs12203592 = checkrs12203592
+    this.rs12896399 = checkrs12896399
+    this.rs6119471 = checkrs6119471
+    this.rs12913832 = checkrs12913832
+    this.rs16891982 = checkrs16891982
+   
+   console.log("this.rs16891982 2")
+console.log(this.rs16891982)
+    }
 
-  }
 
 }
 </script>
+
+<style scope>
+.card {
+    min-width: 200px;
+    border-style: none
+}
+
+.card-block {
+    min-height: 75px
+}
+
+.jumbotron-buffer {
+    min-height: 40px
+}
+
+.bat_jumbotron {
+    margin-top: 4rem
+}
+
+.norisk {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.heterozygous {
+    background-color: #4c57af;
+    /*BLUE*/
+    color: white;
+}
+
+.homozygous {
+    background-color: #af4c4c;
+    /*RED*/
+    color: white;
+}
+
+hr.style18 {
+    height: 30px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+hr.style18:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.browneye{
+    color: #542a0e;
+    margin-bottom: 2.5px;
+}
+.blueeye{
+    color: #99ccff;
+    border-bottom: 2px;
+}
+.greeneye{
+    color: #19a337;
+    border-bottom: 2.5px;
+}
+.rcorners2 {
+    border-radius: 90px;
+    border: 1px solid #73AD21;
+    margin: 1px;
+}
+.genomatch{
+    text-decoration: underline;
+    font-size:1.5em;
+}
+
+</style>

@@ -81,7 +81,7 @@ h3 {
                       <img src="static/img/AMD_many_eyes.jpg" class="img-fluid text-center">
                       <!-- <figcaption class="figure-caption">Fatty deposits, called drusen, deposit under the retina resulting blured or loss of vision.</figcaption> -->
                       <div class="blockquote quote-lg">
-                        <p style="font-size: 25px; color: #797979; line-height: 1;">Age-related macular degeneration (AMD) affects more than 11.5% of the population over age 80..</p>
+                        <p style="font-size: 25px; color: #797979; line-height: 1;">Age-related macular degeneration (AMD) affects more than 11.5% of the population over age 80.</p>
                       </div>
                   </div>
                 <h1 class="text-primary">Description</h1>
@@ -92,7 +92,7 @@ h3 {
 
                     <h1 class="text-primary">Subtypes</h1>
 
-                    <p>AMD is often divided into two subtypes: dry and wet.<sup>3</sup> Dry AMD makes up the vast majority of AMD cases (85-90%) and is caused by a buildup of yellowish deposits called drusen in the area underneath the retina.3 Drusen buildup leads
+                    <p>AMD is often divided into two subtypes: dry and wet.<sup>3</sup> Dry AMD makes up the vast majority of AMD cases (85-90%) and is caused by a buildup of yellowish deposits called drusen in the area underneath the retina.<sup>3</sup> Drusen buildup leads
                         to weakening and death of the photoreceptor (rod and cone) cells responsible for transmitting light and color information to the brain.<sup>3</sup> It is thought that once drusen builds up to a certain point, the eye responds by generating
                         new blood vessel growth to the area, leading to the development of the more severe wet form of AMD.<sup>3</sup></p>
                     <p>Wet (also called neovascular) AMD results from the overgrowth of new blood vessels underneath the retina.<sup>3</sup> These vessels are often fragile and break, causing scarring of the macula.<sup>3</sup> Although wet AMD accounts for a small portion
@@ -104,7 +104,7 @@ h3 {
                         as a result cannot be reversed. Dietary supplements including zinc and the antioxidants lutein and zeaxanthin have been shown to decrease the risk of progression to later stages of the disease. Supportive measures appropriate for
                         vision loss of any type may also be used for individuals with AMD.<sup>6</sup></p>
 
-                    <h1 class="text-primary">Risk Factors:</h1><br />
+                    <h2 class="text-primary">Risk Factors:</h2><br />
                     <h4><small class="text-muted">Adopted from Journal of Ophthalmology, Volume 2013, Article ID 895147</small></h4>
 
                         <div class="col-md-12 text-left pull-right" style="  margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
@@ -171,7 +171,7 @@ h3 {
                         <br>
 
             <hr class="style18">
-            <h1>Genetic Risk Factors</h1>
+            <h1>Your Genetic Risk Factors</h1>
             <p>Below is a summary of several <em>selected</em> genetic variants which have been identified as influencing a person&#39;s risk for macular degeneration.</p>
         </div> <!-- col-->
         </div> <!-- ROW2-->

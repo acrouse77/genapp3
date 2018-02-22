@@ -229,5 +229,51 @@
             "pheno": "Likely to freckle"
           }
     ]
+  },
+  {
+    "rsID": "rs4481887",
+    "subject": "asparagus",
+    "chr": 1,
+    "loc": 248496863,
+    "genotypes": [
+      {
+        "trait": "asparagus",
+        "geno1": "C",
+        "geno2": "C",
+        "pheno": "Less likely to freckle"
+      },
+      {
+        "trait": "asparagus",
+        "geno1": "C",
+        "geno2": "T",
+        "pheno": "Likely to freckle"
+      },
+      {
+        "trait": "asparagus",
+        "geno1": "T",
+        "geno2": "T",
+        "pheno": "Likely to freckle"
+      }
+    ]
+  },
+  { "rsID": "rs12203592",
+    "chr": 6,
+    "loc": 396321
+  },
+  { "rsID": "rs6119471",
+    "chr": 20,
+    "loc": 32785212
+  },
+  { "rsID": "rs16891982",
+    "chr": 5,
+    "loc": 33951693
+  },
+  { "rsID": "rs12913832",
+    "chr": 15,
+    "loc": 28365618
+  },
+  { "rsID": "rs12896399",
+    "chr": 14,
+    "loc": 92773663
   }
 ]

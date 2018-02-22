@@ -11,16 +11,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item" style="margin-left:20px">
-            <router-link :to="{name: 'introduction-page'}" class="col btn btn-outline-secondary  btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> Introduction </i><span class="sr-only">(current)</span></router-link>
+            <router-link :to="{name: 'introduction-page'}" class="col btn btn-outline-secondary  btn-lg"><i class="fa fa-info-circle nav-link" aria-hidden="true"> About the Guide </i><span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item" style="margin-left:20px">
-            <router-link :to="{name: 'chapter-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Chapters </i><span class="sr-only">(current)</span></router-link>
+            <router-link :to="{name: 'chapter-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-book nav-link" aria-hidden="true"> Your chapters </i><span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item" style="margin-left:20px">
-            <router-link :to="{name: 'categories-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> Research </i><span class="sr-only">(current)</span></router-link>
+            <router-link :to="{name: 'categories-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-bar-chart nav-link" aria-hidden="true"> More about you </i><span class="sr-only">(current)</span></router-link>
           </li>
           <li class="nav-item" style="margin-left:20px">
-            <router-link :to="{name: 'traits-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Traits </i><span class="sr-only">(current)</span></router-link>
+            <router-link :to="{name: 'traits-page'}" class="col btn btn-outline-secondary   btn-lg"><i class="fa fa-eye nav-link" aria-hidden="true"> Your traits </i><span class="sr-only">(current)</span></router-link>
           </li>
       </ul>
     </div> <!-- END CLASS = COLLAPSE -->
@@ -32,20 +32,7 @@
           <button class="btn btn-lg btn-outline-secondary fa fa-arrow-circle-o-right fa-3x fa-border nav-link"  onclick="history.forward();"></button>
     </div>
   </nav>
-  <div>
-  <div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-<div class="strain"></div>
-  </div>
+
   <div>
     <router-view class="app" ></router-view>
   </div>
@@ -269,107 +256,4 @@ body {
   background-color: #f7f7f7;
   border-width: 1px 0 0 0;
 }
-/* START NEW CSS */
-$bg: #292929;
-$blue: #13b6e2;
-$gray: #dbdbdb;
-
-@mixin animation-delay($time) {
-	animation-delay: $time;
-}
-
-html, body {
-	width: 100%;
-	height: 100%;
-	background-color: $bg;
-	padding-top: 50px;
-}
-
-*, *:before, *:after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-.strain {
-	width: 155px;
-	height: 1px;
-	background-color: $gray;
-	position: relative;
-	margin: 0px auto;
-	margin-top: 28px;
-	margin-bottom: 28px;
-	animation-name: rotate-strain;
-	animation-duration: 1.7s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-play-state: running;
-	
-	&:before {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 18px;
-		height: 18px;
-		border-radius: 50%;
-		background-color: $blue;
-		left: 0;
-		margin-top: -9px;
-		margin-left: -9px;
-		animation-name: strain-size-left;
-		animation-duration: 1.7s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-play-state: running;
-	}
-	
-	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 18px;
-		height: 18px;
-		border-radius: 50%;
-		background-color: $blue;
-		right: 0;
-		margin-top: -9px;
-		margin-right: -9px;
-		animation-name: strain-size-right;
-		animation-duration: 1.7s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-play-state: running;
-	}
-	
-	@for $i from 1 through 12 {
-		&:nth-child(#{$i}), &:nth-child(#{$i}):before, &:nth-child(#{$i}):after {
-			@include animation-delay((.15s * $i));
-		}
-	}	
-}
-
-@keyframes rotate-strain {
-	0% {width: 155px;}
-	25% {width: 0;}	
-	50% {width: 155px;}	
-	75% {width: 0;}
-	100% {width: 155px;}
-}
-
-@keyframes strain-size-left {
-	0% {transform: scale(1) translateX(0px);}	
-	25% {transform: scale(.5);}	
-	50% {transform: scale(1) translateX(155px);}	
-	75% {transform: scale(1.5);}	
-	100% {transform: scale(1) translateX(0px);}
-}
-
-@keyframes strain-size-right {
-	0% {transform: scale(1) translateX(0px);}	
-	25% {transform: scale(1.5);}	
-	50% {transform: scale(1) translateX(-155px);}	
-	75% {transform: scale(.5);}	
-	100% {transform: scale(1) translateX(0px);}
-}
-
 </style>

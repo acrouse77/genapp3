@@ -924,10 +924,10 @@ table {
 </style>
 
 <template>
-<div class="row">
-<div class="section">
+<div >
+ <div class="section">
     <div class="container">
-<div class="row">
+ <div class="row">  
     <div v-if="show_genoTableOne">
         <div style="background-color: #FD901E; margin: 15px;  padding: 15px; border: 1px solid #cecece; border-radius: 25px;">
             <div class="card" style="border: 1px;">
@@ -948,16 +948,16 @@ table {
                             <thead>
                                 <tr class="tr_top">
                                     
-                                    <th width="20%" align="center" v-b-popover.hover.top="'the specific gene in which the variant is located. In some cases a gene may have more than one name listed.'" title="Gene:"> Gene</th>
+                                    <th width="20%" align="center" v-b-popover.hover.top="'The specific gene in which the variant is located. In some cases a gene may have more than one name listed.'" title="Gene:"> Gene</th>
 
-                                    <th width="15%" align="center" v-b-popover.hover.top="'the unique identifier for the particular variant'" title="snpID:"  data-content="the unique identifier for the particular variant">snpID</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.'" title="Your Genotype:">Your Genotype</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'at a variant location, the particular DNA letter found to be associated with an altered disease risk.'" title="Risk allele:" data-content="">Risk allele</th>
-                                    <th width="5%" align="center" v-b-popover.hover.top="'this number represents the estimated impact of the presence of the risk allele at this location. ************ (should this be removed?)'" title="Odds Ratio:" data-content="research publication number.  See references at bottom of page.">OR</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'shown for reviewers to check calculations - to be removed'" title=" Calcualted Odds Ratio:">Zyg?</th>
-                                    <th width="5%" align="center" v-b-popover.hover.top="'this number represents the estimated impact of the risk allele based on your genotype and the model used in the publication.'" title=" Calcualted Odds Ratio:">OR calc</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'the type of inheritance patern required to see the phenotype.  \'add\' means additive.  In this model, each allele adds additional risk. \'rec\' means recessive. In this model, only the homozygous genotype has an increased risk. \'dom\' means dominant.  In this model one or two risk alleles result in the same total risk.'" title="Inheritance model:" data-content="Hom het or add.">model</th>
-                                    <th width="10%" align="center" v-b-popover.hover.top="'click to access more details about the research studies that have investigated the variant\'s impact.'" title="Study Info.:">Study Info.</th>
+                                    <th width="15%" align="center" v-b-popover.hover.top="'The unique identifier for the particular variant'" title="snpID:"  data-content="the unique identifier for the particular variant">snpID</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'Your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.'" title="Your Genotype:">Your Genotype</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'At a variant location, the particular DNA letter found to be associated with an altered disease risk.'" title="Risk allele:" data-content="">Risk allele</th>
+                                    <th width="5%" align="center" v-b-popover.hover.top="'This number represents the estimated impact of the presence of the risk allele at this location. ************ (should this be removed?)'" title="Odds Ratio:" data-content="research publication number.  See references at bottom of page.">OR</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'Shown for reviewers to check calculations - to be removed'" title=" Calcualted Odds Ratio:">Zyg?</th>
+                                    <th width="5%" align="center" v-b-popover.hover.top="'This number represents the estimated impact of the risk allele based on your genotype and the model used in the publication. A higher odds ratio means there is a higher risk.'" title=" Calcualted Odds Ratio:">OR calc</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'The type of inheritance pattern required to see the phenotype.  \'add\' means additive.  In this model, each allele adds additional risk. \'rec\' means recessive. In this model, only the homozygous genotype has an increased risk. \'dom\' means dominant.  In this model one or two risk alleles result in the same total risk.'" title="Inheritance model:" data-content="Hom het or add.">model</th>
+                                    <th width="10%" align="center" v-b-popover.hover.top="'Click to access more details about the research studies that have investigated the variant\'s impact. If multiple studies have implicated a variant, then multiple rows are shown below.'" title="Study Info.:">Study Info.</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -991,12 +991,12 @@ table {
                             <thead>
                                 <tr class="tr_top" style="text-align:center">
                                     
-                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'the specific gene in which the variant is located. In some cases a gene may have more than one name listed.'" title="Gene:"> Gene</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'The specific gene in which the variant is located. In some cases a gene may have more than one name listed.'" title="Gene:"> Gene</th>
 
-                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'the unique identifier for the particular variant'" title="snpID:"  data-content="the unique identifier for the particular variant">snpID</th>
-                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.'" title="Your Genotype:">Your Genotype</th>
-                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'at a variant location, the particular DNA letter found to be associated with an altered disease risk.'" title="Risk allele:" data-content="">Risk allele</th>
-                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'click to access more details about the research studies that have investigated the variant\'s impact.'" title="Study Info.:">Study Info.</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'The unique identifier for the particular variant'" title="snpID:"  data-content="the unique identifier for the particular variant">snpID</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'Your DNA result at the particular variant location.  Genotypes are typically a combination of two DNA letter (A,T,G,C) - one inherited from each parent.'" title="Your Genotype:">Your Genotype</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'At a variant location, the particular DNA letter found to be associated with an altered disease risk.'" title="Risk allele:" data-content="">Risk allele</th>
+                                    <th width="20%" align="center" style="text-align:center" v-b-popover.hover.top="'Click to access more details about the research studies that have investigated the variant\'s impact.'" title="Study Info.:">Study Info.</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1009,10 +1009,13 @@ table {
             </div>
             <hr class="style18">
         </div>
+        </div>
+        </div>
+        </div>
 
-    </div> <!-- end card -->
-    </div> <!-- end rounded style -->
-    </div>
+   <!-- </div>  end row -->
+   <!-- </div>  end row -->
+   <!-- </div> end row -->
     </div>
     </div>
     </div>

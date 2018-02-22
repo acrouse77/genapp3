@@ -3,9 +3,9 @@
 <template>
 <div>
     <CAD></CAD>
-    <!-- <Key class="section"></Key> -->
+    <!-- <Key class="section"></Key> 
     <div class="section">
-    <div class="container">
+    <div class="container"> -->
 
     <Geno3></Geno3>
     </div>

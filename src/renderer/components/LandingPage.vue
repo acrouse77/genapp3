@@ -2,17 +2,24 @@
   <div>
     <!-- <Home></Home> -->
     <Banner ></Banner>
+ <!--   <helixone ></helixone>
+    <helixtwo ></helixtwo> -->
   </div>
 </template>
 
 <script>
   import Banner from './Banner'
+  import helixone from './helixone'
+  import helixtwo from './helixtwo'
+
   // import Links from './LandingPageView/Links'
   // import Versions from './LandingPageView/Versions'
   // import Home from './LandingPageView/Home'
   export default {
     components: {
       Banner
+      // helixone,
+      // helixtwo
       // Links,
       // Versions,
       // Home

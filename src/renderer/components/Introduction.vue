@@ -14,12 +14,12 @@
 <script>
   import Banner from './Banner'
   import Home from './Introduction/Home'
-  import Intro from './Introduction/Guide-Introduction'
+  // import Intro from './Introduction/Guide-Introduction'
   export default {
     components: {
       Home,
-      Banner,
-      Intro
+      Banner
+      
     },
     name: 'introduction-page'
   }
